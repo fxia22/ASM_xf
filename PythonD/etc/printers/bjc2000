@@ -1,0 +1,20 @@
+#! bash
+# DRECT Queueless printer for DOS configuration: values must be literal!
+
+# Version control for future revision/incompatibilty check
+export DDIRECTVERSION=1
+
+# Name of the printer
+export PRINTERNAME=bjc2000
+
+# Defaults
+export DEVICE=/dev/lpt1
+export DRIVER=
+export PAPER=A4
+export MARGIN=
+export COPIES=
+export FONT=
+export BW=
+export BANNER=
+export FILTER=a2ps
+

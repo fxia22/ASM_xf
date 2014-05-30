@@ -1,0 +1,27 @@
+#! bash
+# D-DIRECT Queueless driver configuration for DOS
+#
+
+# a2ps will make the input file unreadable to ghostscript if it is a ps!
+if [ `echo $1 | tail -c 5` != ".ps" ]
+then
+    export TEMPFILE=/dev/env/DJDIR/tmp/`date +%H%M%S`.ps
+    a2ps -g -K --medium=$PAPER --output=$TEMPFILE $1 2>/dev/null
+else
+    cmd \/C ps2pdf $1
+    exit
+fi
+
+#Ghostscript uses lowercase papersize
+export PAPER=`echo $PAPER | tr '[A-Z]' '[a-z]'`
+
+#Final ouput is sent to a file (replacing last extension with 'pdf').
+export DEVICE=`expr $1 : '\(.*\).*\.'`.pdf
+
+#echo creating $DEVICE from $TEMPFILE size $PAPER, options= $OPTIONS >2
+# Universal PS filter sends results to matching PSprinter ($PRINTERNAME + 'ps') 
+gs -sPAPERSIZE=$PAPER -dNOPAUSE -dSAFER -dNOPLATFONTS -dWRITESYSTEMDICT \
+-dNOBIND -sDEVICE=pdfwrite $OPTIONS -sOutputFile=$DEVICE $TEMPFILE -c quit
+
+#ps2pdf $TEMPFILE $DEVICE
+rm -f $TEMPFILE

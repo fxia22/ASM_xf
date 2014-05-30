@@ -1,0 +1,12 @@
+set nobackup
+set backupcopy=yes
+set showmatch
+set matchtime=2
+set smartindent
+set number
+set nocompatible
+set mouse=a
+source $VIMRUNTIME/mswin.vim
+source $VIMRUNTIME/vimrce.vim
+behave mswin
+set helplang=zh

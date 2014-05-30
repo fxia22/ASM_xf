@@ -1,0 +1,17 @@
+#
+#  Tcpdump ethers file
+#
+
+01:02:03:04:05:06   eaddr1
+02:03:04:05:06:07   eaddr2
+03:04:05:06:07:08   eaddr3
+04:05:06:07:08:09   eaddr4
+05:06:07:08:09:0a   eaddr5
+06:07:08:09:0a:0b   eaddr6
+07:08:09:0a:0b:0c   eaddr7
+08:09:0a:0b:0c:0d   eaddr8
+09:0a:0b:0c:0d:0e   eaddr9
+0a:0b:0c:0d:0e:0f   eaddr10
+
+08:00:2B:B2:5E:BF   fddi-a1
+00:00:A2:09:BC:E8   gw

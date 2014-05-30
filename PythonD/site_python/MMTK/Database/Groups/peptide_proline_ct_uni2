@@ -1,0 +1,10 @@
+C = Atom('C')
+C_alpha = Atom('CH')
+N = Atom('N')
+O = Atom('O')
+O_2 = Atom('O')
+bonds = [Bond(N, C_alpha), Bond(C_alpha, C), Bond(C, O), Bond(C, O_2), ]
+pdbmap = [('', {'N': N, 'O1': O, 'O2': O_2, 'CA': C_alpha, 'C': C, }, ), ]
+pdb_alternative = {'O': 'O1', 'OXT': 'O2', 'HN': 'H', 'OT': 'O1', 'OT2': 'O2', 'OT1': 'O1', }
+amber91_atom_type = {O_2: 'O2', O: 'O2', C: 'C', N: 'N', C_alpha: 'CH', }
+name = 'peptide in proline C terminus'

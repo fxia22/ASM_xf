@@ -1,0 +1,79 @@
+# Copyright (c) 1993-1999 Microsoft Corp.
+#
+# Dies ist eine Beispieldatei für LMHOSTS, wie sie von Microsoft TCP/IP
+# für Windows 2000 verwendet wird.
+# Sie ist mit der LMHOSTS-Datei von Microsoft TCP/IP für LAN Manager 2.x
+# kompatibel.
+# Bearbeiten Sie diese Datei mit einem ASCII-Editor.
+#
+# In dieser Datei werden einzelnen IP-Adressen die entsprechenden
+# Computernamen (NetBIOS-Namen) zugeordnet. Jeder Eintrag sollte aus
+# einer einzelnen Zeile bestehen.
+# Die IP-Adresse wird in der ersten Spalte eingetragen, gefolgt vom
+# zugehörigen Computer-Namen. Die Adresse und der Computer-Name müssen
+# dabei durch mindestens ein Leerzeichen oder ein Tabulatorzeichen
+# getrennt sein.
+# Das Zeichen "#" wird gewöhnlich Kommentaren vorangestellt. Ausnahmen
+# hiervon sind die folgenden Erweiterungen:
+#
+#      #PRE
+#      #DOM:<Domäne>
+#      #INCLUDE <Dateiname>
+#      #BEGIN_ALTERNATE
+#      #END_ALTERNATE
+#      \0xnn (Unterstützung nichtdarstellbarer Zeichen)
+#
+# Die Erweiterung "#PRE" wird nach dem Computer-Namen angegeben, wenn
+# dieser Eintrag bereits zu Anfang in den Namen-Cache geladen werden
+# soll. Standardmäßig werden die Einträge nicht zu Anfang in den Namen-
+# Cache geladen, sie werden jedoch auch nur dann ausgewertet, wenn die
+# dynamische Namensauswertung fehlschlägt.
+#
+# Die Erweiterung "#DOM:<Domäne>" wird nach dem Computer-Namen angegeben,
+# wenn der Eintrag mit einer Domäne verknüpft werden soll.
+# Dies wirkt sich auf das Verhalten des Computer-Suchdienstes und des
+# Anmeldedienstes in der TCP/IP-Umgebung aus.
+# Die Erweiterung "DOM:<Domäne>" kann zusammen mit der Erweiterung "PRE"
+# für einen Eintrag angegeben werden.
+#
+# Die Angabe von "#INCLUDE <Dateiname>" veranlasst den NetBIOS Helper-
+# Dienst die angegebene Datei zu suchen und sie wie eine lokale Datei
+# auszuwerten. Für <Dateiname> werden UNC-Namen akzeptiert. Dadurch ist
+# es möglich, eine LMHOSTS-Datei zentral auf einem Server zu verwalten.
+# Befindet sich der Server außerhalb des Broadcast-Bereichs, ist eine
+# Adresszuordnung für diesen Server vor der "#INCLUDE"-Anweisung not-
+# wendig.
+#
+# Die Anweisungen "#BEGIN_ALTERNATE" und "#END_ALTERNATE" ermöglichen die
+# Gruppierung von mehreren "#INCLUDE"-Anweisungen.
+# Ist eine "INCLUDE"-Anweisung erfolgreich, werden alle weiteren
+# "INCLUDE-ANWEISUNGEN" übersprungen und die Gruppe verlassen.
+#
+# Nichtdarstellbare Zeichen können im Computer-Namen enhalten sein.
+# Solche Zeichen müssen als Hex-Wert in der \0xnn-Notation angegeben
+# werden und zusammen mit dem NetBIOS-Namen in Anführungszeichen
+# eingeschlossen werden.
+#
+#
+# Beispiel:
+# 
+# 102.54.94.97     maestro         #PRE #DOM:technik    # DC von "Technik"
+# 102.54.94.102    "spiele \0x14"                       # besonderer Server
+# 102.54.94.123    nordpol         #PRE                 # Server in 3/4317
+# #BEGIN_ALTERNATE
+# #INCLUDE \\lokal\public\lmhosts
+# #INCLUDE \\maestro\public\lmhosts
+# #END_ALTERNATE
+#
+# In diesem Beispiel enthält der Server "spiele" ein Sonderzeichen
+# im Namen, und der Server "nordpol" wird bereits zu Anfang in den
+# Namen-Cache geladen.
+# Die Adresszuordnung für den Server "maestro" wird angegeben, um diesen
+# Server weiter unten in der #INCLUDE-Gruppe verwenden zu können.
+# Wenn der Server "lokal" nicht verfügbar ist, wird die zentrale LMHOSTS-
+# Datei auf "maestro" verwendet.
+#
+# Beachten Sie, dass die gesamte Datei bei jeder Auswertung durchsucht wird,
+# einschließlich der Kommentarzeilen. Es wird daher empfohlen, die obigen
+# Kommentarzeilen zu entfernen.
+

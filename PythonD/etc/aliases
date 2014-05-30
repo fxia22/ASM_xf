@@ -1,0 +1,17 @@
+# Service-order for DNS name lookups. Use `hosts' first. If name not
+# in `hosts' file send a DNS request to nameserver(s).
+# NOT YET IMPLEMENTED; order is always "hosts,bind".
+# For IPv6, order is always "hosts6, bind6, hosts, bind".
+#
+# host.conf = order hosts, bind
+
+#
+# Configuration of bind resolver. These settings are active only if
+# library was compiled with USE_BIND (ref. .\src\config.h) and using
+# any of the resolver functions in <resolv.h>.
+#
+# HOSTALIASES points to a file which lists host aliases, e.g:
+#  alfie.somewhere.net www.somewhere.net
+#  blondie.foo.net     mail.mci.net
+
+

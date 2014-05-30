@@ -1,0 +1,20 @@
+#! bash
+# DRECT Queueless printer for DOS
+
+# Version control for future revision/incompatibilty check
+export DDIRECTVERSION=1
+
+# Name of the printer
+export PRINTERNAME=
+
+# Defaults
+export DEVICE=
+export DRIVER=
+export PAPER=a4
+export MARGIN=
+export COPIES=1
+export FONT=
+export BW=
+export BANNER=
+export FILTER=
+

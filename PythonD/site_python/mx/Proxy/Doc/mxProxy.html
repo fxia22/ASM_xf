@@ -1,0 +1,819 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+    <TITLE>mxProxy - Generic Proxy Wrapper Type for Python</TITLE>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+    <STYLE TYPE="text/css">
+      p { text-align: justify; }
+      ul.indent { }
+      body { }
+    </STYLE>
+</HEAD>
+
+  <BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+
+    <HR NOSHADE WIDTH="100%">
+    <H2>mxProxy - Generic Proxy Wrapper Type for Python</H2>
+
+    <HR SIZE=1 NOSHADE WIDTH="100%">
+    <TABLE WIDTH="100%">
+      <TR>
+	<TD>
+	  <SMALL>
+	    <A HREF="#AccessProtocol">Access Protocol</A> :
+	    <A HREF="#CleanupProtocol">Cleanup Protocol</A> :
+	    <A HREF="#ImplicitAccess">Implicit Access</A> :
+	    <A HREF="#WeakRefs">Weak References</A> :
+	    <A HREF="#Interface">Interface</A> :
+	    <A HREF="#Examples">Examples</A> :
+	    <A HREF="#Structure">Structure</A> :
+	    <A HREF="#Support">Support</A> :
+	    <A HREF="http://www.egenix.com/files/python/eGenix-mx-Extensions.html#Download-mxBASE"><B>Download</B></A> :
+	    <A HREF="#Copyright">Copyright &amp; License</A> :
+	    <A HREF="#History">History</A> :
+	    <A HREF="" TARGET="_top">Home</A>
+	</SMALL>
+	</TD>
+	<TD ALIGN=RIGHT VALIGN=TOP>
+	  <SMALL>
+	    <FONT COLOR="#FF0000">Version 2.0.3</FONT>
+	  </SMALL>
+	</TD>
+    </TABLE>
+    <HR SIZE=1 NOSHADE WIDTH="100%">
+
+    <H3>Introduction</H3>
+
+    <UL CLASS="indent">
+
+	<P>
+	  A while ago, I ran into a security problem within Python:
+	  there was no apparent way to hide attributes from
+	  unauthorized access other than running in an restricted
+	  environment and using the standard lib's Bastion object
+	  wrapper.
+
+	<P>
+	  Since I couldn't run the code in restricted mode (e.g. it
+	  does assignments to __class__ and __dict__ in a few vital
+	  places), the only reasonable way seemed building a new type
+	  that hides a few attributes in the C implementation.  These
+	  attributes are not accessible from within Python. Of course,
+	  a debugger will give you access and some special extension
+	  module that knows about the internal structure of the types
+	  could too. But for my purpose this level security suffices.
+
+	<P>
+	  Instead of creating a special Bastion like type I figured
+	  that it would be a good idea to provide a more generic and
+	  extendable version of a <B>Proxy</B> object. The object
+	  itself doesn't provide too much funtionality. It basically
+	  hides the wrapped object and provides controlled access to
+	  its attributes.
+
+	<P>
+	  Another subject that comes up every now and then in the
+	  Python community is that of <B>weak references</B>,
+	  i.e. references to objects that don't prevent them to be
+	  garbage collected. Since Python uses a reference count
+	  garbage collection scheme, circular references cause memory
+	  leakage as soon as the reference to the cycle is dropped
+	  (the involved objects are not garbage collected because
+	  their reference count never drops to zero).
+
+	<P>
+	  Proxy objects can use two flavors of references starting
+	  with version 0.2: strong references which act just like any
+	  other reference you use to the object in Python and weak
+	  references. The <CODE>WeakProxy()</CODE> constructor must be
+	  used for the latter. Details are described below.
+
+    <A NAME="AccessProtocol">
+
+    <H4>Access Protocol</H4>
+
+    <P>
+      To control access to the wrapped objects attributes (these also
+      include its methods), the Proxy provides two features:
+    <P>
+    <OL>
+
+      <LI>Access is only granted if the attributes name appears in a
+      special <B>interface list</B> of accessible names.
+	<P>
+
+      <LI>Public access can be further controlled if the object
+      provides the methods <CODE><B>__public_getattr__</B></CODE>
+      and/or <CODE><B>__public_setattr__</B></CODE>.
+	<P>
+
+    </OL>
+
+    <P>
+      The access scheme first checks the interface list. If given,
+      only attributes with names appearing in it can be set or
+      fetched. All other accesses are cancelled by raising an
+      <CODE>AccessError</CODE> exception (which is a subclass of the
+      standard <CODE>AttributeError</CODE>).
+
+    <P>
+      The presence of the interface list also indicates whether
+      methods that are to be returned to the requesting object should
+      be Proxy-wrapped on-the-fly or not.  Wrapped methods only have
+      the callable slot enabled, thus inhibiting access to the
+      enclosed object reference.
+
+    <P>
+      In case an attribute it to be fetched, the Proxy checks the
+      availability of a <CODE>__public_getattr__</CODE> method. If
+      found, this method is called with the name as parameter and
+      whatever this method returns is returned to the requesting
+      object. Otherwise, the Proxy uses the standard
+      getattr()-functionality to fetch the attribute.
+
+    <P>
+      Setting attributes is done in a similar way: the Proxy checks
+      the availability of a <CODE>__public_setattr__</CODE> method. If
+      found, this method is called with parameters name and value.
+      Otherwise, the standard setattr() functionality is used.
+
+    <A NAME="CleanupProtocol">
+
+    <H4>Cleanup Protocol</H4>
+
+    <P>
+      When dealing with large object systems circular references are
+      sometimes introduced. Since these reference loops cannot
+      automatically be broken by the system, the user has to provide
+      means of breaking the circles at the proper places. One such place
+      is the object destructor of objects that explicitly contain such
+      references.
+
+    <P>
+      The Proxy object can be used to provide an indirect pointer into
+      such a circle of objects that reference each other. When the
+      system deletes the Proxy object, its destructor tries to find a
+      special method <CODE><B>__cleanup__</B></CODE> in the wrapped
+      object and calls it before continuing the destruction. This
+      allows the object to break the reference circles, e.g. by
+      performing a <CODE>self.__dict__.clear()</CODE> or something
+      similar.
+
+    <P>
+      Errors raised in <CODE>__cleanup__</CODE> calls are
+      ignored. Warnings are printed to stderr in case Python is run in
+      verbose mode (python -v) and tracebacks printed if run in debug
+      mode (python -d; note that printing tracebacks can sometimes
+      cause core dumps e.g. during finalization of the interpreter).
+
+    <A NAME="ImplicitAccess">
+
+    <H4>Implicit Access</H4>
+
+    <P>
+      On many occasions object attributes are not explicitly accessed
+      by e.g. using <CODE>object.attribute</CODE>, but indirect
+      through builtin functions or the interpreter itself. This poses
+      a problem to the Proxy, since there are different ways to reach
+      an objects implementation. For Python instances all important
+      hooks are reachable via <CODE>getattr()</CODE>, e.g. __len__ and
+      __add__. This is different for extension and builtin types: they
+      use a system of slots for providing access to their data.
+
+    <P>
+      As of version 0.2, Proxy objects also allow managing the type
+      slot interface for most applications. This means that you can
+      transparently use the Proxy to wrap builtin types such as lists
+      or tuples and use the Proxy just like you would use the
+      referenced builtin object itself.
+
+    <P>
+      Since Proxies are about access management, you can also restrict
+      access to these slots. For simplicity, the names you have to use
+      for different slots are exactly those you would define for
+      Python classes, e.g. the length slot is named '__len__', the
+      sequence and mapping get item slot are grouped under the name
+      '__getitem__'. These names have to be explicitly stated in the
+      interface list you pass to the Proxy constructor when creating
+      the proxy in case you do define an interface list. If you don't
+      specify such a list, no direct interface restriction is applied.
+
+    <P>
+      These type slot names are defined:
+    <P>
+    <DL>
+      <DT>Generic:
+      <DD>__call__, __hash__, __str__, __cmp__
+
+      <DT>Mapping:
+      <DD>__getitem__, __setitem__, __len__
+
+      <DT>Sequence:
+      <DD>__add__, __repeat__, __getitem__, __getslice__
+	__setitem__, __getitem__
+
+      <DT>Number: 
+      <DD>__add__, __sub__, __mul__, __div__
+      __mod__, __divmod__, __pow__, __neg__, __pos__, __abs__, __true__
+      __invert__, __lshift__, __rshift__, __and__, __str__, __or__, __int__
+      __long__, __float__
+	<BR> Note: number coercion does not yet
+	work, so most of these are currently useless !
+
+    </DL>
+    
+    <P>
+      Omissions currently are: __coerce__, __hex__ and
+      __oct__. __repr__ is handled by the Proxy object itself since it
+      would otherwise possibly expose address information about the
+      underlying object.
+	
+    <P>
+      Proxies also work transparently for Python instances. To achieve
+      this, another proxy-like object which is a real Python instance
+      is to be put in front of the Proxy object. Access to this
+      instance then gets translated into getattr-calls by the
+      interpreter, these calls are filtered through the Proxy and the
+      wrapped instance object's attribute then gets accessed in the
+      usual way. The result is passed back to the requesting object.
+
+    <A NAME="WeakRefs">
+
+    <H4>Weak References</H4>
+
+    <P>
+      Proxy objects work in two modes: keeping a strong or a weak reference
+      to the object. The <CODE>Proxy()</CODE> constructor returns a
+      Proxy object using a strong reference, the <CODE>WeakProxy()</CODE> constructor one
+      using a weak reference.
+
+    <P>
+      Weak references are called weak because they don't keep the
+      object alive by incrementing the reference count on the
+      referenced object. Since objects get garbage collected when this
+      reference count falls down to 0, a weak reference can become
+      invalid at any time. The mxProxy implementation raises a
+      <CODE>LostReferenceError</CODE> in case a weak reference to such
+      an object is used.
+
+    <P>
+      This may sound like a pretty flaky feature at first, but the
+      main pro argument for these weak references is that you can
+      build up circular references without having to fear about them
+      not being properly garbage collected. Using strong references
+      (which do increment the reference count and thus keep the object
+      alive as long as the reference is around) would produce cycles
+      in the referencing scheme which the Python garbage collection
+      (GC) mechanism cannot automatically break causing the cycle to
+      become unreachable from the Python namespaces: a severe memory
+      leak.
+
+    <P>
+      Weak references in mxProxy work by using a global dictionary of
+      all objects handled through weak reference Proxies. This
+      dictionary is checked prior to every action on a weak Proxy and
+      after its deletion. You can also force a check by calling the
+      <CODE>checkweakrefs()</CODE> anytime you like, e.g. at regular
+      intervals. 
+
+    <P>
+      The dictionary holds a strong reference to the object keeping it
+      alive until the next check is done. During the check all handled
+      objects are inspected to see if their reference count has gone
+      down to 1 (<I>phantom objects</I>: only the dictionary
+      references them). If this is the case, all weak proxies are
+      marked defunct and the object is removed from the dictionary
+      causing it to be garbage collected by the Python GC
+      mechanism. All subsequent actions on the weak references to this
+      object will then cause a <CODE>LostReferenceError</CODE>
+      exception to be raised.
+
+    </UL><!--CLASS="indent"-->
+
+    <A NAME="Interface">
+
+    <H3>Interface</H3>
+
+    <UL CLASS="indent">
+
+    <H4>Proxy Constructors</H4>
+
+    <UL CLASS="indent">
+
+	<P>
+	  These constructors are available in the package:
+
+	<P><DL>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		Proxy(object,interface=None,passobj=None)</FONT></CODE></DT>
+
+	  <DD>
+	    Returns a new Proxy instance that wraps object. 
+
+	    <P>
+	      interface can be given as sequence of strings and/or
+	      objects with __name__ attribute or as dictionary with
+	      string keys (only the keys are currently used) and tells
+	      the Proxy to only allow access to these names. If not
+	      given or None, no filtering is done by the Proxy (see
+	      above on how access is managed). 
+
+	    <P>
+	      passobj can be provided to retrieve the wrapped object
+	      from the Proxy at a later point using the
+	      <CODE>.proxy_object()</CODE> method.  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		InstanceProxy(object,interface=None,passobj=None)</FONT></CODE></DT>
+
+	  <DD>
+	    Same as above, except that a Python instance wraps the
+	    Proxy object. 
+
+	    <P>
+	      This makes the Proxy transparent for access to wrapped
+	      Python instances, meaning that the Proxy will act as if
+	      it were the wrapped object itself (with the added
+	      features mentioned above). </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		CachingInstanceProxy(object,interface=None,passobj=None)</FONT></CODE></DT>
+
+	  <DD>
+	    Same as InstanceProxy(), except that a read cache is used
+	    by the Proxy which caches all queried attributes in the
+	    Proxy instance's dictionary.
+
+	    <P>
+	      Note that this may introduce circular references if not
+	      used properly. Cached attributes are not looked up in
+	      the wrapped instance after the first lookup -- if their
+	      value changes, this won't be noticed by objects that
+	      access the object through this wrapper.  
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		SelectiveCachingInstanceProxy(object,interface=None,passobj=None)</FONT></CODE></DT>
+
+	  <DD>
+	    Same as InstanceProxy(), except that a read cache is used
+	    by the Proxy which caches certain queried attributes in
+	    the Proxy instance's dictionary depending on their type.
+
+	    <P>
+	      The cached types are defined by the
+	      <CODE>.proxy_cacheable_types</CODE> attribute. It
+	      defaults to only cache Python methods.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		MethodCachingProxy(object,interface=None,passobj=None)</FONT></CODE></DT>
+
+	  <DD>
+	    Alias for SelectiveCachingInstanceProxy().
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		ReadonlyInstanceProxy(object,interface=None,passobj=None)</FONT></CODE></DT>
+
+	  <DD>
+	    Same as InstanceProxy, except that write access will
+	    result in an <CODE>AccessError</CODE> being raised
+	    </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		ProxyFactory(Class,interface=None)</FONT></CODE></DT>
+
+	  <DD>
+	    Returns a factory object for producing Class instances
+	    that are automatically wrapped using Proxy-instances.
+
+	    <P>
+	      interface is passed to the Proxy constructor,
+	      pass-objects are not supported.  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		InstanceProxyFactory(Class,interface=None)</FONT></CODE></DT>
+
+	  <DD>
+	    Returns a factory object for producing Class instances
+	    that are automatically wrapped using
+	    InstanceProxy-instances.</DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		WeakProxy(object,interface=None,passobj=None)</FONT></CODE></DT>
+
+	  <DD>
+	    Returns a new weak referencing Proxy instance that points
+	    to object.
+
+	    <P>
+	      interface can be given as sequence of strings and/or
+	      objects with __name__ attribute or as dictionary with
+	      string keys (only the keys are currently used) and tells
+	      the Proxy to only allow access to these names. If not
+	      given or None, no filtering is done by the Proxy (see
+	      above on how access is managed). 
+
+	    <P>
+	      passobj can be provided to retrieve the wrapped object
+	      from the Proxy at a later point using the
+	      <CODE>.proxy_object()</CODE> method.  
+
+	    <P>
+	      For details on weak references and how they work, see
+	      the above discussion.
+	  
+	  </DD><P>
+
+	</DL>
+
+    </UL><!--CLASS="indent"-->
+
+    <H4>Proxy Instance Methods</H4>
+
+    <UL CLASS="indent">
+      
+	<P>
+	  A <TT>Proxy</TT> instance <CODE>proxy</CODE> defines these
+	  methods in addition to the ones available through restricted
+	  access to the wrapped object:
+
+	<P><DL>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		proxy_object(passobj)</FONT></CODE></DT>
+
+	  <DD>
+	    Returns the wrapped object provided the given passobj is
+	    identical to the one used for creating the Proxy.
+
+	    <P>
+	      Simple equality is not enough -- it has to be the same
+	      object.  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		proxy_getattr(name)</FONT></CODE></DT>
+
+	  <DD>
+	    Same as getattr(proxy,name).  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		proxy_setattr(name,value)</FONT></CODE></DT>
+
+	  <DD>
+	    Same as setattr(proxy,name,value). </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		proxy_defunct()</FONT></CODE></DT>
+
+	  <DD>
+	    Return 1 iff the referenced object has already been
+	    garbage collected. </DD><P>
+
+	</DL>
+
+	<P>
+	  Note that all attribute names starting with
+	  '<CODE>proxy_</CODE>' are interpreted as being Proxy
+	  attributes and are not passed to the wrapped object. Access
+	  to these attributes is <I>not</I> subject to the
+	  restrictions explained above.
+
+    </UL><!--CLASS="indent"-->
+
+    <H4>Proxy Instance Variables</H4>
+
+    <UL CLASS="indent">
+
+	<P>
+	  <TT>Proxy</TT> instances do not provide any instance
+	  variables themselves. They do provide restricted access to
+	  the variables of the wrapped object though.
+
+	<P>
+	  Note that all attribute names starting with
+	  '<CODE>proxy_</CODE>' are interpreted as being Proxy
+	  attributes and are not passed to the wrapped object. Also,
+	  access to these attributes is <I>not</I> subject to the
+	  restrictions explained above.
+
+    </UL><!--CLASS="indent"-->
+    
+    <H4>Functions</H4>
+
+    <UL CLASS="indent">
+
+	<P>
+	  These functions are available:
+
+	<P><DL>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		checkweakrefs()</FONT></CODE></DT>
+
+	  <DD>
+	    Calling this function causes the global dictionary used
+	    for managing weak references to be checked for phantom
+	    objects. If such objects are found, they are garbage
+	    collected during the call and weak referencing Proxies
+	    pointing to them are defunct.
+	    <P>
+	      Weak references cause the objects to stay alive until
+	      either a proxy is used on them (causing an exception), a
+	      proxy referencing them is deleted or this function is
+	      called. To ensure the timely garbage collection of the
+	      objects, call this function at regular intervals.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		initweakrefs()</FONT></CODE></DT>
+	  
+	  <DD>
+	    For internal use only:<BR> Initializes or reinitializes
+	    the weak reference implementation.  This first forces a
+	    finalization of the previous state if the implementation
+	    has already been used and then starts again with a clean
+	    weak reference dictionary.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		finalizeweakrefs()</FONT></CODE></DT>
+
+	  <DD>
+	    For internal use only:<BR> Forces finalization of the weak
+	    reference implementation. Subsequent usage of weak
+	    references will cause errors to be raised.
+	    <P>
+	      Calling this function after finalization is not an
+	      error.
+
+	  </DD><P>
+
+	</DL>
+
+    </UL><!--CLASS="indent"-->
+    
+    <H4>Constants</H4>
+
+    <UL CLASS="indent">
+
+	<P>
+	  These constants are available:
+
+	<P><DL>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		AccessError</FONT></CODE></DT>
+
+	  <DD>
+	    Exception object used for access specific errors that the
+	    module raises. It is a subclass of
+	    exceptions.AttributeError. </DD><P>
+
+	</DL>
+
+    </UL><!--CLASS="indent"-->
+
+    </UL><!--CLASS="indent"-->
+    
+    <A NAME="Examples">
+
+    <H3>Examples of Use</H3>
+
+    <UL CLASS="indent">
+
+	<P>
+	  Here is a very simple one:
+
+	<PRE><FONT COLOR="#000066">import Proxy
+
+class DataRecord:
+    a = 2
+    b = 3
+    # Make read-only:
+    def __public_setattr__(self,what,to):
+	  raise Proxy.AccessError,'read-only'
+    # Cleanup protocol
+    def __cleanup__(self):
+	  print 'cleaning up',self
+
+o = DataRecord()
+
+# Wrap the instance:
+p = Proxy.InstanceProxy(o,('a',))
+# Remove o from the accessible system:
+del o
+
+print 'Read p.a through Proxy:',p.a
+
+# This will cause an exception, because the object is read-only
+p.a = 3
+
+# This will cause an exception, because no access is given to .b
+print p.b
+
+# Clear all traces of the provious exceptions (they might contain
+# references to p) by issuing another one. Note that not doing
+# so will cause the following 'del p' to not destroy the final
+# reference to p... (don't ask me why).
+1/0
+
+# Deleting the Proxy will also delete the wrapped object, if there
+# is no other reference to it in the system. It will invoke
+# the __cleanup__ method in that case.
+del p
+
+# If you want to have the wrapping done automatically, you can use
+# the InstanceProxyFactory:
+DataRecord = Proxy.InstanceProxyFactory(DataRecord,('a',))
+
+# This gives the same behaviour...
+p = DataRecord()
+print p.a
+p.a = 3
+print p.b
+
+</FONT></PRE>
+
+	<P>
+	  More examples will eventually appear in the Examples
+	  subdirectory of the package.
+
+    </UL><!--CLASS="indent"-->
+
+    <A NAME="Structure">
+
+    <H3>Package Structure</H3>
+    
+    <UL CLASS="indent">
+
+	<PRE>
+[Proxy]
+       Doc/
+       Examples/
+       [mxProxy]
+       Proxy.py
+	</PRE>
+
+	<P>
+	  Entries enclosed in brackets are packages (i.e. they are
+	  directories that include a <TT>__init__.py</TT> file). Ones
+	  without brackets are just simple subdirectories that are not
+	  accessible via <CODE>import</CODE>.
+
+	<P>
+	  The package imports all symbols from the Proxy sub module
+	  which in turn imports the extension module, so you only need
+	  to '<CODE>import Proxy</CODE>' to start working.
+
+	<P>
+
+    </UL><!--CLASS="indent"-->
+
+    <A NAME="Support">
+
+    <H3>Support</H3>
+
+    <UL CLASS="indent">
+
+	<P>
+	  eGenix.com is providing commercial support for this
+	  package. If you are interested in receiving information
+	  about this service please see the <A
+	  HREF="http://www.egenix.com/files/python/eGenix-mx-Extensions.html#Support">eGenix.com
+	  Support Conditions</A>.
+
+    </UL><!--CLASS="indent"-->
+
+    <A NAME="Copyright">
+
+    <H3>Copyright &amp; License</H3>
+
+    <UL CLASS="indent">
+
+	<P>
+	  &copy; 1998-2000, Copyright by Marc-Andr&eacute; Lemburg;
+	  All Rights Reserved.  mailto: <A
+	  HREF="mailto:mal@lemburg.com">mal@lemburg.com</A>
+	<P>
+	  &copy; 2000-2001, Copyright by eGenix.com Software GmbH,
+	  Langenfeld, Germany; All Rights Reserved.  mailto: <A
+	  HREF="mailto:info@egenix.com">info@egenix.com</A>
+
+	<P>
+	  This software is covered by the <A
+	  HREF="mxLicense.html#Public"><B>eGenix.com Public
+	  License Agreement</B></A>. The text of the license is also
+	  included as file "LICENSE" in the package's main directory.
+
+	<P>
+	  <B> By downloading, copying, installing or otherwise using
+	  the software, you agree to be bound by the terms and
+	  conditions of the eGenix.com Public License
+	  Agreement. </B>
+
+    </UL><!--CLASS="indent"-->
+
+    <A NAME="History">
+
+    <H3>History & Future</H3>
+
+    <UL CLASS="indent">
+
+	<P>Things that still need to be done:
+
+	<P><UL>
+
+	    <LI> Get number coercion to work. This may not be possible
+	    in general due to deficiencies in Python internal coercion
+	    mechanism.
+
+	    <P><LI> Provide a callback hook for weak referencing
+	    proxies which gets called when the referenced object dies.
+
+	    <P><LI> Implement getattr-translators that map __XXX__
+	    style names to type slot calls.
+
+	    <P><LI> Make automatic method and function wrapping (and
+	    proxy object hiding) optional.
+
+	</UL>
+
+	<P>There were no significant changes between 2.0.0 and 2.0.3.
+
+	<P>Changes from <A HREF="mxProxy-0.2.0.zip">0.2.0</A> to 2.0.0:
+
+	<UL>
+
+	    <LI> Fixed a bug in the finalization of the weak
+	    reference implemenation. Thanks to Michael Muller for
+	    pointing me to this quirk. Finalization of the weak ref
+	    dict previously occurred in an atexit() function, but at
+	    this time, the Python interpreter is already gone, so
+	    __del__ hooks would cause a fatal error due to a missing
+	    thread state. The implementation now uses explicit
+	    function APIs to handle finalization at module cleanup
+	    time.
+
+	    <P><LI> Removed __weakref reference to the weak ref dict
+	    from the module interface.
+
+	    <P><LI> Added initweakrefs() and finalizeweakrefs().
+
+	    <P><LI> AccessError is now a subclass of
+	    exceptions.AttributeError to enhance integration with the
+	    getattr() protocol.
+
+	    <P><LI> Exceptions raised during .__cleanup__() are only
+	    reported in debug or verbose mode (python -v or -d).
+
+	    <P><LI> AccessErrors now contain the name of the attribute
+	    to which access was denied (in case the name is a string).
+
+	    <P><LI> <B>Moved</B> the package under a new top-level
+	    package 'mx'. It is part of the <I>eGenix.com mx BASE
+	    distribution</I>.
+
+	</UL>
+
+	<P>Changes from <A HREF="mxProxy-0.1.0.zip">0.1.0</A> to 0.2.0:
+
+	<UL>
+
+	    <LI>AccessError is a subclass of
+	    exceptions.StandardError.
+
+	    <P><LI>Fixed a bug where a proxy without interface would
+	    not wrap bound and unbound methods.
+
+	    <P><LI>Added CachingInstanceProxy.
+
+	    <P><LI>Added weak referencing mechanism.
+
+	    <P><LI>Added support for nearly all low level type slots.
+
+	</UL>
+
+	<P>
+
+	<P>
+	  Version 0.1.0 was the intial release.
+
+	<P>
+
+    </UL><!--CLASS="indent"-->
+
+    <HR WIDTH="100%">
+    <CENTER><FONT SIZE=-1>&copy; 1999, Copyright by Marc-Andr&eacute;
+    Lemburg; All Rights Reserved. mailto: <A
+    HREF="mailto:mal@lemburg.com?subject=mxProxy">mal@lemburg.com</A>
+    </FONT></CENTER>
+
+  </BODY>
+</HTML>

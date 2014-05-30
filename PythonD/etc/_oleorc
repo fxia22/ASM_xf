@@ -1,0 +1,8 @@
+# oleorc, customization for oleo spreadsheet
+
+# Use the a0 reference system.
+set-option a0
+
+# Set the status line at the bottom instead of top
+set-option status -1
+

@@ -1,0 +1,7 @@
+#! /bin/bash
+# Simple Fetchmail, bdecker 2004 http://members.lycos.co.uk/bdeck
+
+# Account for Digital Distribution Australia IMAP
+# DOS bidirectional isync only corrupts the server downloads old messages.
+
+isync -f dda

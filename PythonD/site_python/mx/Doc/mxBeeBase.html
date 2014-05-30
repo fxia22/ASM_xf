@@ -1,0 +1,1171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+    <TITLE>mxBeeBase - On-disk B+Tree Based Database Kit</TITLE>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+    <STYLE TYPE="text/css">
+      p { text-align: justify; }
+      ul.indent { }
+      body { }
+    </STYLE>
+</HEAD>
+
+  <BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+
+    <HR NOSHADE WIDTH="100%">
+    <H2>mxBeeBase - On-disk B+Tree Based Database Kit</H2>
+
+    <HR SIZE=1 NOSHADE WIDTH="100%">
+    <TABLE WIDTH="100%">
+      <TR>
+	<TD>
+	  <SMALL>
+	    Interface (
+	    <A HREF="#BeeDict">BeeDict</A> :
+	    <A HREF="#BeeStorage">BeeStorage</A> :
+	    <A HREF="#BeeIndex">BeeIndex</A> )
+	    <A HREF="#Examples">Examples</A> :
+	    <A HREF="#Structure">Structure</A> :
+	    <A HREF="#Support">Support</A> :
+            <A HREF="http://www.egenix.com/files/python/eGenix-mx-Extensions.html#Download-mxBASE"><B>Download</B></A> :
+	    <A HREF="#Copyright">Copyright &amp; License</A> :
+	    <A HREF="#History">History</A> :
+	    <A HREF="" TARGET="_top">Home</A>
+	</SMALL>
+	</TD>
+	<TD ALIGN=RIGHT VALIGN=TOP>
+	  <SMALL>
+	    <FONT COLOR="#FF0000">Version 2.0.2</FONT>
+	  </SMALL>
+	</TD>
+    </TABLE>
+    <HR SIZE=1 NOSHADE WIDTH="100%">
+
+    <H3>Introduction</H3>
+
+    <UL CLASS="indent">
+
+      <HR>
+
+	<P>
+	  <B>XXX This documentation is unfinished...</B> the software
+	  itself has been in use for quite a while, but the
+	  documentation still needs to be completed. For now, all I
+	  can offer you is to read the code which is well documented.
+
+	<HR>
+
+	<P>
+	  mxBeeBase is a high performance construction kit for disk
+	  based indexed databases. It offers components which you can
+	  plug together to easily build your own custom mid-sized
+	  databases (the current size limit is
+	  <CODE>sizeof(long)</CODE> which gives you an address range
+	  of around 2GB on 32-bit platforms).
+
+	<P>
+	  The two basic building blocks in mxBeeBase are
+	  <I>storage</I> and <I>index</I>. Storage is implemented as
+	  variable record length data storage with integrated data
+	  protection features, automatic data recovery and locking for
+	  multi process access. Indexes use a high performance
+	  optimized B+Tree implementation built on top of <A
+	  HREF="http://epaperpress.com/">Thomas
+	  Niemann</A>'s Cookbook B+Tree implementation.
+
+	<P>
+	  <U>Note:</U> Due to the file locking mechanism currently
+	  used in mxBeeBase, the package will only work on systems
+	  which support symbolic links, e.g. Windows does not support
+	  symbolic links and therefore parts of mxBeeBase don't work
+	  on that platform.
+
+    </UL><!--CLASS="indent"-->
+
+    <A NAME="BeeDict">
+
+    <H3>BeeDict Module</H3>
+
+    <UL CLASS="indent">
+
+	<P>
+	  The BeeDict module provides two high level on-disk
+	  dictionary implementations. The first (<I>BeeDict</I>) can
+	  work with arbitrary hashable key objects, while the second
+	  (<I>BeeStringDict</I>) uses limited sized strings as basis
+	  providing slightly better performance. Both variants need
+	  pickleable Python objects as keys and values.
+
+	<P>
+	  Data transfer to and from the dictionaries is done in the
+	  same way as for in-memory dictionaries, e.g. <CODE>d['key']
+	  = 1; print d['key']; del d['key]</CODE>, so usage should be
+	  transparent to Python programs using either in-memory or
+	  on-disk dictionaries. Not all dictionary methods are
+	  understood though.
+
+    <H4>BeeDict Objects</H4>
+
+    <UL CLASS="indent">
+
+	<P>
+	  BeeDict objects are on-disk dictionaries which use a
+	  hash-to-address index.  Both Keys and values must be
+	  pickleable and can have arbitrary size (keys shouldn't be
+	  too long though); keys have to be hashable.
+
+	<P>
+	  Hash collisions are treated by sequential reads of all
+	  records with the same hash value and testing for equality of
+	  keys. This can be expensive ! 
+
+	<P>
+	  BeeDicts use a BeeStorage.BeeKeyValueStorage instance as
+	  storage object and a BeeIndex.BeeIntegerIndex instance as
+	  index object.
+
+	<P>
+	  BeeDict objects are constructed using:
+
+	<P><DL>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		BeeDict(name,min_recordsize=0,readonly=0,recover=0,
+		autocommit=0,validate=0)</FONT></CODE></DT>
+
+	  <DD>
+	    Create an instance using <CODE>name</CODE> as basename for
+	    the data and index files. Two files will be created:
+	    name.dat and name.idx.
+
+	    <P>
+	      <CODE>min_recordsize</CODE> is passed to the BeeStorage
+	      as indicator of the minimum size for data
+	      records. <CODE>readonly</CODE> can be set to true to
+	      open the files in read-only mode, preventing any disk
+	      modifications.
+
+	    <P>
+	      To open the dictionary in recovery mode, pass a keyword
+	      <CODE>recover=1</CODE>. Then run <CODE>.recover()</CODE>
+	      and reopen using the normal settings. The
+	      <CODE>AutoRecover()</CODE> wrapper can take care of this
+	      action for you automatically.
+
+	    <P>
+	      If <CODE>autocommit</CODE> is true the cache control
+	      will do an automatic <CODE>.commit()</CODE> whenever the
+	      transaction log overflows.
+            
+	    <P>
+	      If <CODE>validate</CODE> is true, the dictionary will
+	      run a validation check after having successfully opened
+	      storage and index.  <CODE>RecreateIndexError</CODE> or
+	      <CODE>RecoverError</CODE> exceptions could be raised in
+	      case inconsistencies are found.
+
+	  </DD><P>
+
+	</DL>
+
+    </UL><!--CLASS="indent"-->
+
+    <H5>BeeDict Instance Methods</H5>
+
+    <UL CLASS="indent">
+      
+	<P>
+	  BeeDict objects have the following methods:
+
+	<P><DL>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		flush()</FONT></CODE></DT>
+
+	  <DD>
+	    Flush buffers to disk.
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		close()</FONT></CODE></DT>
+
+	  <DD>
+	    Flush buffers and close.
+	    <P>
+	      This does not issue a <CODE>.commit()</CODE>, so the
+	      current transaction is rolled back.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		commit()</FONT></CODE></DT>
+
+	  <DD>
+	    Commits all changes and starts a new transaction.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		rollback()</FONT></CODE></DT>
+
+	  <DD>
+	    Rolls back the current transaction. All changes are undone.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		changed()</FONT></CODE></DT>
+
+	  <DD>
+	    Return true in case the current transaction includes changes
+            to the database, false otherwise.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		has_key()</FONT></CODE></DT>
+
+	  <DD>
+	    Check if the dictionary has an item indexed by key.
+	    <P>
+	      Successfully found items are put in the cache for fast
+	      subsequent access.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		get(key,default=None)</FONT></CODE></DT>
+
+	  <DD>
+	    Get item indexed by key from the dictionary or default if
+	    no such item exists.
+	    <P>
+	      This first tries to read the item from cache and reverts
+	      to the disk storage if it is not found.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		cursor(key,default=None)</FONT></CODE></DT>
+
+	  <DD>
+	    Return a BeeDictCursor instance for the dictionary.
+	    <P>
+	      In case the key is not found, default is returned
+	      instead.
+	    <P>
+	      Note that cursors operate with the data on disk meaning
+	      that any uncommitted changes will not be seen by the
+	      cursor.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		garbage()</FONT></CODE></DT>
+
+	  <DD>
+	    Determine the amount of garbage in bytes that has accumulated
+            in the storage file.
+	    <P>
+	      This amount would be freed if .collect() were run.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		collect()</FONT></CODE></DT>
+
+	  <DD>
+	    Run the storage garbage collector.
+	    <P>
+	      Storage collection can only be done for writeable
+	      dictionaries and then only if the current transaction
+	      does not contain any pending changes.
+	    <P>
+	      This can take a while depending on the size of the
+	      dictionary.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		recover()</FONT></CODE></DT>
+
+	  <DD>
+	    Recover all valid records and recreate the index.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		keys()</FONT></CODE></DT>
+
+	  <DD>
+	    Return a list of keys.
+	    <P>
+	      The method does not load any data into the cache, but
+	      does take notice of uncommitted changes.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		values()</FONT></CODE></DT>
+
+	  <DD>
+	    Return a list of values.
+	    <P>
+	      The method does not load any data into the cache, but
+	      does take notice of uncommitted changes.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		items()</FONT></CODE></DT>
+
+	  <DD>
+	    Return a list of items.
+	    <P>
+	      The method does not load any data into the cache, but
+	      does take notice of uncommitted changes.
+
+	  </DD><P>
+
+	</DL>
+
+    </UL><!--CLASS="indent"-->
+
+    <H5>BeeDict Instance Attributes</H5>
+
+    <UL CLASS="indent">
+      
+	<P>
+	  BeeDict objects have the following read-only attributes:
+
+	<P><DL>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		name</FONT></CODE></DT>
+
+	  <DD>
+	    Basenname of the dictionary. The implementation uses two
+	    files for the on-disk representation: name.dat and name.idx.
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		closed</FONT></CODE></DT>
+
+	  <DD>
+	    Closed flag.
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		readonly</FONT></CODE></DT>
+
+	  <DD>
+	    Read-only flag.
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		autocommit</FONT></CODE></DT>
+
+	  <DD>
+	    Autocommit flag.
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		FirstKey</FONT></CODE></DT>
+
+	  <DD>
+	    Special key object useable to represent the first key in
+	    the (sorted) B+Tree index.
+	    
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		LastKey</FONT></CODE></DT>
+
+	  <DD>
+	    Special key object useable to represent the last key in
+	    the (sorted) B+Tree index.
+	    
+	  </DD><P>
+
+	</DL>
+
+    </UL><!--CLASS="indent"-->
+
+    <H4>BeeDictCursor Objects</H4>
+
+    <UL CLASS="indent">
+
+	<P>
+	  BeeDickCursor objects are intended to iterate over the
+	  database one item at a time without the need to read all
+	  keys. You can then read/write to the current cursor position
+	  and thus modify the dictionary in place.
+
+	<P>
+	  Note that modifying the targetted dictionary while using a
+	  cursor can cause the cursor to skip new entries or fail due
+	  to deleted items. Especially deleting the key to which the
+	  cursor currently points can cause errors to be raised.  In
+	  all other cases, the cursor will be repositioned.
+
+	<P>
+	  BeeDictCursor objects are constructed using the BeeDict
+	  <CODE>.cursor()</CODE> method.
+
+    </UL><!--CLASS="indent"-->
+
+    <H5>BeeDictCursor Instance Methods</H5>
+
+    <UL CLASS="indent">
+      
+	<P>
+	  BeeDictCursor objects have the following methods:
+
+	<P><DL>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		position(key,value=None)</FONT></CODE></DT>
+
+	  <DD>
+	    Position the index cursor to index[key]. If value is given,
+            index[key] == value is assured.
+	    <P>
+	      key may also be FirstKey or LastKey (in which case value
+	      has to be None).
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		next()</FONT></CODE></DT>
+
+	  <DD>
+	    Moves to the next entry in the dictionary.
+	    <P>
+	      Returns true on success, false if the end-of-data has
+	      been reached.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		prev()</FONT></CODE></DT>
+
+	  <DD>
+	    Moves to the previous entry in the dictionary.
+	    <P>
+	      Returns true on success, false if the end-of-data has
+	      been reached.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		read()</FONT></CODE></DT>
+
+	  <DD>
+	    Reads the object from the dict to which the cursor
+            currently points.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		read_key()</FONT></CODE></DT>
+
+	  <DD>
+	    Reads the key object from the dict to which the cursor
+	    currently points.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		write()</FONT></CODE></DT>
+
+	  <DD>
+	    Writes the object to the dict under the key to which
+            the cursor currently points.
+	    <P>
+	      The new data is not written to disk until the
+	      dictionary's current transaction is committed.
+
+	  </DD><P>
+
+	</DL>
+
+    </UL><!--CLASS="indent"-->
+
+    <H5>BeeDictCursor Instance Attributes</H5>
+
+    <UL CLASS="indent">
+      
+	<P>
+	  BeeDictCursor don't have any useful attributes. Use the instance
+	  methods to query the key and value objects.
+
+    </UL><!--CLASS="indent"-->
+
+    <H4>BeeStringDict Objects</H4>
+
+    <UL CLASS="indent">
+
+	<P>
+	  BeeStringDict objects are on-disk dictionaries which use a
+	  limited size string to address index.  Values must be
+	  pickleable and can have arbitrary size.
+
+	<P>
+	  Since hash collisions cannot occur this dictionary type may
+	  have some performance advantages over the standard BeeDict
+	  dictionary.
+
+	<P>
+	  BeeStringDict objects are constructed using:
+
+	<P><DL>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		BeeStringDict(name,keysize=10,min_recordsize=0,readonly=0,
+		recover=0,autocommit=0,validate=0)</FONT></CODE></DT>
+
+	  <DD>
+	    Create an instance using <CODE>name</CODE> as basename for
+	    the data and index files. Two files will be created:
+	    name.dat and name.idx.
+
+	    <P>
+	      <CODE>keysize</CODE> gives the maximal size of the
+	      strings used as index keys. <CODE>min_recordsize</CODE>
+	      is passed to the BeeStorage as indicator of the minimum
+	      size for data records. <CODE>readonly</CODE> can be set
+	      to true to open the files in read-only mode, preventing
+	      any disk modifications.
+
+	    <P>
+	      To open the dictionary in recovery mode, pass a keyword
+	      <CODE>recover=1</CODE>. Then run <CODE>.recover()</CODE>
+	      and reopen using the normal settings. The
+	      <CODE>AutoRecover()</CODE> wrapper can take care of this
+	      action for you automatically.
+
+	    <P>
+	      If <CODE>autocommit</CODE> is true the cache control
+	      will do an automatic <CODE>.commit()</CODE> whenever the
+	      transaction log overflows.
+            
+	    <P>
+	      If <CODE>validate</CODE> is true, the dictionary will
+	      run a validation check after having successfully opened
+	      storage and index.  <CODE>RecreateIndexError</CODE> or
+	      <CODE>RecoverError</CODE> exceptions could be raised in
+	      case inconsistencies are found.
+
+	    <P>
+	      Note that the keysize is currently not stored in the
+	      dictionary itself -- you'll have to store this
+	      information in some other form. This may change in
+	      future versions.
+
+	  </DD><P>
+
+	</DL>
+
+    </UL><!--CLASS="indent"-->
+
+    <H5>BeeStringDict Instance Methods</H5>
+
+    <UL CLASS="indent">
+      
+	<P>
+	  BeeStringDict objects have the following methods:
+
+	<P><DL>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		commit()</FONT></CODE></DT>
+
+	  <DD>
+	    Commits all changes and starts a new transaction.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		rollback()</FONT></CODE></DT>
+
+	  <DD>
+	    Rolls back the current transaction. All changes are undone.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		changed()</FONT></CODE></DT>
+
+	  <DD>
+	    Return true in case the current transaction includes changes
+            to the database, false otherwise.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		has_key()</FONT></CODE></DT>
+
+	  <DD>
+	    Check if the dictionary has an item indexed by key.
+	    <P>
+	      Successfully found items are put in the cache for fast
+	      subsequent access.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		get(key,default=None)</FONT></CODE></DT>
+
+	  <DD>
+	    Get item indexed by key from the dictionary or default if
+	    no such item exists.
+	    <P>
+	      This first tries to read the item from cache and reverts
+	      to the disk storage if it is not found.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		cursor(key,default=None)</FONT></CODE></DT>
+
+	  <DD>
+	    Return a BeeStringDictCursor instance for the dictionary.
+	    <P>
+	      In case the key is not found, default is returned
+	      instead.
+	    <P>
+	      Note that cursors operate with the data on disk meaning
+	      that any uncommitted changes will not be seen by the
+	      cursor.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		garbage()</FONT></CODE></DT>
+
+	  <DD>
+	    Determine the amount of garbage in bytes that has accumulated
+            in the storage file.
+	    <P>
+	      This amount would be freed if .collect() were run.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		collect()</FONT></CODE></DT>
+
+	  <DD>
+	    Run the storage garbage collector.
+	    <P>
+	      Storage collection can only be done for writeable
+	      dictionaries and then only if the current transaction
+	      does not contain any pending changes.
+	    <P>
+	      This can take a while depending on the size of the
+	      dictionary.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		recover()</FONT></CODE></DT>
+
+	  <DD>
+	    Recover all valid records and recreate the index.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		keys()</FONT></CODE></DT>
+
+	  <DD>
+	    Return a list of keys.
+	    <P>
+	      The method will raise an error if there are uncommitted
+	      changes pending. Output is sorted ascending according to
+	      keys.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		values()</FONT></CODE></DT>
+
+	  <DD>
+	    Return a list of values.
+	    <P>
+	      The method will raise an error if there are uncommitted
+	      changes pending. Output is sorted ascending according to
+	      keys.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		items()</FONT></CODE></DT>
+
+	  <DD>
+	    Return a list of items.
+	    <P>
+	      The method will raise an error if there are uncommitted
+	      changes pending. Output is sorted ascending according to
+	      keys.
+
+	  </DD><P>
+
+	</DL>
+
+    </UL><!--CLASS="indent"-->
+
+    <H5>BeeStringDict Instance Attributes</H5>
+
+    <UL CLASS="indent">
+      
+	<P>
+	  BeeDict objects have the following read-only attributes:
+
+	<P><DL>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		name</FONT></CODE></DT>
+
+	  <DD>
+	    Basenname of the dictionary. The implementation uses two
+	    files for the on-disk representation: name.dat and name.idx.
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		closed</FONT></CODE></DT>
+
+	  <DD>
+	    Closed flag.
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		readonly</FONT></CODE></DT>
+
+	  <DD>
+	    Read-only flag.
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		autocommit</FONT></CODE></DT>
+
+	  <DD>
+	    Autocommit flag.
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		FirstKey</FONT></CODE></DT>
+
+	  <DD>
+	    Special key object useable to represent the first key in
+	    the (sorted) B+Tree index.
+	    
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		LastKey</FONT></CODE></DT>
+
+	  <DD>
+	    Special key object useable to represent the last key in
+	    the (sorted) B+Tree index.
+	    
+	  </DD><P>
+
+	</DL>
+
+    </UL><!--CLASS="indent"-->
+
+    <H4>BeeStringDictCursor Objects</H4>
+
+    <UL CLASS="indent">
+
+	<P>
+	  BeeDickCursor objects are intended to iterate over the
+	  database one item at a time without the need to read all
+	  keys. You can then read/write to the current cursor position
+	  and thus modify the dictionary in place.
+
+	<P>
+	  Note that modifying the targetted dictionary while using a
+	  cursor can cause the cursor to skip new entries or fail due
+	  to deleted items. Especially deleting the key to which the
+	  cursor currently points can cause errors to be raised.  In
+	  all other cases, the cursor will be repositioned.
+
+	<P>
+	  BeeStringDictCursor objects are constructed using the BeeStringDict
+	  <CODE>.cursor()</CODE> method.
+
+    </UL><!--CLASS="indent"-->
+
+    <H5>BeeStringDictCursor Instance Methods</H5>
+
+    <UL CLASS="indent">
+      
+	<P>
+	  BeeStringDictCursor objects have the following methods:
+
+	<P><DL>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		position(key,value=None)</FONT></CODE></DT>
+
+	  <DD>
+	    Position the index cursor to index[key]. If value is given,
+            index[key] == value is assured.
+	    <P>
+	      key may also be FirstKey or LastKey (in which case value
+	      has to be None).
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		next()</FONT></CODE></DT>
+
+	  <DD>
+	    Moves to the next entry in the dictionary.
+	    <P>
+	      Returns true on success, false if the end-of-data has
+	      been reached.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		prev()</FONT></CODE></DT>
+
+	  <DD>
+	    Moves to the previous entry in the dictionary.
+	    <P>
+	      Returns true on success, false if the end-of-data has
+	      been reached.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		read()</FONT></CODE></DT>
+
+	  <DD>
+	    Reads the object from the dict to which the cursor
+            currently points.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		read_key()</FONT></CODE></DT>
+
+	  <DD>
+	    Reads the key object from the dict to which the cursor
+	    currently points.
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		write()</FONT></CODE></DT>
+
+	  <DD>
+	    Writes the object to the dict under the key to which
+            the cursor currently points.
+	    <P>
+	      The new data is not written to disk until the
+	      dictionary's current transaction is committed.
+
+	  </DD><P>
+
+	</DL>
+
+    </UL><!--CLASS="indent"-->
+
+    <H5>BeeStringDictCursor Instance Attributes</H5>
+
+    <UL CLASS="indent">
+      
+	<P>
+	  BeeStringDictCursor objects have the following read-only
+	  attributes:
+
+	<P><DL>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		key</FONT></CODE></DT>
+
+	  <DD>
+	    Key string which dereferences to the current cursor position.
+	  </DD><P>
+
+	</DL>
+
+    </UL><!--CLASS="indent"-->
+
+    <H4>Functions</H4>
+
+    <UL CLASS="indent">
+
+	<P>
+	  These functions are available:
+
+	<P><DL>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		AutoRecover(Class,*args,**kws)</FONT></CODE></DT>
+
+	  <DD>
+	    Wrapper that can be used around the dictionary
+	    constructors to provide automatic recovery whenever needed
+	    (if possible).
+	    <P>
+	      Example: <CODE>diskdict = AutoRecover(BeeDict.BeeDict,
+	      'test')</CODE>
+
+	  </DD><P>
+
+	</DL>
+
+    </UL><!--CLASS="indent"-->
+    
+    <H4>Constants</H4>
+
+    <UL CLASS="indent">
+
+	<P>
+	  These constants are available:
+
+	<P><DL>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		Error</FONT></CODE></DT>
+
+	  <DD>
+	    Baseclass for errors related to this module. It is a
+	    subclass of exceptions.StandardError. </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		RecreateIndexError</FONT></CODE></DT>
+
+	  <DD>
+	    This error is raised in case the index for a dictionary
+	    was not found and/or needs to be recreated by running
+	    recovery. It is a subclass of Error. </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		RecoverError</FONT></CODE></DT>
+
+	  <DD>
+	    This error is raised in case the storage for a dictionary
+	    was found to be in an inconsistent state. It is a subclass
+	    of Error. </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		FirstKey</FONT></CODE></DT>
+
+	  <DD>
+	    Special index key object representing the key of the first
+	    entry in the index (B+Tree's sort their data).
+
+	  </DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		LastKey</FONT></CODE></DT>
+
+	  <DD>
+	    Special index key object representing the key of the last
+	    entry in the index (B+Tree's sort their data).
+
+	  </DD><P>
+
+	</DL>
+
+    </UL><!--CLASS="indent"-->
+
+    </UL><!--CLASS="indent"-->
+    
+    <A NAME="BeeStorage"></A>
+
+    <H3>BeeStorage Module</H3>
+
+    <UL CLASS="indent">
+
+	<P>
+	  XXX Not yet documented. Please refer to the source code.
+
+    </UL><!--CLASS="indent"-->
+    
+    <A NAME="BeeIndex"></A>
+
+    <H3>BeeIndex Module</H3>
+
+    <UL CLASS="indent">
+
+	<P>
+	  XXX Not yet documented. Please refer to the source code.
+
+    </UL><!--CLASS="indent"-->
+    
+    <A NAME="Examples"></A>
+
+    <H3>Examples of Use</H3>
+
+    <UL CLASS="indent">
+
+	<P>
+	  Here is a very simple one:
+
+	<PRE><FONT COLOR="#000066">from mx import BeeBase
+
+#...XXX not written yet...
+
+</FONT></PRE>
+
+	<P>
+	  More examples will eventually appear in the Examples
+	  subdirectory of the package.
+
+    </UL><!--CLASS="indent"-->
+
+    <A NAME="Structure">
+
+    <H3>Package Structure</H3>
+    
+    <UL CLASS="indent">
+
+	<PRE>
+[BeeBase]
+       Doc/
+       [mxBeeBase]
+              test.py
+       BeeBase.py
+       BeeDict.py
+       BeeIndex.py
+       BeeStorage.py
+       showBeeDict.py
+ 	</PRE>
+
+	<P>
+	  Entries enclosed in brackets are packages (i.e. they are
+	  directories that include a <TT>__init__.py</TT> file). Ones
+	  without brackets are just simple subdirectories that are not
+	  accessible via <CODE>import</CODE>.
+
+	<P>
+	  The package imports all symbols from the BeeBase sub module
+	  which in turn imports the extension module, so you only need
+	  to '<CODE>import BeeBase</CODE>' to start working.
+
+	<P>
+
+    </UL><!--CLASS="indent"-->
+
+    <A NAME="Support">
+
+    <H3>Support</H3>
+
+    <UL CLASS="indent">
+
+	<P>
+	  eGenix.com is providing commercial support for this
+	  package. If you are interested in receiving information
+	  about this service please see the <A
+	  HREF="http://www.egenix.com/files/python/eGenix-mx-Extensions.html#Support">eGenix.com
+	  Support Conditions</A>.
+
+    </UL><!--CLASS="indent"-->
+
+    <A NAME="Copyright">
+
+    <H3>Copyright &amp; License</H3>
+
+    <UL CLASS="indent">
+
+	<P>
+	  &copy; 1999-2000, Copyright by Marc-Andr&eacute; Lemburg;
+	  All Rights Reserved.  mailto: <A
+	  HREF="mailto:mal@lemburg.com">mal@lemburg.com</A>
+	<P>
+	  &copy; 2000-2001, Copyright by eGenix.com Software GmbH,
+	  Langenfeld, Germany; All Rights Reserved.  mailto: <A
+	  HREF="mailto:info@egenix.com">info@egenix.com</A>
+
+	<P>
+	  This software is covered by the <A
+	  HREF="mxLicense.html#Public"><B>eGenix.com Public
+	  License Agreement</B></A>. The text of the license is also
+	  included as file "LICENSE" in the package's main directory.
+
+	<P>
+	  <B> By downloading, copying, installing or otherwise using
+	  the software, you agree to be bound by the terms and
+	  conditions of the eGenix.com Public License
+	  Agreement. </B>
+
+	<P>
+	  Parts of this package are based on an ANSI C implementation
+    	  of a B+Tree implementation written by Thomas Nieman,
+    	  Portland, Oregon.  The files in question are btr.c and btr.h
+    	  which were heavily modified for the purpose of inclusion in
+    	  this package by the above author.
+
+	<P>
+	  The original files were extracted from btr.c -- an ANSI C
+    	  implementation included in the source code distribution of
+
+	<PRE>
+        SORTING AND SEARCHING ALGORITHMS: A COOKBOOK
+
+	by THOMAS NIEMANN Portland, Oregon 
+	home: <A HREF="http://epaperpress.com/">http://epaperpress.com/</A>
+	</PRE>
+    
+	<P>
+	  From the cookbook:
+	<BLOCKQUOTE>
+	  Permission to reproduce this document, in whole or in part,
+    	  is given provided the original web site listed below is
+    	  referenced, and no additional restrictions apply. Source
+    	  code, when part of a software project, may be used freely
+    	  without reference to the author.
+	</BLOCKQUOTE>
+	  
+
+    </UL><!--CLASS="indent"-->
+
+    <A NAME="History">
+
+    <H3>History & Future</H3>
+
+    <UL CLASS="indent">
+
+	<P>Things that still need to be done:
+
+	<P><UL>
+
+	    <LI> Provide more examples.
+
+	    <P><LI> Test the package some more.
+
+	    <P><LI> Write more documentation.
+
+	</UL>
+
+	<P>
+	  There were no significant changes between 2.0.0 and 2.0.3.
+
+	<P>
+	  Version 2.0.0 was the intial release. 
+
+	<P>
+
+    </UL><!--CLASS="indent"-->
+
+    <HR WIDTH="100%">
+    <CENTER><FONT SIZE=-1>
+        <P>
+          &copy; 1998-2000, Copyright by Marc-Andr&eacute; Lemburg;
+          All Rights Reserved.  mailto: <A
+          HREF="mailto:mal@lemburg.com">mal@lemburg.com</A>
+        <P>
+          &copy; 2000-2001, Copyright by eGenix.com Software GmbH; 
+          All Rights Reserved.  mailto: <A
+          HREF="mailto:info@egenix.com">info@egenix.com</A>
+    </FONT></CENTER>
+    </FONT></CENTER>
+
+  </BODY>
+</HTML>

@@ -1,0 +1,39 @@
+# sample _inputrc for bash's readline
+$if BASH
+# variables
+set bell-style on
+set visible-stats on
+
+#set meta-flag on
+#set convert-meta off
+#set output-meta on
+
+#
+# Sample Key Bindings
+# A full list of keys available for binding is in bindings.txt
+# 
+
+"\e[1~": Home
+"\e[2~": Insert
+"\e[3~": Delete
+"\e[5~": history-search-backward
+"\e[6~": history-search-forward
+"\e[3~": delete-char
+"\e[39~": backward-word
+"\e[40~": forward-word
+"\e[45~": beginning-of-history
+"\e[46~": end-of-history
+
+"\e[[A": "Function Key 1"
+"\e[[B": "Function Key 2"
+"\e[[C": "Function Key 3"
+"\e[[26~": "SHIFT + Function Key 1"
+"\e[[27~": "SHIFT + Function Key 2"
+"\e[[28~": "SHIFT + Function Key 3"
+"\e[[29~": "CTRL + Function Key 1"
+"\e[[47~": "CTRL + Function Key 2"
+"\e[[48~": "CTRL + Function Key 3"
+"\e[[69~": "ALT + Function Key 1"
+"\e[[70~": "ALT + Function Key 2"
+"\e[[71~": "ALT + Function Key 3"
+$endif

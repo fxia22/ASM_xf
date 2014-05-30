@@ -1,0 +1,5 @@
+# D-DIRECT Queueless driver configuration for DOS
+#
+# Use bash because the redirect might give DOS problems
+#
+bash -c "cat $OPTIONS $* > $DEVICE"

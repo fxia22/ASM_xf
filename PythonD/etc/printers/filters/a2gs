@@ -1,0 +1,38 @@
+#! bash
+# D-DIRECT Queueless driver configuration for DOS
+#
+# This driver has been modified to simply return PS output to stdout.
+
+
+#A2PS uses uppercase papersize, but ghostscript uses lowercase
+export PAPER=`echo $PAPER | tr '[a-z]' '[A-Z]'`
+export GSPAPER=`echo $PAPER | tr '[A-Z]' '[a-z]'`
+
+
+
+# Tempfile method - safer
+export TEMPFILE=/dev/env/DJDIR/tmp/`date +%H%M%S`.ps
+
+# a2ps will make the input file unreadable to ghostscript if it is a ps!
+if [ `echo $1 | tail -c 5` != ".ps" ]
+then
+    a2ps -K --medium=$PAPER --output=$TEMPFILE $* 2>/dev/null
+else
+    cp $1 $TEMPFILE
+fi
+
+
+gs  -q -sPAPERSIZE=$GSPAPER -dNOPAUSE -dSAFER -dNOBIND \
+-sDEVICE=$DRIVER $OPTIONS -sOutputFile=$DEVICE $TEMPFILE -c quit
+rm $TEMPFILE
+
+
+
+# Pipe method - Piping to ghostscript may create problems under DOS (buggy)
+# a2ps --medium=$PAPER --output=- $* | gs -q -sPAPERSIZE=$GSPAPER -dNOPAUSE \
+# -dSAFER -dNOBIND -sDEVICE=$DRIVER -sOutputFile=$DEVICE
+
+# note that '-c quit' causes error-carrying piped jobs to terminate
+
+
+export GSPAPER=

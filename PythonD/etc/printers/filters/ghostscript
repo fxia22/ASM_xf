@@ -1,0 +1,9 @@
+#! bash
+# D-DIRECT Queueless driver configuration for DOS
+#
+
+#Ghostscript uses lowercase papersize
+export PAPER=`echo $PAPER | tr '[A-Z]' '[a-z]'`
+
+gs  -q -sPAPERSIZE=$PAPER -dNOPAUSE -dSAFER -dNOBIND -sDEVICE=$DRIVER\
+ $OPTIONS -sOutputFile=$DEVICE $* -c quit

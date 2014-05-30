@@ -1,0 +1,101 @@
+# Global configuration section
+#   Values here are used as defaults for any following Mailbox section that
+#   doesn't specify it.
+
+# SSL server certificate file
+#CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+# by default, expunge deleted messages (same as -e on command line)
+Expunge yes
+
+# by default delete messages in the local mailbox which no longer exist
+# on the server
+Delete no
+
+# copy deleted messages to the IMAP "Trash" folder
+CopyDeletedTo "Trash"
+
+# my default username, if different from the local username
+User bdecker
+#Port	143
+Box	Inbox
+# don't download messages larger than 8 MB
+# This is where the "cannot download because file too big" error originates
+MaxSize	80000000
+
+###
+### work flow mailbox
+###
+
+Mailbox /dev/env/DJDIR/var/mail/flow_imap
+Host	flowcom01
+Box     INBOX
+Pass	regensburg
+# define a shortcut so I can just use "isync flow" from the command line
+Alias	flow
+# Permanently delete files from both local and IMAP directories.
+Expunge yes
+
+###
+### work DDA mailbox
+###
+
+Mailbox /dev/env/DJDIR/var/mail/dda_imap
+Host	dda-sbs1
+Box     INBOX
+User	bend
+Pass	regensburg
+# define a shortcut so I can just use "isync flow" from the command line
+Alias	dda
+# Permanently delete files from both local and IMAP directories.
+Expunge yes
+
+###
+### david's mailbox
+###
+
+Mailbox /dev/env/DJDIR/var/mail/flow_dtaylor
+Host	flowcom01
+Box     INBOX
+User	dtaylor
+Pass	trustno1
+# define a shortcut so I can just use "isync flow" from the command line
+Alias	dtaylor
+# Permanently delete files from both local and IMAP directories.
+Expunge yes
+
+###
+### work phone list
+###
+
+#Mailbox /dev/env/DJDIR/var/mail/flow_phone
+#Host	flow01
+#Box     "Public Folders/Phone List"
+#Pass	regensburg
+# define a shortcut so I can just use "isync flow" from the command line
+#Alias	flow-phone
+# delete old phone lists from local machine
+#Delete yes
+# Permanently delete files from both local and IMAP directories.
+#Expunge no
+
+
+###
+### Temporary mailbox
+###
+
+#Mailbox /dev/env/DJDIR/var/mail/temp
+#Host    flow01
+# use a non-default port for this connection
+#Port 6789
+#Alias personal
+
+
+###
+### Remote mailbox over a SSH tunnel
+###
+
+#Mailbox /home/me/Mail/remote
+#Host host.remote.com
+#Tunnel "ssh -q host.remote.com /usr/sbin/imapd"
+#Alias remote

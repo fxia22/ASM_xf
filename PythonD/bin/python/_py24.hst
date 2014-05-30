@@ -1,0 +1,351 @@
+import sys, os
+os.path
+sys.path
+import sha
+import imaging
+import _imaging
+import ephem
+import cjaro
+import sqlite
+import threeds
+import threeDS
+import _ctypes
+import _crack
+import crypt
+import termios
+import signal
+import md5
+import timing
+im port _curses
+import _curses
+import _curses_panel
+import termios
+import _curses_panel
+import _bsddb
+import sys
+sys.platform
+from _bsddb import __version__
+__version__
+import LParser
+import Scientific_netcdf
+import Scientific_mpi
+import msvcrt
+msvcrt.
+import os
+os.listdir("/tmp")
+os.listdir("/dev/env/DJDIR/tmp")
+import zipfile
+zipfile.ZipInfo
+zipfile.ZipFile
+zipfile.PyZipfile
+zipfile.PyZipFile
+import locale
+import time
+from datetime import date as datetime_date
+import _strptime
+ptime = _strptime.LocaleTime()
+ptime
+strptime.strptime(mytime)
+_strptime.strptime(mytime)
+_strptime.strptime(ptime)
+time_tuple=time.localtime()
+time_tuple
+format_string = "%Y %m %d %H %M %S %w %Z"
+time.strftime(format_string, format_string)
+time.strftime(format_string, time_tuple)
+time_tuple
+time.strftime(format_string)
+time.strftime(format_string, time.localtime())
+import time
+format_string = "%Y %m %d %H %M %S %w %Z"
+time.strftime(format_string, time.localtime())
+time_tuple=time.localtime()
+time_tuple
+format_string = "%Y %m %d %H %M %S %w"
+time.strftime(format_string, time.localtime())
+import time
+format_string = "%Y %m %d %H %M %S %w"
+time.strftime(format_string, time.localtime())
+format_string = "%Y %m %d %H %M %S %w %Z"
+time.strftime(format_string, time.localtime())
+time.tzname
+import time
+time.tzname
+import time
+time.tzset()
+time.strftime(format_string, time.localtime())
+time_tuple=time.localtime()
+time.tzname
+time.tzset('AU')
+import os
+os.getenv('TZ')
+import time
+time.tzset()
+time.tzname
+import time
+time.tzname
+time_tuple=time.localtime()
+format_string = "%Y %m %d %H %M %S %w %Z"
+time_tuple=time.localtime()
+time.strftime(format_string, time.localtime())
+format_string = "%Y %m %d %H %M %S %w %X %p"
+time.strftime(format_string, time.localtime())
+format_string = "%Z"
+time.strftime(format_string, time.localtime())
+import posix
+posix.startfile("D:\\D\\XML\\system.xml")
+posix.startfile("D:/D/XML/system.xml")
+import posix
+posix.startfile("D:\D\XML\system.xml")
+posix.startfile("D:\\\D\\\XML\\\system.xml")
+posix.startfile("/dev/d/xml/system.xml")
+import posix
+posix.startfile("/dev/d/xml/system.xml")
+format_string = "%Y %m %d %H %M %S %w %X %p"
+import time
+time_tuple=time.localtime()
+time.strftime(format_string, time.localtime())
+time.tzname
+import time
+time.tzname
+format_string = "%Y %m %d %H %M %S %w %X %p"
+time_tuple=time.localtime()
+time.strftime(format_string, time.localtime())
+format_string = "%Y %m %d %H %M %S %w %X %Z"
+time.strftime(format_string, time.localtime())
+import time
+time.strftime(format_string, time.localtime())
+import time
+format_string = "%Y %m %d %H %M %S %w %X %Z"
+time.strftime(format_string, time.localtime())
+import os
+os.getenv("TZ")
+import time
+format_string = "%Y %m %d %H %M %S %w %X %Z"
+time.strftime(format_string, time.localtime())
+import time
+time.strftime(format_string, time.localtime())
+format_string = "%Y %m %d %H %M %S %w %X %Z"
+time.strftime(format_string, time.localtime())
+import sys
+assert
+test
+try:
+ assert 1 = 2
+ assert 1 == 2
+ assert (1 == 2)
+try:
+ assert 1 == 2
+except:
+ print "no"
+import ode
+import sys
+sys.path
+import os
+os.getenv("PYTHONPATH")
+import sys
+sys.path
+import ode
+ode.
+import imageop
+imageop
+import socket
+#create an INET, STREAMing socket
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+#now connect to the web server on port 80 
+# - the normal http port
+s.connect(("www.mcmillan-inc.com", 80))
+s.setblocking(0)
+s.shutdown()
+s.shutdown(0)
+del s
+import sys
+import os
+import shutil
+import tempfile
+import unittest
+import tarfile
+from test import test_support
+# Check for our compression modules.
+try:
+    import gzip
+    gzip.GzipFile
+except (ImportError, AttributeError):
+    gzip = None
+try:
+    import bz2
+except ImportError:
+    bz2 = None
+def path(path):
+try:
+    import gzip
+    gzip.GzipFile
+try:
+import gzip
+import bz2
+testtar = path("testtar.tar")
+tempdir = os.path.join(tempfile.gettempdir(), "testtar" + os.extsep + "dir")
+tempname = test_support.TESTFN
+membercount = 10
+def path(path):
+    return test_support.findfile(path)
+def path(path):
+    return test_support.findfile(path)
+testtar = path("testtar.tar")
+testtar
+a = 'd:/usr/djgpp/lib/python2.4\\test\\testtar.tar'
+comp = 'gz'
+sep = '.'
+import os
+os.path.join(tempdir, "%s%s%s" % (testtar, os.extsep, comp))
+import tempfile
+tempdir = os.path.join(tempfile.gettempdir(), "testtar" + os.extsep + "dir")
+tempdir
+os.path.join(tempdir, "%s%s%s" % (testtar, os.extsep, comp))
+testtar = path("testtar.tar")
+def path(path):
+    return test_support.findfile(path)
+testtar = path("testtar.tar")
+import test_support
+from test import test_support
+testtar = path("testtar.tar")
+testtar
+os.path.join(tempdir, "%s%s%s" % (testtar, os.extsep, comp))
+if os.path.isabs(testtar):
+  print "yes"
+else:
+  print "no"
+if os.path.isabs("testtar.tar"):
+  print "yes"
+else:
+  print "no"
+path = sys.path
+path = [os.path.dirname(here)] + path
+import sys
+path = sys.path
+path = [os.path.dirname(".")] + path
+path
+import file
+import os
+os.__file__
+os.
+import socket
+s = socket.sockt.AF_INET, socket.SOCK_STREAM)
+s.setblocking(0)
+s.fileno()
+import fcntl
+old = fcntl.fcntl(s.fileno(), fcntl.F_GETFD)
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.setblocking(0)
+s.fileno()
+import fcntl
+old = fcntl.fcntl(s.fileno(), fcntl.F_GETFD)
+import fcntl
+import socket
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+old = fcntl.fcntl(s.fileno(), fcntl.F_GETFD)
+import socket
+import fcntl
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+old = fcntl.fcntl(s.fileno(), fcntl.F_GETFD)
+import _bsddb
+import bsddb
+import bsddbmodule
+import bsddb
+from bsddb3 import db
+import bsddb185
+from bsddb import db
+a = db.DBEnv()
+a
+a.open
+a.open()
+a.lock_detect()
+a.log_archive()
+a.txn_begin()
+import bsddb185
+import anydb
+import anydbm
+import whichdb
+import os
+import tempfile
+import shutil
+db = bsddb185.hashopen("./185test.db")
+self.assertEqual(db["1"], "1")
+db.close()
+db = bsddb185.hashopen("/dev/env/DJDIR/lib/python2.4/185test.db")
+db = bsddb185.hashopen("/dev/env/DJDIR/lib/python2.4/test/185test.db")
+import os
+import bsddb185
+db = bsddb185.hashopen("/dev/env/DJDIR/lib/python2.4/test/185test.db")
+db = bsddb185.hashopen("185test.db")
+import bsddb185
+db = bsddb185.hashopen("185test.db")
+import bsddb185
+db = bsddb185.hashopen("185test.db")
+db = bsddb185.hashopen("/dev/env/DJDIR/lib/python2.4/test/185test.db")
+import bsddb185
+db = bsddb185.hashopen("/dev/env/DJDIR/lib/python2.4/test/185test.db")
+db = bsddb185.hashopen("/dev/env/DJDIR/lib/python2.4/test/185test.db", "c")
+import bsddb185
+db = bsddb185.hashopen("/dev/env/DJDIR/lib/python2.4/test/185test.db", "c")
+db = bsddb185.hashopen("/dev/env/DJDIR/lib/python2.4/test/185test.db", "c", 1, 1024)
+import os
+os.O_RDONLY
+db = bsddb185.hashopen("/dev/env/DJDIR/lib/python2.4/test/185test.db", 0, 0, 1024)
+db = bsddb185.hashopen("/dev/env/DJDIR/lib/python2.4/test/185test.db", 'r', 0, 1024)
+db = bsddb185.hashopen("test.db", 'c', 0, 1024)
+db.close()
+db = bsddb185.hashopen("test.db", 'r', 0, 1024)
+db.close()
+db = bsddb185.hashopen("test.db", 'r', 0)
+db.close()
+db = bsddb185.hashopen("test.db", 'n', 0)
+db.close()
+db = bsddb185.hashopen("test.db", 'r', 0)
+import bsddb185
+db = bsddb185.hashopen("/dev/env/DJDIR/tmp/test.db", 'n', 0)
+db.close()
+db = bsddb185.hashopen("/dev/env/DJDIR/tmp/test.db", 'r', 0)
+db.keys
+db.keys()
+db.keys().append("1")
+db.keys()
+import bsddb185
+db = bsddb185.hashopen("/dev/env/DJDIR/lib/python2.4/test/185test.db")
+import libxml2mod
+import libxml
+import libxslt
+ls
+1
+?
+callers
+stats
+quit
+import pcfitsio
+import fitsio
+fitsio.read_data
+fitsio.read_data()
+import msvcrt
+import sys
+sys.prefix
+import sys
+sys.path
+from OpenGL import GL
+from GL import Autodesk
+from OpenGL.GL import Autodesk
+Autodesk
+Autodesk.string
+import libxml2
+libxml2.xl
+print 123
+100+200
+quit()
+quit
+dir
+print
+quit
+quit()
+dir
+vim
+print 1233
+xf

@@ -1,0 +1,16 @@
+#! bash
+# D-DIRECT Queueless driver configuration for DOS
+#
+# This driver has been modified to simply return PS output to stdout.
+
+
+#A2PS uses uppercase papersize
+export PAPER=`echo $PAPER | tr '[a-z]' '[A-Z]'`
+
+# export TEMPFILE=/dev/env/DJDIR/tmp/`date +%H%M%S`.ps
+# a2ps --medium=$PAPER --output=$TEMPFILE $*
+a2ps --medium=$PAPER --output=- $* 2>/dev/null
+
+# software filter sends results to required hardware filter ($PRINTERNAME + 'ps') 
+# lp -d"$PRINTERNAME"ps $TEMPFILE
+# rm -f $TEMPFILE

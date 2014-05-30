@@ -1,0 +1,398 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+   <TITLE>Queue - A Queue Implementation for Python</TITLE>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+    <STYLE TYPE="text/css">
+      p { text-align: justify; }
+      ul.indent { }
+      body { }
+    </STYLE>
+</HEAD>
+
+  <BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+
+    <HR NOSHADE WIDTH="100%">
+    <H2>mxQueue - A Queue Implementation for Python</H2>
+
+    <HR SIZE=1 NOSHADE WIDTH="100%">
+    <TABLE WIDTH="100%">
+      <TR>
+	<TD>
+	  <SMALL>
+	    <A HREF="#Interface">Interface</A> :
+	    <A HREF="#Examples">Examples</A> :
+	    <A HREF="#API">C API</A> :
+	    <A HREF="#Structure">Structure</A> :
+	    <A HREF="#Support">Support</A> :
+	    <A HREF="http://www.egenix.com/files/python/eGenix-mx-Extensions.html#Download-mxBASE"><B>Download</B></A> :
+	    <A HREF="#Copyright">Copyright &amp; License</A> :
+	    <A HREF="#History">History</A> :
+	    <A HREF="" TARGET="_top">Home</A>
+	</SMALL>
+	</TD>
+	<TD ALIGN=RIGHT VALIGN=TOP>
+	  <SMALL>
+	    <FONT COLOR="#FF0000">Version 2.0.3</FONT>
+	  </SMALL>
+	</TD>
+    </TABLE>
+    <HR SIZE=1 NOSHADE WIDTH="100%">
+
+    <H3>Introduction</H3>
+
+    <UL CLASS="indent">
+
+      <HR>
+
+	<P>
+	  <B>XXX This documentation is unfinished...</B> it is
+	  basically a search&replace copy of the mxStack documentation
+	  since the mxQueue APIs are very similar to mxStack. Usage
+	  should be straight forward though. The next release will
+	  have proper documentation and also be advertised on the
+	  download page :-).
+
+	<HR>
+
+	<P>
+	  Though queues can be emulated with Python lists, this type
+	  provides a simple interface to the data structure, both in
+	  Python and in C. Because of the function call overhead
+	  calling the methods from Python it is only a tad faster than
+	  a corresponding list emulation.  Called from within an C
+	  extension shows a more significant performance increase. The
+	  included <TT>queuebench.py</TT> gives an impression of how
+	  the different methods relate w/r to speed:
+
+	<PRE>
+projects/Queue> python1.5 -O queuebench.py 1000 100 100
+list:  1.11
+tuples: 0.6
+Queue (with push + pop): 0.72
+Queue (with push + pop_many): 0.5
+Queue (with &lt;&lt; + &gt;&gt;): 0.85
+Queue (with push_many + pop_many): 0.47
+UserQueue: 1.79
+	</PRE>
+
+	<P>
+	  Note that the tuple version has a few disadvantages when
+	  used for big queues: for one it uses lots of memory (20
+	  bytes per entry slot; Queue uses 20 bytes + 4 bytes per
+	  entry slot) and deallocation can become a problem -- this is
+	  done using recursion with one level per queue element. For
+	  small queues it still is unbeatable, though (it has no
+	  function call overhead). BTW, the UserQueue implementation
+	  uses the same technique: the figures shown mainly result
+	  from Python method call overhead.
+
+	<P>
+	  Because queues are normally used only temporarily, the Queue
+	  implementation only grows the memory buffer used for holding
+	  the entry slots. It never shrinks it. This has an advantage
+	  of reducing malloc overhead when doing e.g. depth first
+	  search, but also the disadvantage of using more memory in
+	  degenerate cases. To compensate for this, simply call the
+	  .resize() method every now and then. It forces the used
+	  buffer to be resized.
+
+	<P>
+
+    </UL><!--CLASS="indent"-->
+
+    <A NAME="Interface">
+
+    <H3>Interface</H3>
+
+    <UL CLASS="indent">
+
+	<P><B>Queue Constructors</B>
+
+	<P>There are two ways to construct a <TT>Queue</TT> from scratch:
+
+	<P><DL>
+
+	  <DT><CODE><FONT COLOR="#000099">
+
+		Queue([initial_size])
+
+	      </FONT></CODE></DT>
+
+	  <DD>Returns a new empty Queue instance allocating at least
+	  the given number of slots for queue elements. If the
+	  parameter is not given a reasonable default is
+	  chosen.</DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+
+		QueueFromSequence(seq)
+
+	      </FONT></CODE></DT>
+
+	  <DD>Constructs a Queue instance from the given sequence. The
+	  instance is filled with all the elements found in the
+	  sequence by pushing the items from index 0 to len(seq)-1 in
+	  that order, i.e. popping all elements from the Queue results
+	  in a reversed sequence. </DD><P>
+
+	</DL>
+
+	  <B>Instance Methods</B>
+
+	<P>A <TT>Queue</TT> instance has the following methods:
+
+	<P><DL>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		push(x)</FONT></CODE></DT>
+
+	  <DD>
+	    Pushes the object x onto the queue.</DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		push_many(sequences)</FONT></CODE></DT>
+
+	  <DD>
+	    Pushes the objects in <CODE>sequence</CODE> from left to
+	    right onto the queue. If errors occur during this process,
+	    the already pushed elements are discarded from the queue
+	    and it returns to its original state.</CODE></DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		pop()</FONT></CODE></DT>
+
+	  <DD>
+	    Pops the top element off of the queue.</DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		pop_many(n)</FONT></CODE></DT>
+
+	  <DD>
+	    Pops the top <CODE>n</CODE> elements and returns them in
+	    form of a tuple. If less than <CODE>n</CODE> elements are
+	    on the queue, the tuple will contain all queue entries and
+	    the queue will then be empty again. The order is top to
+	    bottom, i.e. <CODE>s.pop_many(2) ==
+	    (s.pop(),s.pop())</CODE></DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		as_tuple()</FONT></CODE></DT>
+
+	  <DD>
+	    Returns the queue's content as tuple, without modifying
+	    it.</DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		as_list()</FONT></CODE></DT>
+
+	  <DD>
+	    Returns the queue's content as list, without modifying
+	    it.</DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		clear()</FONT></CODE></DT>
+
+	  <DD>
+	    Clears the queue.</DD><P>
+
+	  <DT><CODE><FONT COLOR="#000099">
+		resize([size=len(queue)])</FONT></CODE></DT>
+
+	  <DD>
+	    Resize the queue buffer to hold at least <CODE>size</CODE>
+	    entries.
+	    <P>
+	      You can call this method without argument to force the
+	      queue to shrink its memory buffer to the minimal limit
+	      needed to hold the contained elements. </DD><P>
+
+	</DL>
+
+	<P>Note that no method for testing emtpyness is provided. Use
+	len() for that or simply test for trueness, e.g. <CODE>while
+	s: print s.pop()</CODE> will loop as long as there are
+	elements left on the Queue s. This is much faster than going
+	through the method calling process -- even when the method
+	being called is written in C.
+
+	<P>
+
+    </UL><!--CLASS="indent"-->
+
+    <A NAME="Examples">
+
+    <H3>Examples of Use</H3>
+
+    <UL CLASS="indent">
+
+	<P>Well, there's not much to show:
+
+	<FONT COLOR="#000099"><PRE>
+from mx.Queue import *
+s = Queue()
+for i in range(1000):
+    s.push(i)
+while s:
+    print s.pop()
+# which could also be done as:
+s = QueueFromSequence(range(1000))
+while s:
+    print s.pop()
+# or a little different
+s = QueueFromSequence(range(1000))
+print s.as_tuple()
+print s.as_list()
+	</PRE></FONT>
+
+    </UL><!--CLASS="indent"-->
+
+    <A NAME="API">
+
+    <H3>Supported Data Types in the C-API</H3>
+
+    <UL CLASS="indent">
+
+	<P>Please have look at the file <TT>mxQueue.h</TT> for
+	details.  Basically all of the above Python interfaces are
+	also available in the C API.
+
+	<P>To access the module, do the following (note the
+	similarities with Python's way of accessing functions from a
+	module):
+
+	<PRE>
+#include "mxQueue.h"
+
+...
+    PyObject *v;
+
+    /* Import the mxQueue module */
+    if (mxQueue_ImportModuleAndAPI())
+	goto onError;
+
+    /* Access functions from the exported C API through mxQueue */
+    v = mxQueue.Queue(0);
+    if (!v)
+	goto onError;
+
+    /* Type checking */
+    if (mxQueue_Check(v))
+        printf("Works.\n");
+
+    Py_DECREF(v);
+...
+	</PRE>
+	<P>
+
+    </UL><!--CLASS="indent"-->
+
+    <A NAME="Structure">
+
+    <H3>Package Structure</H3>
+
+    <UL CLASS="indent">
+
+	<PRE>
+[Queue]
+	mxQueue
+	</PRE>
+
+	<P>Entries enclosed in brackets are packages (i.e. they are
+	directories that include a <TT>__init__.py</TT> file). Ones
+	without brackets are just simple subdirectories that are not
+	accessible via <CODE>import</CODE>. These are used for
+	compiling the C extension modules which will get installed in
+	the same place where all your other site specific extensions
+	live (e.g. <TT>/usr/local/lib/python-x.xx/site-packages</TT>).
+
+	<P>The package Queue imports all symbols from the extension
+	mxQueue, so <CODE>import Queue; s = Queue.Queue()</CODE> gives
+	you a Queue instance in <CODE>s</CODE>.
+
+	<P>
+
+    </UL><!--CLASS="indent"-->
+
+    <A NAME="Support">
+
+    <H3>Support</H3>
+
+    <UL CLASS="indent">
+
+	<P>
+	  eGenix.com is providing commercial support for this
+	  package. If you are interested in receiving information
+	  about this service please see the <A
+	  HREF="http://www.egenix.com/files/python/eGenix-mx-Extensions.html#Support">eGenix.com
+	  Support Conditions</A>.
+
+    </UL><!--CLASS="indent"-->
+
+    <A NAME="Copyright">
+
+    <H3>Copyright &amp; License</H3>
+
+    <UL CLASS="indent">
+
+	<P>
+	  &copy; 1999-2000, Copyright by Marc-Andr&eacute; Lemburg;
+	  All Rights Reserved.  mailto: <A
+	  HREF="mailto:mal@lemburg.com">mal@lemburg.com</A>
+	<P>
+	  &copy; 2000-2001, Copyright by eGenix.com Software GmbH,
+	  Langenfeld, Germany; All Rights Reserved.  mailto: <A
+	  HREF="mailto:info@egenix.com">info@egenix.com</A>
+
+	<P>
+	  This software is covered by the <A
+	  HREF="mxLicense.html#Public"><B>eGenix.com Public
+	  License Agreement</B></A>. The text of the license is also
+	  included as file "LICENSE" in the package's main directory.
+
+	<P>
+	  <B> By downloading, copying, installing or otherwise using
+	  the software, you agree to be bound by the terms and
+	  conditions of the eGenix.com Public License
+	  Agreement. </B>
+
+    </UL><!--CLASS="indent"-->
+
+    <A NAME="History">
+
+    <H3>History & Future</H3>
+
+    <UL CLASS="indent">
+      
+        <P>There were no significant changes between 2.0.2 and 2.0.3.
+
+	<P>Changes from version 2.0.0 to 2.0.2:
+
+	<UL>
+
+	  <LI> Fixed a bug in the coercion code which surfaced due to
+	  the rich comparison changes in Python 2.1. Python 2.1 will
+	  now compare Queue objects to other objects without raising a
+	  TypeError.
+	    
+	</UL>
+
+	<P>Version 2.0.0 was the initial public version.
+
+    </UL><!--CLASS="indent"-->
+
+    <HR WIDTH="100%">
+    <CENTER><FONT SIZE=-1>
+        <P>
+          &copy; 1999-2000, Copyright by Marc-Andr&eacute; Lemburg;
+          All Rights Reserved.  mailto: <A
+          HREF="mailto:mal@lemburg.com">mal@lemburg.com</A>
+        <P>
+          &copy; 2000-2001, Copyright by eGenix.com Software GmbH; 
+          All Rights Reserved.  mailto: <A
+          HREF="mailto:info@egenix.com">info@egenix.com</A>
+    </FONT></CENTER>
+    </FONT></CENTER>
+
+  </BODY>
+</HTML>

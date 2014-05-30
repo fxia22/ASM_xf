@@ -1,0 +1,8 @@
+#! /bin/bash
+# Simple Fetchmail, bdecker 2004 http://members.lycos.co.uk/bdeck
+
+# Upload all mail to gateway over smtp using 'msmtp'.
+for file in `ls /dev/env/DJDIR/var/mail/new`
+do
+    cat $file | msmtp -t
+done

@@ -1,0 +1,227 @@
+# This file is part of Mailutils testsuite.
+# Copyright (C) 2002, Free Software Foundation
+#  
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#   
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#  
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software Foundation,
+# Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA. 
+
+#text/plain; less '%s'; needsterminal
+#entry
+#	typefield: text/plain
+#	view-command: less '%s'
+#	fields[1]: needsterminal
+#	For mutt also be sure to enable 'auto_view' for copiousoutput
+
+
+application/octet-stream;  mutt.octet.filter %s; copiousoutput
+application/octet-stream;  mutt.octet.filter -v %s; needsterminal
+#application/octet-stream;  mutt_octet_view %s; copiousoutput
+#application/octet-stream;  mutt_octet_view -v %s
+
+
+text/plain; less %s; \
+description="Plain Text"; copiousoutput; 
+entry
+	typefield: text/plain
+	view-command: less '%s'
+	fields[1]: description="Plain Text"
+	fields[2]: copiousoutput
+
+application/pdf; pdftotext -eol unix -layout %s "-"; \
+description="Adobe PDF"; copiousoutput;
+entry
+	typefield: application/pdf
+	view-command: pdftotext -eol unix -layout %s "-" | less
+	fields[1]: description="Adobe PDF"
+	fields[2]: copiousoutput
+
+application/x-troff-man; /dev/env/DJDIR/bin/nroff -mandoc -Tlatin1; \
+copiousoutput; print=/dev/env/DJDIR/bin/nroff -mandoc -Tlatin1 | print text/plain:-
+entry
+	typefield: application/x-troff-man
+	view-command: /dev/env/DJDIR/bin/nroff -mandoc -Tlatin1
+	fields[1]: copiousoutput
+	fields[2]: print=/dev/env/DJDIR/bin/nroff -mandoc -Tlatin1 | print text/plain:-
+
+text/richtext; shownonascii iso-8859-1 -e richtext -p '%s'; \
+description="Richtext"; copiousoutput; \
+test=test "$(echo %{charset} | tr "[A-Z]" "[a-z]")" = iso-8859-1 -a "$DISPLAY" != ""
+entry
+	typefield: text/richtext
+	view-command: shownonascii iso-8859-1 -e richtext -p '%s'
+	fields[1]: description="Richtext"
+	fields[2]: copiousoutput
+	fields[3]: test=test "$(echo %{charset} | tr "[A-Z]" "[a-z]")" = iso-8859-1 -a "$DISPLAY" != ""
+
+text/enriched; shownonascii iso-8859-1 -e richtext -e -p '%s'; \
+description="Enriched Text"; \
+copiousoutput; \
+test=test "$(echo %{charset} | tr "[A-Z]" "[a-z]")" = iso-8859-1 -a "$DISPLAY" != ""
+entry
+	typefield: text/enriched
+	view-command: shownonascii iso-8859-1 -e richtext -e -p '%s'
+	fields[1]: description="Enriched Text"
+	fields[2]: copiousoutput
+	fields[3]: test=test "$(echo %{charset} | tr "[A-Z]" "[a-z]")" = iso-8859-1 -a "$DISPLAY" != ""
+
+message/partial; showpartial '%s' %{id} %{number} %{total}; description="An incomplete message"
+entry
+	typefield: message/partial
+	view-command: showpartial '%s' %{id} %{number} %{total}
+	fields[1]: description="An incomplete message"
+
+message/external-body; showexternal '%s' %{access-type} %{name} %{site} %{directory} %{mode} %{server}; needsterminal; description="A reference to data stored in an external location"; composetyped="extcompose '%s"'
+entry
+	typefield: message/external-body
+	view-command: showexternal '%s' %{access-type} %{name} %{site} %{directory} %{mode} %{server}
+	fields[1]: needsterminal
+	fields[2]: description="A reference to data stored in an external location"
+	fields[3]: composetyped="extcompose '%s"'
+
+application/x-dvi; /dev/env/DJDIR/bin/xdvi '%s'; test=test -n "$DISPLAY"; description=TeX DVI file; nametemplate=%s.dvi
+entry
+	typefield: application/x-dvi
+	view-command: /dev/env/DJDIR/bin/xdvi '%s'
+	fields[1]: test=test -n "$DISPLAY"
+	fields[2]: description=TeX DVI file
+	fields[3]: nametemplate=%s.dvi
+
+text/plain; more '%s'; needsterminal
+entry
+	typefield: text/plain
+	view-command: more '%s'
+	fields[1]: needsterminal
+
+text/richtext; richtext '%s'; description="Richtext"; copiousoutput
+entry
+	typefield: text/richtext
+	view-command: richtext '%s'
+	fields[1]: description="Richtext"
+	fields[2]: copiousoutput
+
+text/enriched; richtext -e '%s'; description="Enriched Text"; copiousoutput
+entry
+	typefield: text/enriched
+	view-command: richtext -e '%s'
+	fields[1]: description="Enriched Text"
+	fields[2]: copiousoutput
+
+text/html; lynx %s; needsterminal; description=HTML Text; nametemplate=%s.html
+entry
+	typefield: text/html
+	view-command: lynx %s
+	fields[1]: needsterminal
+	fields[2]: description=HTML Text
+	fields[3]: nametemplate=%s.html
+    
+text/html; lynx -dump -nolist '%s'; copiousoutput; description=HTML Text; nametemplate=%s.html
+entry
+	typefield: text/html
+	view-command: lynx -dump '%s'
+	fields[1]: copiousoutput
+	fields[2]: description=HTML Text
+	fields[3]: nametemplate=%s.html
+
+text/html; /dev/env/DJDIR/bin/lynx -force_html '%s'; needsterminal; description=HTML Text; nametemplate=%s.html
+entry
+	typefield: text/html
+	view-command: /dev/env/DJDIR/bin/lynx -force_html '%s'
+	fields[1]: needsterminal
+	fields[2]: description=HTML Text
+	fields[3]: nametemplate=%s.html
+
+text/html; /dev/env/DJDIR/bin/w3m -dump -T text/html '%s'; copiousoutput; description=HTML Text; nametemplate=%s.html
+entry
+	typefield: text/html
+	view-command: /dev/env/DJDIR/bin/w3m -dump -T text/html '%s'
+	fields[1]: copiousoutput
+	fields[2]: description=HTML Text
+	fields[3]: nametemplate=%s.html
+
+text/html; /dev/env/DJDIR/bin/html2text '%s'; copiousoutput; description=HTML Text
+entry
+	typefield: text/html
+	view-command: /dev/env/DJDIR/bin/html2text '%s'
+	fields[1]: copiousoutput
+	fields[2]: description=HTML Text
+
+text/html; /dev/env/DJDIR/bin/lynx -dump -force_html '%s'; copiousoutput; description=HTML Text; nametemplate=%s.html
+entry
+	typefield: text/html
+	view-command: /dev/env/DJDIR/bin/lynx -dump -force_html '%s'
+	fields[1]: copiousoutput
+	fields[2]: description=HTML Text
+	fields[3]: nametemplate=%s.html
+
+text/*; less '%s'; needsterminal
+entry
+	typefield: text/*
+	view-command: less '%s'
+	fields[1]: needsterminal
+
+text/*; more '%s'; needsterminal
+entry
+	typefield: text/*
+	view-command: more '%s'
+	fields[1]: needsterminal
+
+application/x-debian-package; /usr/lib/mime/debian-view '%s'; \
+needsterminal; description=Debian GNU/Linux Package; \
+nametemplate=%s.deb
+entry
+	typefield: application/x-debian-package
+	view-command: /usr/lib/mime/debian-view '%s'
+	fields[1]: needsterminal
+	fields[2]: description=Debian GNU/Linux Package
+	fields[3]: nametemplate=%s.deb
+
+audio/basic; /usr/lib/mime/playaudio '%s'; description=Basic uLaw Audio; \
+nametemplate=%s.au
+entry
+	typefield: audio/basic
+	view-command: /usr/lib/mime/playaudio '%s'
+	fields[1]: description=Basic uLaw Audio
+	fields[2]: nametemplate=%s.au
+
+application/msword; antiword -t %s | less; copiousoutput; description=Microsoft Word Document; nametemplate=%s.doc
+entry
+	typefield: application/msword
+	view-command: antiword -t '%s'
+	fields[1]: description=MS Word Document
+	fields[2]: nametemplate=%s.doc
+
+application/vnd.ms-excel; xlhtml '%s' | lynx -dump; copiousoutput; description=Microsoft Excel Spreadsheet; nametemplate=%s.xls
+entry
+	typefield: application/vnd.ms-excel
+	view-command: bash -c view-excel '%s'
+	fields[1]: copiousoutput
+	fields[2]: description=MS Excel Spreadsheet
+	fields[3]: nametemplate=%s.xls
+
+application/msword; cmd /C start '%s';
+copiousoutput; description=Microsoft Word Document; print=3DwvWare -x /usr/share/wv/wvHtml.xml '%s' | html2text | print text/plain:-
+
+application/excel; cmd /C start '%s';
+description=Microsoft Excel Document; print=3Dxlhtml -c '%s' | html2text | print text/plain:-
+
+application/pgp-keys; gpg -f < '%s' ; copiousoutput
+
+application/x-pkcs7-signature; openssl smime -pk7out -inform DER -in '%s' | openssl pkcs7 -print_certs -noout -outform DER; copiousoutput; description=PKCS#7 Data Management; nametemplate=%s.p7s 
+entry
+	typefield: application/x-pkcs7-signature
+	#view-command: openssl smime -pk7out -inform DER -in '%s' | openssl.exe pkcs7 -print_certs -text -noout
+	view-command: less '%s'
+	fields[1]: description=PKCS#7 Data Management
+	fields[2]: nametemplate=%s.p7s
+
+# End of Mailcap. For mutt also be sure to enable 'auto_view' for copiousoutput

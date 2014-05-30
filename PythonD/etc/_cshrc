@@ -1,0 +1,52 @@
+#
+# Example .csrhc file supplied with scsh
+#
+# $Id: _cshrc,v 0.1 1999/09/07 17:35:40 dosuser Exp dosuser $
+#
+# $Log: _cshrc,v $
+# Revision 0.1  1999/09/07 17:35:40  dosuser
+# Added example .key command
+#
+# Revision 0.0  1999/08/17 12:02:34  dosuser
+# Example .cshrc
+#
+#
+set filec
+unset ignoreeof
+set nonomatch
+unset noclobber
+
+set history=100
+set path=(. $home/bin $path)
+
+#set prompt='$user !) '
+set prompt='$cwd #'
+
+alias ls	ls -Fx
+alias lrt	ls -lrt
+alias la	ls -a
+
+alias h		'history | more'
+alias hi	history 20
+alias p		pwd
+
+alias vc	vi $home/.cshrc
+alias sc	source $home/.cshrc
+
+alias wenv	'env | egrep '
+alias wal	'alias | egrep '
+alias wset	'set | egrep '
+
+# Directory setting aliases
+#
+alias dset	'echo "setenv !:1 $cwd ; alias !:1 cd $cwd" >> ~/.dalias'
+alias dsrc	'source ~/.dalias'
+alias dwot	'alias | egrep "	cd" | egrep -v dwot'
+alias vd	vi /dev/env/DJDIR/etc/_cshalias
+#source /dev/env/DJDIR/etc/_cshalias
+
+# Example key commands
+#
+.key 315	ls\n		# F1
+
+# Startup commands

@@ -1,0 +1,5973 @@
+import sys
+sys.path
+8
+y
+4
+y
+4
+y
+6536
+12088
+4
+y
+6528
+12080
+4
+y
+6544
+12096
+1
+y
+6508
+10096
+import Plex
+import irclib
+import sys
+sys.path
+import sys
+sys.path
+import sys
+sys.path
+from serial import *
+import rlcompleter
+im.
+im.		
+import readline
+readline.parse_and_bind("tab: complete")
+imp.
+del rlcompleter
+import rlcompleter
+import string
+exit
+import os
+os.s
+import os
+os.fork()
+os.keyword
+keyword
+a = "\a"
+a
+print a
+print a
+print a
+os.items()
+import readline
+import sys
+sys.
+sys.sys
+sys.sys
+sys.modules
+import *
+from . import *
+readline.__doc__
+import socket
+socket.__doc__
+import pdb
+import socket
+pdb.w
+pdb.run("from Ft import *")
+from Ft import *
+w 
+w
+h
+l
+import
+exit
+q
+curdir
+os.curdir
+os.kill
+os.kill()
+os.kill.__doc__
+os.kill(1380,1)
+import os
+os.chdir
+os.chdir.__doc__
+os.chdir("/dev/d")
+os.system("ls")
+os.chdir("/dev/d")
+os.system("ls")
+sys.path
+os.path
+import sys
+sys.path
+import Tkinter
+os.path
+import sys
+sys.path
+?
+tkButton
+Tk()
+quit
+quit
+import s2dom
+import s2dom
+import os
+os.getenv("$SYSTEM")
+os.getenv("%SYSTEM%")
+os.getenv(SYSTEM)
+os.getenv($SYSTEM)
+os.getenv("user")
+os.getenv("USER")
+os.getenv("SYSTEM")
+xml = os.getenv("SYSTEM")
+s2dom.doc = xml
+s2dom.getxml(xml, "//*")
+s2dom.tree.getxml(xml, "//*")
+import s2dom.tree
+xml = os.getenv("SYSTEM")
+import os
+import s2dom
+s2dom.doc = xml
+xml = os.getenv("SYSTEM")
+s2dom.doc = xml
+s2dom.getxml(xml, "//*")
+s2dom.getxml("", xml, "//*")
+s2dom.getxml("", s2dom.doc, "//*")
+s2dom.doc
+import os
+import s2dom
+xml = os.getenv("SYSTEM")
+s2dom.doc = xml
+s2dom.docname = xml
+import os
+import s2dom
+xml = os.getenv("SYSTEM")
+s2dom.docname = xml
+s2dom.getxml("", s2dom.doc, "//*")
+import os
+import s2dom
+s2dom.docname
+xml = os.getenv("SYSTEM")
+s2dom.docname = xml
+s2dom.docname
+s2dom.getxml("", s2dom.doc, "//*")
+import os
+import s2dom
+xml = os.getenv("SYSTEM")
+s2dom.docname = xml
+s2dom.getxml("", s2dom.doc, "//*")
+import os
+import s2dom
+import os
+import s2dom
+import s2dom
+import s2dom
+s2dom.doc
+import s2dom
+s2dom.doc
+import s2dom
+import os
+xml = os.getenv("SYSTEM")
+s2dom.docname = xml
+import sdom
+import s2dom
+import os
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom(xml)
+import s2dom
+import s2dom
+import s2dom
+import s2dom
+import s2dom
+import s2dom
+import s2dom
+import s2dom
+import s2dom
+import s2dom
+import os
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+import s2dom
+import os
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+xmldoc.doc
+xmldoc.doc()
+import os
+import s2dom
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+xmldoc.doc()
+import os
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+import s2dom
+xmldoc = s2dom.tree(xml)
+xmldoc.doc()
+import os
+import s2dom
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+xmldoc.doc()
+txt = xmldoc.getxml("//*")
+import os
+import s2dom
+import s2dom
+import s2dom
+import os
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+xmldoc.doc
+txt = xmldoc.getxml("//*")
+import os
+import s2dom
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+xmldoc.doc
+txt = xmldoc.getxml("//*")
+txt
+txt = xmldoc.getxml("link[1]")
+txt
+txt = xmldoc.getxml("link")
+txt
+txt = xmldoc.getxml("system/link")
+txt
+txt = xmldoc.getxml("//system")
+txt
+import os
+xmldoc.doc
+import s2dom
+import os
+import s2dom
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+txt
+txt = xmldoc.getxml("//system")
+txt
+xmldoc
+xmldoc.doc
+txt = xmldoc.getnode("//system")
+txt
+import os
+os.startfile
+os.startfile("iexplore")
+os.startfile("C:\5_1_1.svg")
+os.startfile("C:/5_1_1.svg")
+os.startfile("C:\\5_1_1.svg")
+os.startfile(" C:\\5_1_1.svg")
+os.startfile("/dev/c/5_1_1.svg")
+os.startfile("ls")
+os.startfile("telnet")
+os.startfile("start C:\5_1_1.svg")
+os.startfile("rundll32.exe shell32.dll,ShellExec_RunDLLA C:\5_1_1.svg")
+os.startfile("rundll32.exe shell32.dll,ShellExec_RunDLLA C:\\5_1_1.svg")
+os.startfile("rundll32.exe shell32.dll,ShellExec_RunDLLA C:\5_3_3.svg")
+os.startfile("rundll32.exe shell32.dll,ShellExec_RunDLLA C:/5_3_3.svg")
+os.startfile("rundll32.exe shell32.dll,ShellExec_RunDLLA iexplore")
+import os
+os.startfile("ls")
+os.startfile("iexplore")
+import os
+os.system("rundll32.exe shell32.dll,ShellExec_RunDLLA iexplore")
+os.pipe("rundll32.exe shell32.dll,ShellExec_RunDLLA iexplore")
+os.popen("rundll32.exe shell32.dll,ShellExec_RunDLLA iexplore")
+import os
+os.startfile("ls")
+import os
+os.startfile
+os.startfile("ls")
+import os
+os.startfile("ls")
+import os
+os.startfile("ls")
+import os
+os.startfile("ls")
+import os
+os.startfile("ls")
+os.startfile("ls :pause")
+import os
+os.startfile("c:/5_3_3.svg")
+os.startfile("c:/5_3_3.svg")
+os.startfile("cls")
+import os
+os.startfile("cls")
+os.startfile("command /C cls")
+os.system("cls")
+import s2dom
+import os
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+txt = xmldoc.getnode("//system")
+txt
+txt = xmldoc.getxml("//system/link")
+txt
+import s2dom
+s2dom.tree.usage
+s2dom.tree.getxml.usage
+import s2dom
+import os
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+txt = xmldoc.getxml("//system/link")
+txt
+from system2 import s2dom
+import os
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+txt = xmldoc.getxml("//system/link")
+txt
+print txt
+import sys
+sys.path
+from Zope import *
+from Zope import *
+from Zope import *
+from Zope import *
+from Zope import *
+import sys
+sys.path
+import s2dom
+from system import s2dom
+from system2 import s2dom
+import os
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+from system2 import s2dom
+import os
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+sys.path
+txt = s2dom.getxml(xmldoc)
+txt = s2dom.tree.getxml(xmldoc)
+txt = xmldoc.getxml(xmldoc)
+txt = xmldoc.getxml("//system/link/outlook)
+txt = xmldoc.getxml("//system/link/outlook")
+from system2 import s2dom
+import os
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+txt = xmldoc.getxml("//system/link/outlook")
+txt
+txt = xmldoc.gettext("//system/link/outlook")
+del s2dom
+help ("libxml2")
+@
+@1
+@1 = 1
+@1 = aaa
+@111@ 
+:
+:a
+a
+""":
+echo off = 1
+echo off
+from system2 import s2dom
+import sys, os
+def srun(nodename):
+    xml = os.getenv("SYSTEM")
+    xmldoc = s2dom.tree(xml)
+    node = "descendant-or-self::" + nodename + "/open"
+    # print node, "\n"
+    txt = xmldoc.gettext(node)
+    print txt, "\n"
+cmd = srun
+nodename "redir"
+nodename = "redir"
+cmd(nodename)
+import os
+os.system("%DJGPP%\..\bin\redir -e output.txt -oe %1 %2 %3 %4 %5 %6 %7 %8 %9")
+os.system("command /C %DJGPP%\..\bin\redir -e output.txt -oe %1 %2 %3 %4 %5 %6 %7 %8 %9")
+os.system("command")
+os.system("command /C echo %DJGPP%")
+os.system("command /C set")
+os.system("cmd /C set")
+os.system("cmd /C echo %DJGPP%")
+import os
+import time
+time.time.clock
+time.time.clock()
+time.clock()
+time.localtime
+time.localtime()
+txt = time.localtime()
+txt[4]
+txt = time.localtime()
+time.localtime()
+import os
+os.getenv("TEMP")
+import os
+help("os.remove")
+quit
+quit
+?
+?
+import sys
+import os
+from system2 import s2dom, s2util
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+node = "descendant-or-self::" + nodename + "/open"
+txt = xmldoc.gettext(node)
+filename = s2util.writepid()
+cmdfile = open(filename, 'w')   #'wb' creates strange CR char in .BAT
+cmdfile.writelines(txt)
+cmdfile.close()                 #or else windows has no access!!
+del cmdfile
+try:
+    if os.getenv("OS") == "Windows_NT":
+        cmdline = "cmd /C" + filename + sys.argv[3:]
+        print cmdline, "\n"
+        os.system(cmdline)
+    else:
+        cmdline = "command /C" + filename + sys.argv[3:]
+        print cmdline, "\n"
+        os.system(filename)
+        os.remove(cmdline)
+except:
+    print "ERROR at system2.py: tried to execute", cmdline, "\n"
+nodename = "redir"
+nodename = "redir"
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+node = "descendant-or-self::" + nodename + "/open"
+txt = xmldoc.gettext(node)
+filename = s2util.writepid()
+cmdfile = open(filename, 'w')   #'wb' creates strange CR char in .BAT
+cmdfile.writelines(txt)
+cmdfile.close()                 #or else windows has no access!!
+del cmdfile
+try:
+    if os.getenv("OS") == "Windows_NT":
+        cmdline = "cmd /C" + filename + sys.argv[3:]
+        print cmdline, "\n"
+        os.system(cmdline)
+    else:
+        cmdline = "command /C" + filename + sys.argv[3:]
+        print cmdline, "\n"
+        os.system(filename)
+        os.remove(cmdline)
+except:
+    print "ERROR at system2.py: tried to execute", cmdline, "\n"
+os.getenv("OS")
+import os
+os.startfile("cls")
+os.startfile("cls")
+os.startfile("clear")
+os.system("cls")
+from Ft import *
+import sys
+sys.path
+import sys
+sys.path
+import sys
+sys.path
+import Tk
+import Tk
+import pyglut
+import pyglut
+import pyGLUT
+import sys
+sys.path
+import PyGLUT
+import sys
+sys.platform
+import Togl
+import GLUT
+import GLE
+from encodings import gb2312
+gb2312
+pagename = "encodings." + "gb2312"
+charset = __import__(pagename)
+charset
+charset = from encodings __import__("gb2312")
+pagename = "gb2312"
+from encodings __import__(pagename)
+from encodings import %charset
+from encodings import $charset
+from encodings import (charset)
+oldpage = "gb2312"
+pagename = "encodings." + oldpage
+codepage = getattr(__import__(pagename), "gb2312")
+codepage
+codepage = getattr(__import__(pagename), oldpage)
+codepage
+def to_uni(instring, oldpage):          # Convert from native to Unicode
+    # print instring, oldpage, "\n"
+    try:
+        # from encodings import gb2312    # BROKEN -set up module variable?
+        pagename = "encodings." + oldpage
+        # charset = __import__(pagename)
+        codepage = getattr(__import__(pagename), oldpage)
+        codepage = charset
+    except:
+        print "ERROR s2code.to_uni:", oldpage, "codepage not in encodings.\n"
+        return
+    uni = codepage.decode(instring, "unicode")   # BROKEN!!
+    uni = repr(uni)                     # Cannot return a function
+    return uni
+to_uni 56 gb2312
+to_uni ("56","gb2312")
+def to_uni(instring, oldpage):          # Convert from native to Unicode
+    pagename = "encodings." + oldpage
+    # charset = __import__(pagename)
+    codepage = getattr(__import__(pagename), oldpage)
+    codepage = charset
+    print codepage
+to_uni ("56","gb2312")
+from Ft import *
+import socket
+socket.connect("hello")
+from Ft.Xml import *
+from Ft.Xml.Xslt import *
+import rpc
+import sys
+sys.path
+ import os
+import os
+os.getenv('PATH')
+os.getenv('CLASSPATH')
+import sys
+sys.path
+8
+y
+4
+y
+4
+y
+6536
+12088
+4
+y
+6528
+12080
+4
+y
+6544
+12096
+1
+y
+6508
+10096
+import Plex
+import irclib
+import sys
+sys.path
+import sys
+sys.path
+import sys
+sys.path
+from serial import *
+import rlcompleter
+im.
+im.		
+import readline
+readline.parse_and_bind("tab: complete")
+imp.
+del rlcompleter
+import rlcompleter
+import string
+exit
+import os
+os.s
+import os
+os.fork()
+os.keyword
+keyword
+a = "\a"
+a
+print a
+print a
+print a
+os.items()
+import readline
+import sys
+sys.
+sys.sys
+sys.sys
+sys.modules
+import *
+from . import *
+readline.__doc__
+import socket
+socket.__doc__
+import pdb
+import socket
+pdb.w
+pdb.run("from Ft import *")
+from Ft import *
+w 
+w
+h
+l
+import
+exit
+q
+curdir
+os.curdir
+os.kill
+os.kill()
+os.kill.__doc__
+os.kill(1380,1)
+import os
+os.chdir
+os.chdir.__doc__
+os.chdir("/dev/d")
+os.system("ls")
+os.chdir("/dev/d")
+os.system("ls")
+sys.path
+os.path
+import sys
+sys.path
+import Tkinter
+os.path
+import sys
+sys.path
+?
+tkButton
+Tk()
+quit
+quit
+import s2dom
+import s2dom
+import os
+os.getenv("$SYSTEM")
+os.getenv("%SYSTEM%")
+os.getenv(SYSTEM)
+os.getenv($SYSTEM)
+os.getenv("user")
+os.getenv("USER")
+os.getenv("SYSTEM")
+xml = os.getenv("SYSTEM")
+s2dom.doc = xml
+s2dom.getxml(xml, "//*")
+s2dom.tree.getxml(xml, "//*")
+import s2dom.tree
+xml = os.getenv("SYSTEM")
+import os
+import s2dom
+s2dom.doc = xml
+xml = os.getenv("SYSTEM")
+s2dom.doc = xml
+s2dom.getxml(xml, "//*")
+s2dom.getxml("", xml, "//*")
+s2dom.getxml("", s2dom.doc, "//*")
+s2dom.doc
+import os
+import s2dom
+xml = os.getenv("SYSTEM")
+s2dom.doc = xml
+s2dom.docname = xml
+import os
+import s2dom
+xml = os.getenv("SYSTEM")
+s2dom.docname = xml
+s2dom.getxml("", s2dom.doc, "//*")
+import os
+import s2dom
+s2dom.docname
+xml = os.getenv("SYSTEM")
+s2dom.docname = xml
+s2dom.docname
+s2dom.getxml("", s2dom.doc, "//*")
+import os
+import s2dom
+xml = os.getenv("SYSTEM")
+s2dom.docname = xml
+s2dom.getxml("", s2dom.doc, "//*")
+import os
+import s2dom
+import os
+import s2dom
+import s2dom
+import s2dom
+s2dom.doc
+import s2dom
+s2dom.doc
+import s2dom
+import os
+xml = os.getenv("SYSTEM")
+s2dom.docname = xml
+import sdom
+import s2dom
+import os
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom(xml)
+import s2dom
+import s2dom
+import s2dom
+import s2dom
+import s2dom
+import s2dom
+import s2dom
+import s2dom
+import s2dom
+import s2dom
+import os
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+import s2dom
+import os
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+xmldoc.doc
+xmldoc.doc()
+import os
+import s2dom
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+xmldoc.doc()
+import os
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+import s2dom
+xmldoc = s2dom.tree(xml)
+xmldoc.doc()
+import os
+import s2dom
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+xmldoc.doc()
+txt = xmldoc.getxml("//*")
+import os
+import s2dom
+import s2dom
+import s2dom
+import os
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+xmldoc.doc
+txt = xmldoc.getxml("//*")
+import os
+import s2dom
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+xmldoc.doc
+txt = xmldoc.getxml("//*")
+txt
+txt = xmldoc.getxml("link[1]")
+txt
+txt = xmldoc.getxml("link")
+txt
+txt = xmldoc.getxml("system/link")
+txt
+txt = xmldoc.getxml("//system")
+txt
+import os
+xmldoc.doc
+import s2dom
+import os
+import s2dom
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+txt
+txt = xmldoc.getxml("//system")
+txt
+xmldoc
+xmldoc.doc
+txt = xmldoc.getnode("//system")
+txt
+import os
+os.startfile
+os.startfile("iexplore")
+os.startfile("C:\5_1_1.svg")
+os.startfile("C:/5_1_1.svg")
+os.startfile("C:\\5_1_1.svg")
+os.startfile(" C:\\5_1_1.svg")
+os.startfile("/dev/c/5_1_1.svg")
+os.startfile("ls")
+os.startfile("telnet")
+os.startfile("start C:\5_1_1.svg")
+os.startfile("rundll32.exe shell32.dll,ShellExec_RunDLLA C:\5_1_1.svg")
+os.startfile("rundll32.exe shell32.dll,ShellExec_RunDLLA C:\\5_1_1.svg")
+os.startfile("rundll32.exe shell32.dll,ShellExec_RunDLLA C:\5_3_3.svg")
+os.startfile("rundll32.exe shell32.dll,ShellExec_RunDLLA C:/5_3_3.svg")
+os.startfile("rundll32.exe shell32.dll,ShellExec_RunDLLA iexplore")
+import os
+os.startfile("ls")
+os.startfile("iexplore")
+import os
+os.system("rundll32.exe shell32.dll,ShellExec_RunDLLA iexplore")
+os.pipe("rundll32.exe shell32.dll,ShellExec_RunDLLA iexplore")
+os.popen("rundll32.exe shell32.dll,ShellExec_RunDLLA iexplore")
+import os
+os.startfile("ls")
+import os
+os.startfile
+os.startfile("ls")
+import os
+os.startfile("ls")
+import os
+os.startfile("ls")
+import os
+os.startfile("ls")
+import os
+os.startfile("ls")
+os.startfile("ls :pause")
+import os
+os.startfile("c:/5_3_3.svg")
+os.startfile("c:/5_3_3.svg")
+os.startfile("cls")
+import os
+os.startfile("cls")
+os.startfile("command /C cls")
+os.system("cls")
+import s2dom
+import os
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+txt = xmldoc.getnode("//system")
+txt
+txt = xmldoc.getxml("//system/link")
+txt
+import s2dom
+s2dom.tree.usage
+s2dom.tree.getxml.usage
+import s2dom
+import os
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+txt = xmldoc.getxml("//system/link")
+txt
+from system2 import s2dom
+import os
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+txt = xmldoc.getxml("//system/link")
+txt
+print txt
+import sys
+sys.path
+from Zope import *
+from Zope import *
+from Zope import *
+from Zope import *
+from Zope import *
+import sys
+sys.path
+import s2dom
+from system import s2dom
+from system2 import s2dom
+import os
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+from system2 import s2dom
+import os
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+sys.path
+txt = s2dom.getxml(xmldoc)
+txt = s2dom.tree.getxml(xmldoc)
+txt = xmldoc.getxml(xmldoc)
+txt = xmldoc.getxml("//system/link/outlook)
+txt = xmldoc.getxml("//system/link/outlook")
+from system2 import s2dom
+import os
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+txt = xmldoc.getxml("//system/link/outlook")
+txt
+txt = xmldoc.gettext("//system/link/outlook")
+del s2dom
+help ("libxml2")
+@
+@1
+@1 = 1
+@1 = aaa
+@111@ 
+:
+:a
+a
+""":
+echo off = 1
+echo off
+from system2 import s2dom
+import sys, os
+def srun(nodename):
+    xml = os.getenv("SYSTEM")
+    xmldoc = s2dom.tree(xml)
+    node = "descendant-or-self::" + nodename + "/open"
+    # print node, "\n"
+    txt = xmldoc.gettext(node)
+    print txt, "\n"
+cmd = srun
+nodename "redir"
+nodename = "redir"
+cmd(nodename)
+import os
+os.system("%DJGPP%\..\bin\redir -e output.txt -oe %1 %2 %3 %4 %5 %6 %7 %8 %9")
+os.system("command /C %DJGPP%\..\bin\redir -e output.txt -oe %1 %2 %3 %4 %5 %6 %7 %8 %9")
+os.system("command")
+os.system("command /C echo %DJGPP%")
+os.system("command /C set")
+os.system("cmd /C set")
+os.system("cmd /C echo %DJGPP%")
+import os
+import time
+time.time.clock
+time.time.clock()
+time.clock()
+time.localtime
+time.localtime()
+txt = time.localtime()
+txt[4]
+txt = time.localtime()
+time.localtime()
+import os
+os.getenv("TEMP")
+import os
+help("os.remove")
+quit
+quit
+?
+?
+import sys
+import os
+from system2 import s2dom, s2util
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+node = "descendant-or-self::" + nodename + "/open"
+txt = xmldoc.gettext(node)
+filename = s2util.writepid()
+cmdfile = open(filename, 'w')   #'wb' creates strange CR char in .BAT
+cmdfile.writelines(txt)
+cmdfile.close()                 #or else windows has no access!!
+del cmdfile
+try:
+    if os.getenv("OS") == "Windows_NT":
+        cmdline = "cmd /C" + filename + sys.argv[3:]
+        print cmdline, "\n"
+        os.system(cmdline)
+    else:
+        cmdline = "command /C" + filename + sys.argv[3:]
+        print cmdline, "\n"
+        os.system(filename)
+        os.remove(cmdline)
+except:
+    print "ERROR at system2.py: tried to execute", cmdline, "\n"
+nodename = "redir"
+nodename = "redir"
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+node = "descendant-or-self::" + nodename + "/open"
+txt = xmldoc.gettext(node)
+filename = s2util.writepid()
+cmdfile = open(filename, 'w')   #'wb' creates strange CR char in .BAT
+cmdfile.writelines(txt)
+cmdfile.close()                 #or else windows has no access!!
+del cmdfile
+try:
+    if os.getenv("OS") == "Windows_NT":
+        cmdline = "cmd /C" + filename + sys.argv[3:]
+        print cmdline, "\n"
+        os.system(cmdline)
+    else:
+        cmdline = "command /C" + filename + sys.argv[3:]
+        print cmdline, "\n"
+        os.system(filename)
+        os.remove(cmdline)
+except:
+    print "ERROR at system2.py: tried to execute", cmdline, "\n"
+os.getenv("OS")
+import os
+os.startfile("cls")
+os.startfile("cls")
+os.startfile("clear")
+os.system("cls")
+from Ft import *
+import sys
+sys.path
+import sys
+sys.path
+import sys
+sys.path
+import Tk
+import Tk
+import pyglut
+import pyglut
+import pyGLUT
+import sys
+sys.path
+import PyGLUT
+import sys
+sys.platform
+import Togl
+import GLUT
+import GLE
+from encodings import gb2312
+gb2312
+pagename = "encodings." + "gb2312"
+charset = __import__(pagename)
+charset
+charset = from encodings __import__("gb2312")
+pagename = "gb2312"
+from encodings __import__(pagename)
+from encodings import %charset
+from encodings import $charset
+from encodings import (charset)
+oldpage = "gb2312"
+pagename = "encodings." + oldpage
+codepage = getattr(__import__(pagename), "gb2312")
+codepage
+codepage = getattr(__import__(pagename), oldpage)
+codepage
+def to_uni(instring, oldpage):          # Convert from native to Unicode
+    # print instring, oldpage, "\n"
+    try:
+        # from encodings import gb2312    # BROKEN -set up module variable?
+        pagename = "encodings." + oldpage
+        # charset = __import__(pagename)
+        codepage = getattr(__import__(pagename), oldpage)
+        codepage = charset
+    except:
+        print "ERROR s2code.to_uni:", oldpage, "codepage not in encodings.\n"
+        return
+    uni = codepage.decode(instring, "unicode")   # BROKEN!!
+    uni = repr(uni)                     # Cannot return a function
+    return uni
+to_uni 56 gb2312
+to_uni ("56","gb2312")
+def to_uni(instring, oldpage):          # Convert from native to Unicode
+    pagename = "encodings." + oldpage
+    # charset = __import__(pagename)
+    codepage = getattr(__import__(pagename), oldpage)
+    codepage = charset
+    print codepage
+to_uni ("56","gb2312")
+from Ft import *
+import socket
+socket.connect("hello")
+from Ft.Xml import *
+from Ft.Xml.Xslt import *
+import rpc
+import sys
+sys.path
+ import os
+import os
+os.getenv('PATH')
+os.getenv('CLASSPATH')
+import sys
+sys.path
+8
+y
+4
+y
+4
+y
+6536
+12088
+4
+y
+6528
+12080
+4
+y
+6544
+12096
+1
+y
+6508
+10096
+import Plex
+import irclib
+import sys
+sys.path
+import sys
+sys.path
+import sys
+sys.path
+from serial import *
+import rlcompleter
+im.
+im.		
+import readline
+readline.parse_and_bind("tab: complete")
+imp.
+del rlcompleter
+import rlcompleter
+import string
+exit
+import os
+os.s
+import os
+os.fork()
+os.keyword
+keyword
+a = "\a"
+a
+print a
+print a
+print a
+os.items()
+import readline
+import sys
+sys.
+sys.sys
+sys.sys
+sys.modules
+import *
+from . import *
+readline.__doc__
+import socket
+socket.__doc__
+import pdb
+import socket
+pdb.w
+pdb.run("from Ft import *")
+from Ft import *
+w 
+w
+h
+l
+import
+exit
+q
+curdir
+os.curdir
+os.kill
+os.kill()
+os.kill.__doc__
+os.kill(1380,1)
+import os
+os.chdir
+os.chdir.__doc__
+os.chdir("/dev/d")
+os.system("ls")
+os.chdir("/dev/d")
+os.system("ls")
+sys.path
+os.path
+import sys
+sys.path
+import Tkinter
+os.path
+import sys
+sys.path
+?
+tkButton
+Tk()
+quit
+quit
+import s2dom
+import s2dom
+import os
+os.getenv("$SYSTEM")
+os.getenv("%SYSTEM%")
+os.getenv(SYSTEM)
+os.getenv($SYSTEM)
+os.getenv("user")
+os.getenv("USER")
+os.getenv("SYSTEM")
+xml = os.getenv("SYSTEM")
+s2dom.doc = xml
+s2dom.getxml(xml, "//*")
+s2dom.tree.getxml(xml, "//*")
+import s2dom.tree
+xml = os.getenv("SYSTEM")
+import os
+import s2dom
+s2dom.doc = xml
+xml = os.getenv("SYSTEM")
+s2dom.doc = xml
+s2dom.getxml(xml, "//*")
+s2dom.getxml("", xml, "//*")
+s2dom.getxml("", s2dom.doc, "//*")
+s2dom.doc
+import os
+import s2dom
+xml = os.getenv("SYSTEM")
+s2dom.doc = xml
+s2dom.docname = xml
+import os
+import s2dom
+xml = os.getenv("SYSTEM")
+s2dom.docname = xml
+s2dom.getxml("", s2dom.doc, "//*")
+import os
+import s2dom
+s2dom.docname
+xml = os.getenv("SYSTEM")
+s2dom.docname = xml
+s2dom.docname
+s2dom.getxml("", s2dom.doc, "//*")
+import os
+import s2dom
+xml = os.getenv("SYSTEM")
+s2dom.docname = xml
+s2dom.getxml("", s2dom.doc, "//*")
+import os
+import s2dom
+import os
+import s2dom
+import s2dom
+import s2dom
+s2dom.doc
+import s2dom
+s2dom.doc
+import s2dom
+import os
+xml = os.getenv("SYSTEM")
+s2dom.docname = xml
+import sdom
+import s2dom
+import os
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom(xml)
+import s2dom
+import s2dom
+import s2dom
+import s2dom
+import s2dom
+import s2dom
+import s2dom
+import s2dom
+import s2dom
+import s2dom
+import os
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+import s2dom
+import os
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+xmldoc.doc
+xmldoc.doc()
+import os
+import s2dom
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+xmldoc.doc()
+import os
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+import s2dom
+xmldoc = s2dom.tree(xml)
+xmldoc.doc()
+import os
+import s2dom
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+xmldoc.doc()
+txt = xmldoc.getxml("//*")
+import os
+import s2dom
+import s2dom
+import s2dom
+import os
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+xmldoc.doc
+txt = xmldoc.getxml("//*")
+import os
+import s2dom
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+xmldoc.doc
+txt = xmldoc.getxml("//*")
+txt
+txt = xmldoc.getxml("link[1]")
+txt
+txt = xmldoc.getxml("link")
+txt
+txt = xmldoc.getxml("system/link")
+txt
+txt = xmldoc.getxml("//system")
+txt
+import os
+xmldoc.doc
+import s2dom
+import os
+import s2dom
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+txt
+txt = xmldoc.getxml("//system")
+txt
+xmldoc
+xmldoc.doc
+txt = xmldoc.getnode("//system")
+txt
+import os
+os.startfile
+os.startfile("iexplore")
+os.startfile("C:\5_1_1.svg")
+os.startfile("C:/5_1_1.svg")
+os.startfile("C:\\5_1_1.svg")
+os.startfile(" C:\\5_1_1.svg")
+os.startfile("/dev/c/5_1_1.svg")
+os.startfile("ls")
+os.startfile("telnet")
+os.startfile("start C:\5_1_1.svg")
+os.startfile("rundll32.exe shell32.dll,ShellExec_RunDLLA C:\5_1_1.svg")
+os.startfile("rundll32.exe shell32.dll,ShellExec_RunDLLA C:\\5_1_1.svg")
+os.startfile("rundll32.exe shell32.dll,ShellExec_RunDLLA C:\5_3_3.svg")
+os.startfile("rundll32.exe shell32.dll,ShellExec_RunDLLA C:/5_3_3.svg")
+os.startfile("rundll32.exe shell32.dll,ShellExec_RunDLLA iexplore")
+import os
+os.startfile("ls")
+os.startfile("iexplore")
+import os
+os.system("rundll32.exe shell32.dll,ShellExec_RunDLLA iexplore")
+os.pipe("rundll32.exe shell32.dll,ShellExec_RunDLLA iexplore")
+os.popen("rundll32.exe shell32.dll,ShellExec_RunDLLA iexplore")
+import os
+os.startfile("ls")
+import os
+os.startfile
+os.startfile("ls")
+import os
+os.startfile("ls")
+import os
+os.startfile("ls")
+import os
+os.startfile("ls")
+import os
+os.startfile("ls")
+os.startfile("ls :pause")
+import os
+os.startfile("c:/5_3_3.svg")
+os.startfile("c:/5_3_3.svg")
+os.startfile("cls")
+import os
+os.startfile("cls")
+os.startfile("command /C cls")
+os.system("cls")
+import s2dom
+import os
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+txt = xmldoc.getnode("//system")
+txt
+txt = xmldoc.getxml("//system/link")
+txt
+import s2dom
+s2dom.tree.usage
+s2dom.tree.getxml.usage
+import s2dom
+import os
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+txt = xmldoc.getxml("//system/link")
+txt
+from system2 import s2dom
+import os
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+txt = xmldoc.getxml("//system/link")
+txt
+print txt
+import sys
+sys.path
+from Zope import *
+from Zope import *
+from Zope import *
+from Zope import *
+from Zope import *
+import sys
+sys.path
+import s2dom
+from system import s2dom
+from system2 import s2dom
+import os
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+from system2 import s2dom
+import os
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+sys.path
+txt = s2dom.getxml(xmldoc)
+txt = s2dom.tree.getxml(xmldoc)
+txt = xmldoc.getxml(xmldoc)
+txt = xmldoc.getxml("//system/link/outlook)
+txt = xmldoc.getxml("//system/link/outlook")
+from system2 import s2dom
+import os
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+txt = xmldoc.getxml("//system/link/outlook")
+txt
+txt = xmldoc.gettext("//system/link/outlook")
+del s2dom
+help ("libxml2")
+@
+@1
+@1 = 1
+@1 = aaa
+@111@ 
+:
+:a
+a
+""":
+echo off = 1
+echo off
+from system2 import s2dom
+import sys, os
+def srun(nodename):
+    xml = os.getenv("SYSTEM")
+    xmldoc = s2dom.tree(xml)
+    node = "descendant-or-self::" + nodename + "/open"
+    # print node, "\n"
+    txt = xmldoc.gettext(node)
+    print txt, "\n"
+cmd = srun
+nodename "redir"
+nodename = "redir"
+cmd(nodename)
+import os
+os.system("%DJGPP%\..\bin\redir -e output.txt -oe %1 %2 %3 %4 %5 %6 %7 %8 %9")
+os.system("command /C %DJGPP%\..\bin\redir -e output.txt -oe %1 %2 %3 %4 %5 %6 %7 %8 %9")
+os.system("command")
+os.system("command /C echo %DJGPP%")
+os.system("command /C set")
+os.system("cmd /C set")
+os.system("cmd /C echo %DJGPP%")
+import os
+import time
+time.time.clock
+time.time.clock()
+time.clock()
+time.localtime
+time.localtime()
+txt = time.localtime()
+txt[4]
+txt = time.localtime()
+time.localtime()
+import os
+os.getenv("TEMP")
+import os
+help("os.remove")
+quit
+quit
+?
+?
+import sys
+import os
+from system2 import s2dom, s2util
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+node = "descendant-or-self::" + nodename + "/open"
+txt = xmldoc.gettext(node)
+filename = s2util.writepid()
+cmdfile = open(filename, 'w')   #'wb' creates strange CR char in .BAT
+cmdfile.writelines(txt)
+cmdfile.close()                 #or else windows has no access!!
+del cmdfile
+try:
+    if os.getenv("OS") == "Windows_NT":
+        cmdline = "cmd /C" + filename + sys.argv[3:]
+        print cmdline, "\n"
+        os.system(cmdline)
+    else:
+        cmdline = "command /C" + filename + sys.argv[3:]
+        print cmdline, "\n"
+        os.system(filename)
+        os.remove(cmdline)
+except:
+    print "ERROR at system2.py: tried to execute", cmdline, "\n"
+nodename = "redir"
+nodename = "redir"
+xml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(xml)
+node = "descendant-or-self::" + nodename + "/open"
+txt = xmldoc.gettext(node)
+filename = s2util.writepid()
+cmdfile = open(filename, 'w')   #'wb' creates strange CR char in .BAT
+cmdfile.writelines(txt)
+cmdfile.close()                 #or else windows has no access!!
+del cmdfile
+try:
+    if os.getenv("OS") == "Windows_NT":
+        cmdline = "cmd /C" + filename + sys.argv[3:]
+        print cmdline, "\n"
+        os.system(cmdline)
+    else:
+        cmdline = "command /C" + filename + sys.argv[3:]
+        print cmdline, "\n"
+        os.system(filename)
+        os.remove(cmdline)
+except:
+    print "ERROR at system2.py: tried to execute", cmdline, "\n"
+os.getenv("OS")
+import os
+os.startfile("cls")
+os.startfile("cls")
+os.startfile("clear")
+os.system("cls")
+from Ft import *
+import sys
+sys.path
+import sys
+sys.path
+import sys
+sys.path
+import Tk
+import Tk
+import pyglut
+import pyglut
+import pyGLUT
+import sys
+sys.path
+import PyGLUT
+import sys
+sys.platform
+import Togl
+import GLUT
+import GLE
+from encodings import gb2312
+gb2312
+pagename = "encodings." + "gb2312"
+charset = __import__(pagename)
+charset
+charset = from encodings __import__("gb2312")
+pagename = "gb2312"
+from encodings __import__(pagename)
+from encodings import %charset
+from encodings import $charset
+from encodings import (charset)
+oldpage = "gb2312"
+pagename = "encodings." + oldpage
+codepage = getattr(__import__(pagename), "gb2312")
+codepage
+codepage = getattr(__import__(pagename), oldpage)
+codepage
+def to_uni(instring, oldpage):          # Convert from native to Unicode
+    # print instring, oldpage, "\n"
+    try:
+        # from encodings import gb2312    # BROKEN -set up module variable?
+        pagename = "encodings." + oldpage
+        # charset = __import__(pagename)
+        codepage = getattr(__import__(pagename), oldpage)
+        codepage = charset
+    except:
+        print "ERROR s2code.to_uni:", oldpage, "codepage not in encodings.\n"
+        return
+    uni = codepage.decode(instring, "unicode")   # BROKEN!!
+    uni = repr(uni)                     # Cannot return a function
+    return uni
+to_uni 56 gb2312
+to_uni ("56","gb2312")
+def to_uni(instring, oldpage):          # Convert from native to Unicode
+    pagename = "encodings." + oldpage
+    # charset = __import__(pagename)
+    codepage = getattr(__import__(pagename), oldpage)
+    codepage = charset
+    print codepage
+to_uni ("56","gb2312")
+from Ft import *
+import socket
+socket.connect("hello")
+from Ft.Xml import *
+from Ft.Xml.Xslt import *
+import rpc
+import sys
+sys.path
+ import os
+import os
+os.getenv('PATH')
+os.getenv('CLASSPATH')
+import os
+os.home
+os.h
+os.home
+sys.prefix
+import sys
+sys.prefix
+import getopt
+import sys
+sys.path
+import sys
+sys.path
+import sys
+sys.path
+import python
+import sys
+sys.path
+import sys
+sys.path
+import *
+from Ft import *
+import curses
+import sys
+sys.path
+from sample import svg
+frm Ft import *
+from Ft import *
+import sys
+sys.path
+from Ft.Xml.Xslt import *
+import sys
+sys.path
+import alpy
+import Ft
+import nis
+import nis
+import nis
+import nis
+import alpy
+import sys
+sys.patj
+sys.path
+import tk
+import sys
+sys.path
+import sys
+sys.path
+import sys
+sys.path
+import tk
+import Tk
+import Tkinter
+import sys
+sys.path
+import Tkinter
+import sys
+sys.path
+from Ft import *
+import sys
+sys.path
+import OpenGL
+import OpenGL
+from OpenGL import *
+from OpenGLimport *
+from OpenGL import *
+from OpenGL import *
+import OpenGL
+from OpenGL import *
+from OpenGL import *
+from GL import _GLUT
+from GL import _GLU
+from GL import _GLU
+from GL import _GLU
+import sys
+sys.path
+help()
+from OpenGL.GLU import *
+import _GLUT
+import _GLU
+import _GL
+exit
+credits
+copyright
+from OpenGL import *
+from OpenGL import *
+from OpenSSL import *
+from OpenSSL import *
+from OpenSSL import *
+from OpenSSL import *
+from OpenSSL import *
+import sys
+import os
+os.name
+quit
+from OpenGL.Tk import *
+from OpenGL.Tk import *
+from OpenGL.Tk import *
+from OpenGL.Tk import *
+from OpenGL.Tk import *
+from OpenGL.Tk import *
+hello
+?
+ps
+exit
+from OPenGL.GLU import *
+from OpenGL.GLU import *
+from OpenGL.Tk import *
+from OpenGL.TK import *
+from OpenGL.Tk import *
+from OpenGL import *
+import _GLU
+import _GLUT
+from OpenGL import *
+from OpenGL import *
+from OpenGL import *
+from OpenGL.Tk import *
+from OpenGL import *
+from OpenGL.Tk import *
+import os
+os.mkdir ("/dev/d/SAMPLE")
+import _GLUT
+import _GLU
+from OpenGL import *
+import GL
+import GL
+from Ft.Xml import *
+from Ft.Xml.Xslt import *
+import _GLUT
+import dl
+dl.read
+dl.load
+dl.import
+dl.open ("glu.dxe")
+dl.open ("gl.dxe")
+import dl
+dl.open("glu.dxe")
+dl.open("glu.dxe")
+import dl
+dl.open("glu.dxe")
+dl.open("gl.dxe")
+dl.open("glut.dxe")
+import glut
+import dl
+dl.open ("glut.dxe")
+dl.open ("glu.dxe")
+dl.open ("gl.dxe")
+import _GLU
+import _GL
+import _GLUT
+import sys
+sys.setdlopenflags(dl.RTLD_GLOBAL)
+import dl
+sys.setdlopenflags(dl.RTLD_GLOBAL)
+import _GLU
+import GL
+sys.getrecursionlimit()
+import GL
+import GLU
+import sys
+import sys
+sys.setdlopenflags(0x100)
+import glut
+import dl
+dl.open("glu.dxe")
+import _GLU
+dlglu=dl.open("glu.dxe")
+import dl
+dlGLU=dl.open("glu.dxe")
+import dl
+import sys
+sys.setdlopenflags(0x100)
+dlGLU=dl.open("glu.dxe")
+import dl
+dlGLU=dl.open("glu.dxe")
+dlGLU2=dl.open("_GLU.dxe")
+dlGLU2=dl.open("/dev/env/DJDIR/lib/python2.2/site-packages/display/GL/_GLU.dxe")
+import _GL
+import _GL
+import _GLU
+a = 0x100
+a
+import sys
+import dl
+sys.setdlopenflags(0x100)
+import _GLU
+import _GLU
+import _GLU
+import _GLU
+import _GLU
+import _GLU
+import 
+import dl
+sys.setdlopenflags(0x100)
+import sys
+sys.setdlopenflags(0x100)
+dlGLU2=dl.open("/dev/env/DJDIR/lib/python2.2/site-packages/display/GL/_GLU.dxe")
+import sys
+sys.setdlopenflags(0x100)
+import dl
+dlGLU2=dl.open("/dev/env/DJDIR/lib/python2.2/site-packages/display/GL/_GLU.dxe")
+import sys
+import dl
+import dl
+import sys
+sys.setdlopenflags(0x100)
+dlGLU2=dl.open("/dev/env/DJDIR/lib/python2.2/site-packages/display/GL/_GLU.dxe")
+import dl
+import dl
+import sys
+sys.setdlopenflags(0x100)
+dlGLU2=dl.open("/dev/env/DJDIR/lib/python2.2/site-packages/display/GL/_GLU.dxe")
+dlGLU=dl.open("glu.dxe")
+dlGLU2=dl.open("/dev/env/DJDIR/lib/python2.2/site-packages/display/GL/_GLU.dxe")
+import sys
+sys.setdlopenflags(0x100)
+import dl
+dlGLU=dl.open("glu.dxe")
+dlGLU2=dl.open("/dev/env/DJDIR/lib/python2.2/site-packages/display/GL/_GLU.dxe")
+help()
+dl.sym
+import sys
+sys.setdlopenflags(0x100)
+import dl
+dlGLU=dl.open("glu.dxe")
+dlGLU2=dl.open("/dev/env/DJDIR/lib/python2.2/site-packages/display/GL/_GLU.dxe")
+import pydxe
+import pydxe
+import pydxe
+from Ft.Xml.Xslt import *
+from Ft.Xml import *
+import _GLU
+import _GLU
+import  _GLU
+from Ft.Xml.Xslt import *
+from Numeric import *
+import Numeric
+import Numeric
+import _GLU
+import _GLU
+import _GLU
+import GL
+import _imaging
+import _GL
+import _GLU
+import _GLUT
+import GL, GLU, GLUT
+dlGLU=dl.open("glu.dxe")
+import dl
+dlGLU=dl.open("glu.dxe")
+import nis
+import nis
+import nis
+import GL
+import GLU
+import _GLU
+import _GLU
+import GL
+import gl
+import GL
+import GL
+import GL
+import GL
+import GL
+import GL
+import GL
+import GL
+import dl
+dl.open("D:\USR\DJGPP\lib\python2.2\site-packages\display\PyGL\_GL.dxe")
+dl.open("D:\USR\DJGPP\lib\python2.2\site-packages\display\PyGL\_GLUT.dxe")
+import dl
+dl.open("D:\USR\DJGPP\lib\python2.2\site-packages\display\PyGL\_GLUT.dxe")
+import GLUT
+impotu GLUT
+import GLUT
+import GLU
+import GLU
+import GL
+import fpectl
+import gl
+import GL
+import dislin
+from Ft.Xml.Xslt import *
+from Ft.Xml import *
+from Ft.Xml.Xslt import *
+import xslt2mod
+import xml2mod
+import libxml2mod
+import dl
+dl.open("iconv.dxe")
+import libxml2mod
+import libxml2mod
+import libxml2mod
+import GL
+import GLUT
+import libxml2mod
+import sys
+sys.setdlopenflags(0x100)
+import dl
+dl.open("iconv.dxe")
+import libxml2mod
+import libxml2mod
+import libxml2mod
+import libxml2mod
+import libxml2mod
+import dislin
+import dislin
+import syslog
+import pcre
+import libxsltmod
+import libxsltmod
+import libxml2
+from Ft.Xml.Xslt import *
+y
+/bin
+y
+/dev/env/DJDIR/bin
+y
+/dev/env/DJDIR/bin
+import sys
+sys.exec_prefix
+sys.prefix
+sys.executable
+import sys
+sys.path
+import curses
+import hotshot
+import sys
+sys.executable
+y
+/dev/env/DJDIR/bin
+import imgfile
+import imgfile
+import imgfile
+import imgfile
+import imgfile
+import imgfile
+import imgfile
+import imgfile
+import sys
+sys.path
+import imgfile
+from Ft.Xml.Xslt import *
+import sys
+import imgfile
+sys.path
+sys.executable
+import libxml
+import libxml
+import GL
+import GL
+import GL
+import GL
+import GL
+import GL
+import GL
+help()
+help(fdopen)#
+help(fdopen)
+help('fdopen')
+help('fdopen')
+help('os.fdopen')
+import os
+os.O
+import pyhl
+import _pyhl
+import _pyhl
+import _pyhl
+import socket
+bash
+import socket
+socket.M
+socket.d
+from dom import minidom
+from xml.dom import minidom
+keyobject = minidom.parse('edifact.xml')
+output = keyobject.getElementsByTagName("UNB"))
+output = keyobject.getElementsByTagName("UNB")
+output
+print output
+print output.text
+output.__str__
+output.index
+output.insert
+output.sort
+output.__doc__
+output.count()
+import pcap
+from Ft.Xml import *
+from Ft.Xml import *
+from Ft.Xml import *
+ls
+ls
+exit
+from xml.dom import minidom
+minidom.Element
+keyobject = minidom.parse("D:/D/XML/system.xml")
+keyobject.getElementsByTagName("libgle")
+test = keyobject.getElementsByTagName("libgle")
+test
+test.length
+test[1]
+test[0]
+ben = test[0]
+ben.TEXT_NODE
+exit
+import GLE
+import GLE
+import GLUT
+help ("switch")
+from Ft.Xml.Xslt import *
+import socket
+test = socket.gethostbyname("ws9")
+test
+test2 = socket.getprotobyname("ip")
+test2
+test3
+import socket
+from Ft.Xml.Xslt import *
+~
+import sys
+sys.modules
+import sys
+sys.modules
+if 'posix' in sys.modules:
+    print "hello"
+if 'nt' in sys.modules:
+    print "hello"
+import sys
+sys.modules
+import sys
+sys.modules
+exit
+from Ft.Xml.Xslt import *
+import sys
+~
+os
+import os
+help("os.path.basename")
+os.path.basename("/dev/env/ben.txt")
+os.path.basename("/dev/env/ben.txt", ".txt")
+os.path.
+psopen2
+impost os
+impost
+import sys, os
+os.pipe()
+help("os.pipe")
+os.pipe()
+os.pipe()
+os.pipe("cat")
+fdopen
+help("os.fdopen")
+import sys
+sys.modules
+import Tkinter
+import Tkinter
+import Tkinter
+import Tkinter
+import Tkinter
+import Tkinter
+import Tkinter
+import Tkinter
+import Tkinter
+import Tkinter
+import Tkinter
+import Tkinter
+from PIL import *
+exit
+import db
+import bsd
+import bsddb
+import dbm
+import dbm+
+import dbm
+import dbm
+import dbm
+import sys
+sys.modules
+import dbm
+sys.modules
+from PIL import *
+import sys
+sys.modules
+import os
+help ("os.listdir")
+os.listdir("..")
+os.listdir("../..")
+from system2 import *
+system2.s2dom
+system2.s2dom.
+import sys
+sys.path
+from Ft import *
+sys.platform
+import sys
+sys.platform
+sys.platform
+import os
+os.platform
+os.name
+os.popen
+import os
+os.popen
+import pyglut
+import pyglut
+import imgfile
+import imgfile
+import imgfile
+import imgfile
+import imgfile
+import PyGLUT
+import errno
+import errno
+import webbrowser
+import os
+os.getenv("USER")
+os.getenv("USR")
+import time
+time.time
+time.time()
+time.localtime
+time.localtime()
+p = os.popen("cat | less")
+p = os.popen("less")
+p.write("hello")
+p.flush
+p.flush()
+p.read()
+p.readinto
+p.readinto("hello")
+p.writelines("hello")
+p = os.popen("cat")
+p.read()
+p.write("hdfjhfshj")
+import sys, os
+import libxml2
+doc = libxml2.pystem.xml")
+scontext = doc.xpathEval("descendant-or-self::weight/@shell")[0]
+text = scontext.getContent()
+import sys, os
+import libxml2
+doc = libxml2.pystem.xml")
+scontext = doc.xpathEval("descendant-or-self::weight/@shell")[0]
+text = scontext.getContent()
+import libxml2
+import sys
+sys.path
+import sys, os
+import libxml2
+doc = libxml2.pext = doc.xpathEval("descendant-or-self::weight/@shell")[0]
+text = scontext.getContent()
+import sys, os
+import libxml2
+doc = libxml2.parseFile("system.xml")
+doc = libxml2.parseFile("/dev/d/d/xml/system.xml")
+scontext = doc.xpathEval("descendant-or-self::weight/@shell")[0]
+text = scontext.getContent()
+del doc, scontext
+scontext = doc.xpathEval("descendant-or-self::weight/@shell")
+doc = libxml2.parseFile("/dev/d/d/xml/system.xml")
+scontext = doc.xpathEval("descendant-or-self::weight/@shell")
+scontext = doc.xpathEval("descendant-or-self::weight/@shell")[0]
+scontext = doc.xpathEval("descendant-or-self::weight/@shell")
+text = scontext.getContent()
+text = scontext.getContent()
+scontext = doc.xpathEval("descendant-or-self::weight/@shell")
+text = scontext.getContent()
+scontext
+scontext = doc.xpathEval("descendant-or-self::weight/open/@shell")
+import sys, os
+import libxml2
+mydoc = libxml2.parseFile("/dev/d/d/xml/system.xml")
+scontext = mydoc.xpathEval("descendant-or-self::weight/open/@shell")
+scontext
+text = scontext.getContent()
+scontext
+scontext[]
+print scontext
+scontext = mydoc.xpathEval("descendant-or-self::weight/open/@shell")[0]
+text = scontext.getContent()
+text
+import cStringIO
+import libxml2
+DOC = """<?xml version="1.0" encoding="UTF-8"?>
+<verse>
+  <attribution>Christopher Okibgo</attribution>
+  <line>For he was a shrub among the poplars,</line>
+  <line>Needing more roots</line>
+  <line>More sap to grow to sunlight,</line>
+  <line>Thirsting for sunlight</line>
+</verse>
+"""
+XMLREADER_START_ELEMENT_NODE_TYPE = 1
+stream = cStringIO.StringIO(DOC)
+input_source = libxml2.inputBuffer(stream)
+reader = input_source.newTextReader("urn:bogus")
+while reader.Read():
+    print "node name: ", reader.Name()
+    if reader.NodeType() == XMLREADER_START_ELEMENT_NODE_TYPE:
+        print "Start of an element"  
+a = "hellloo theree"
+print a[3:]
+print a[2:7]
+print a[0:7]
+print a[0:6]
+print a[1:6]
+print a[0:6]
+a
+a = "jrekjrejk"
+len(a)
+a[0:9]
+a[0:8]
+import sys, os
+import libxml2
+doc = libxml2.parseFile("/dev/d/d/xml/system.xml")
+scontext = mydoc.xpathEval("descendant-or-self::weight")
+scontext = doc.xpathEval("descendant-or-self::weight")
+scontext = doc.xpathEval("descendant-or-self::weight")
+for i in scontext:
+ print i.get_type()
+ print i.get_content()
+ print i.getContent()
+for i in scontext:
+ print i.get_type()
+ print i.get_content()
+for i in scontext:
+ print i.get_type()
+ if i.get_type == "text"
+for i in scontext:
+ print i.get_type()
+ if i.get_type == "text":
+  print i.get_content()
+for i in scontext.children:
+ print i.get_type()
+ if i.get_type == "text":
+  print i.get_content()
+scontext = doc.xpathEval("descendant-or-self::weight")[0]
+ print i.get_type()
+ if i.get_type == "text":
+  print i.get_content()
+for i in scontext.children:
+ print i.get_type()
+ if i.get_type == "text":
+  print i.get_content()
+for i in scontext.children:
+ print i.nodePath()
+ print i.get_type()
+for i in scontext.children:
+ print i.get_type()
+ print i.nodePath()
+import os
+os.platform
+os.name
+sys.platform
+import sys
+sys.platform
+import libxml2
+doc = libxml2.parseFile("ex6.xml")
+doc
+a = doc.xpathEval("*")
+a
+for i in a.children:
+for i in a[0].children:
+ if i.get_type() = 'element'
+for i in a[0].children:
+ if i.get_type() = 'element':
+for i in a[0].children:
+ if i.get_type() == 'element':
+  print i
+for i in a[0].children:
+ if i.get_type() == 'element':
+  print i.nodePath()
+doc2 = doc.xincludeProcess()
+b = doc.xpathEval("*")
+for i in b[0].children:
+ if i.get_type() == 'element':
+  print i
+doc = libxml2.parseFile("/dev/d/d/xml/system.xml")
+import libxml2
+doc = libxml2.parseFile("/dev/d/d/xml/system.xml")
+a = doc.xpathEval("descendent-or-self::python")
+a = doc.xpathEval("descendant-or-self::python")
+for i in a[0].children:
+ if i.get_type() == 'element':
+  print i.nodePath()
+doc2 = doc.xincludeProcess()
+a = doc2.xpathEval("descendent-or-self::python")
+doc = libxml2.parseFile("/dev/d/d/xml/system.xml")
+del doc
+doc = libxml2.parseFile("/dev/d/d/xml/system.xml")
+doc2 = doc.xincludeProcess()
+del doc
+doc2
+b = doc2.xpathEval("*")
+doc = libxml2.parseFile("ex6.xml")
+doc2 = doc.xincludeProcess()
+b = doc.xpathEval("*")
+doc2 = doc.xincludeProcess()
+import os
+os.shell
+os.tmpnam
+os.tmpnam()
+import sys
+sys.platform
+os.name
+ben = os.popen("cmd /C echo %TEMP%")
+ben
+ben.ben.read()
+ben.read()
+ben = os.popen("command /C echo %TEMP%")
+ben.read()
+ben = os.popen("cmd /C echo %TEMP%")
+ben.read()
+a = ben.read()
+a.replace()
+a.replace("NT", "BBB")
+a
+ben.read()
+ben = os.popen("cmd /C echo %TEMP%")
+a = ben.read()
+a.replace("NT", "BBB")
+import libxml2
+doc = libxml2.parseFile("/dev/d/d/xml/system.xml")
+a = doc2.xpathEval(descendant-or-self::utility/etc/printcap/bjc2000-a4/if/open/@shell)
+a = doc.xpathEval("descendant-or-self::utility/etc/printcap/bjc2000-a4/if/open/@shell")
+a
+a.get_content()
+a.getcontent()
+b = a[0
+b.get_content
+b.get_content()
+doc = libxml2.parseFile("/dev/d/d/xml/system.xml")
+import libxml
+import libxml2
+import os
+doc = libxml2.parseFile("/dev/d/d/xml/system.xml")
+current_nodes = doc.xpathEval("self-or-descendant::program/python")
+current_nodes = doc.xpathEval("descendant-or-self::program/python")
+current_nodes = doc.xpathEval("descendant-or-self::program/python")
+node = current_nodes[0]
+node
+node2 = node.serialize()
+node2
+doc2 = libxml2.parseFile(node2)
+doc2 = libxml2.parseEntity(node2)
+import dl
+dl.open("_opengl_num.dxe")
+import dl
+dl.open("openglutil_num.dxe")
+dl.open("_opengl.dxe")
+dl.open("_glut.dxe")
+from OpenGL.GLU import *
+from OpenGL import GLU
+GLU.origdict.keys
+GLU.origdict.keys()
+help("OpenGL.GLU")
+from pyfits import *
+from pyfits import *
+from pyfits import *
+from pyfits import *
+from pyfits import *
+import pyfits
+9
+?
+quit
+from GL import *
+from OpenGL import *
+import fitsio
+import fitsio
+import fitsio
+import fitsio
+import termios
+import os
+os.getenv("DJDIR")
+exit
+import thread
+thread.exit()
+from OpenGL import *
+from OpenGL import *
+from _xmlplus import *
+from _xmlplus import *
+from numeric import *
+from Numeric import *
+import libxml
+import libxml
+import dislin
+from twisted import *
+import thread
+from _xmlplus import *
+import pyhl
+import _pyhl
+import _pyhl
+import thread
+thread.get_ident()
+thread.get_ident()
+thread.exit()
+from socket import *
+icmp=getprotobyname("icmp")
+icmp=getprotobyname("udp")
+icmp=getprotobyname("")
+icmp=getprotobyname("icmp")
+icmp=getprotobyname("udp")
+from socket import *
+icmp=getprotobyname("udp")
+icmp=getprotobyname("icmp")
+import os
+os.getenv("FNCASE")
+os.listdir(".")
+import os
+os.listdir(".")
+import os
+os.listdir(".")
+os.getenv("OS")
+import os
+os.listdir(".")
+os.getenv("FNCASE")
+import sys
+sys.path
+import sys
+sys.path
+import sys
+sys.path
+import sys
+sys.version[:1]
+sys.path
+import sys
+sys.path
+import sys
+sys.path
+import sys
+sys.path
+import libxml
+from GL import *
+from OpenGL import *
+from Ft.Xml.Xslt import *
+from Ft.Xml import Xslt
+from Ft.Xml.Xslt import *
+from OpenGL import *
+import gdbm
+import sys
+sys.path
+import dl
+import dl.open("/dev/d/usr/djgpp/lib/gl.dxe")
+dl.open("/dev/d/usr/djgpp/lib/gl.dxe")
+from OpenGL import *
+from OpenGL import *
+from OpenGL import *
+from Ft.Xml.Xslt import *
+import socket
+import socket
+import socket
+del socket
+import socket
+import errno
+from OpenGL import *
+import errno
+exit
+import _pyhl
+import socket
+from OpenGL import *
+import socket
+sys.path
+import sys
+import sys
+sys.path
+import PIL
+PIL.__init__()
+import thread
+thread.get_ident()
+import dl
+import dl
+from OpenGL import *
+import Numeric
+import Ft
+bdeck
+root
+bdeck
+import thread
+import sys
+sys.path
+import sys
+sys.path
+import sys
+sys.path
+import sys
+sys.path
+from OpenGL import *
+from OpenGL import *
+from commands import *
+getoutput('echo xyzzy')
+getoutput('echo xyzzy')
+from commands import *
+getoutput('echo xyzzy')
+from commands import *
+getoutput('echo xyzzy')
+from commands import *
+getoutput('echo xyzzy')
+from commands import *
+getoutput('echo xyzzy')
+from commands import *
+getoutput('echo xyzzy')
+from commands import *
+getoutput('echo xyzzy')
+import os
+os.listdir(".")
+from commands import *
+os.listdir(".")
+getoutput('echo xyzzy')
+from commands import *
+getoutput('echo xyzzy')
+getoutput('bbb xyzzy')
+from commands import *
+getoutput('bbb xyzzy')
+import sys
+sys.path
+import thread
+thread.get_ident()
+import socket
+import errno
+import signal
+import thread
+import socket
+import thread
+import os
+os.name
+from OpenGL import *
+import thread
+thread.get_ident()
+thread.get_ident()
+import os
+import thread
+from OpenGL import *
+thread.get_ident()
+import socket
+import types
+import libxml2
+import thread
+import socket
+import libxml2
+import libxml2
+import thread
+import thread
+thread.exit()
+exit
+import socket
+from XML import
+from libxml2 import *
+import select
+select.select()
+import largefile
+import largefile
+import select
+select()
+exit
+import socket
+import socket
+socket.socket()
+import thread
+thread.get_ident()
+from OpenGL import *
+from OpenGL import *
+import libxml2
+import libxml
+import thread
+import socket
+socket.socket()
+import select
+select.poll()
+import select
+import libxml
+from libxml import *
+import libxml
+import thread
+thread.get_ident()
+thread.exit()
+import thread
+thread.get_ident()
+from libxml import *
+from OpenGL import *
+import mem
+import memory
+import string
+import socket
+hostname = socket.gethostname()
+hostname
+import socket
+hostname = socket.gethostname()
+hostname
+import socket
+socket.socket()
+hostname = socket.gethostname()
+hostname
+import socket
+hostname = socket.gethostname()
+hostname
+socket.gethostbyname(hostname)
+import socket
+hostname = socket.gethostname()
+socket.gethostbyname(hostname)
+import os
+os.shell
+os.system
+os.system("ls")
+os.p
+os.pipe
+os.pipe("ls")
+os.popen("ls")
+s = os.popen("ls")
+s
+s.read
+s.read()
+s = s.read()
+print s
+s
+s.read()
+s = os.popen("ls")
+s = s.read()
+s
+print s
+s = os.popen("ls")
+s
+s = s.read()
+s
+print s
+from xml.dom import minidom
+self.keyobject = minidom.parse("edifact.xml")
+keyobject = minidom.parse("edifact.xml")
+keyobject
+keyobject1 = keyobject[0]
+listxml = self.keyobject.getElementsByTagName("dictionary")
+listxml = keyobject.getElementsByTagName("dictionary")
+listxml
+lisxml.
+listxml1 = listxml[0]
+listxml1
+from xml.dom import minidom
+keyobject = minidom.parse("edifact.xml")
+listxml = keyobject.getElementsByTagName("dictionary")
+listxml1 = listxml[0]
+listxml1
+listxml1.parentNode
+error
+from xml.dom import minidom
+listxml = keyobject.getElementsByTagName("dictionary")
+keyobject = minidom.parse("edifact.xml")
+listxml = keyobject.getElementsByTagName("dictionary")
+listxml1 = listxml[0]
+listxml1.parentNode
+listxml1 = listxml[1]
+nodes = listxml1.childNodes
+nodes[0]
+nodes[1]
+nodes[1].parentNode
+nodes[3]
+node = nodes[3]
+morenodes = node.childNodes
+morenodes[0]
+target = morenodes[0]
+target.parentNode
+listxml
+listxml1
+listxml
+for a in listxml
+for a in listxml:
+ print a
+from xml.dom import minidom
+listxml = keyobject.getElementsByTagName("dictionary")
+keyobject = minidom.parse("edifact.xml")
+keyobject = minidom.parse("edifact.xml")
+listxml = keyobject.getElementsByTagName("dictionary")
+listxml1 = listxml[1]
+listxml1 = listxml[0]
+listxml1
+for child in listxml1.childNodes:
+ print child
+from xml.dom import minidom
+keyobject = minidom.parse("edifact.xml")
+listxml = keyobject.getElementsByTagName("dictionary")
+listxml1 = listxml[0]
+a = []
+for aa in a:
+ print "1"
+ben = ["ben", "decker"]
+ben
+ben["ben"]
+a = "a"
+a.replace("a", "b")
+a
+a = a.replace("a", "b")
+a
+a = []
+a[1] = "hello"
+a[0] = "hello"
+a = "jvkdkfjj"
+for aa in a:
+ print aa
+a = "y"
+for aa in a:
+ print aa
+a = [[]]
+len(a)
+a = [["ben", "decker"]]
+a
+len(a)
+b = "hello"
+b.append[a]
+a = {}
+a['info'] = 12
+a
+a['info']
+import os
+a = os.open("/dev/c/autoexec.bat")
+a = os.open("/dev/c/autoexec.bat", os.O_RDONLY)
+a
+for b in a
+for b in a:
+ print b
+a = open("/dev/c/autoexec.bat", "r")
+a
+data = a.read()
+data
+import socket
+import dl
+dl.open("_tkinter.dxe")
+import dl
+dl.open("_tkinter.dxe")
+import dl
+dl.open("_tkinter.dxe")
+import Tk
+import Tkinter
+Tkinter.image_types
+Tkinter.image_types()
+a = {'UNT': 1234}
+a['UNT']
+b = a['UNT']
+a = [['a', 'b'], ['c', 'd', 'e']]
+a [1][0]
+a [1][1*2]
+a [1][0*2]
+import thread
+import errno
+import Tkinter
+import libxml
+import Numeric
+Numeric.version
+import sys
+sys.path
+import thread
+thread_get_ident()
+thread.get_ident()
+from OpenGL import *
+GL.glVertex
+GL.glVertex()
+GL.glVertex(0,0)
+a = GL.glVertex(0,0)
+a
+a.__class__
+import libxml
+import os
+os.name
+import sys
+sys.path
+import socket
+socket.socket.connect_ex(('127.0.0.1', 54321))
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+HOST = "127.0.0.1"
+PORT = 54321
+sock.bind((HOST, PORT))
+sock.listen(1)
+class echo_server(threading.Thread):
+    def run(self):
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        sock.bind((HOST, PORT))
+        sock.listen(1)
+        conn, client = sock.accept()
+        buffer = ""
+        while "\n" not in buffer:
+            data = conn.recv(10)
+            if not data:
+                break
+            buffer = buffer + data
+        while buffer:
+            n = conn.send(buffer)
+            buffer = buffer[n:]
+        conn.close()
+        sock.close()
+import thread # If this fails, we can't test this module
+import asyncore, asynchat, socket, threading, time
+class echo_server(threading.Thread):
+    def run(self):
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        sock.bind((HOST, PORT))
+        sock.listen(1)
+        conn, client = sock.accept()
+        buffer = ""
+        while "\n" not in buffer:
+            data = conn.recv(10)
+            if not data:
+                break
+            buffer = buffer + data
+        while buffer:
+            n = conn.send(buffer)
+            buffer = buffer[n:]
+        conn.close()
+        sock.close()
+class echo_server(threading.Thread):
+def run(self):
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    sock.bind((HOST, PORT))
+    sock.listen(1)
+    conn, client = sock.accept()
+    buffer = ""
+    while "\n" not in buffer:
+        data = conn.recv(10)
+        if not data:
+            break
+        buffer = buffer + data
+    while buffer:
+        n = conn.send(buffer)
+        buffer = buffer[n:]
+    conn.close()
+    sock.close()
+import thread
+thread.allocate
+thread.allocate()
+a = thread.allocate()
+a
+a.
+a.
+thread.exit()
+import socket
+exit
+import sys
+sys.prefix
+sys.executable
+import thread
+import sys
+import socket
+import dl
+dl.open("imgfile.dxe")
+import imgfile
+imgfile.getsizes
+imgfile.getsizes("test.rgb")
+imgfile.getsizes("test.rgb")
+import imgfile
+imgfile.getsizes("defaultTexture.rgb")
+import imgfile
+imgfile.getsizes("defaultTexture.rgb")
+import imgfile
+imgfile.write()
+imgfile.write("hello")
+import imgfile
+imgfile.getsizes("defaultTexture.rgb")
+import imgfile
+imgfile.getsizes("defaultTexture.rgb")
+import imgfile
+imgfile.getsizes("defaultTexture.rgb")
+import imgfile
+imgfile.getsizes("test.rgb")
+import dl
+dl.open("Scientific_netcdf.dxe")
+1972,11,1
+import sys
+sys.platform
+import fcntl
+import os
+os.O_NONBLOCK
+import fcntl
+import os
+os.O_N
+help("structure")
+import structure
+help("struct")
+import fcntl
+import struct
+import struct
+import fcntl
+f = open("d:/d/xml/system.xml", 'w')
+import struct
+lockdata = struct.pack('qiqhh', 0, 0, 0, fcntl.F_WRLCK, 0)
+lockdata
+rv = fcntl.fcntl(f.fileno(), fcntl.F_SETFL, os.O_NONBLOCK)
+import os
+rv = fcntl.fcntl(f.fileno(), fcntl.F_SETFL, os.O_NONBLOCK)
+rv
+rv = fcntl.fcntl(f.fileno(), fcntl.F_SETLKW, lockdata)
+rv = fcntl.fcntl(f.fileno(), fcntl.F_GETFL, lockdata)
+rv
+rv = fcntl.fcntl(f.fileno(), fcntl.F_GETFD)
+rv
+rv = fcntl.fcntl(f.fileno(), fcntl.F_SETLKW)
+rv = fcntl.fcntl(f.fileno(), fcntl.F_GETLK, lockdata)
+a = 4305.07 - 287
+a
+a = 4305.07 - 287.00
+a
+a + 287
+4018.07 - 48.60
+import socket
+import os
+help("os.spawnv")
+os.spawnv(os.P_NOWAIT,'/dev/env/DJDIR/bin/ipinit',('ipinit',))
+os.spawnv(os.P_NOWAIT,'/dev/env/DJDIR/bin/ipinit',('ipinit',))
+ip = os.spawnv(os.P_NOWAIT,'/dev/env/DJDIR/bin/ipinit',('ipinit',))
+ip.read()
+ip = op.popen("ipinit")
+ip = os.popen("ipinit")
+ip.read()
+import socket
+import os
+os.getenv("MYIP")
+ip = os.popen("ipinit")
+ip = os.popen("ipinit")
+os.getenv("MYIP")
+ip.read()
+import socket
+import socket
+import os
+if not os.ggg:
+  print 't'
+import socket
+import os
+os.getenv("MYIP")
+import socket
+os.getenv("MYIP")
+import
+import os
+os.getenv("MYIP")
+import os
+import socket
+os.getenv("MYIP")
+import socket
+import os
+os.getenv("MYIP")
+import socket
+os.getenv("MYIP")
+import os
+os.getenv("MYIP")
+import socket
+cmd = 'for i in 0 1 2 3 4 5 6 7 8 9; do echo testing...; sleep 1; done'
+import os
+p = os.popen(cmd, 'r')
+cmd = 'bash -c for i in 0 1 2 3 4 5 6 7 8 9; do echo testing...; sleep 1; done'
+p = os.popen(cmd, 'r')
+cmd = 'bash -c "for i in 0 1 2 3 4 5 6 7 8 9; do echo testing...; sleep 1; done"'
+p = os.popen(cmd, 'r')
+import fcntl
+import socket
+import thread
+thread.get_ident()
+thread.exit()
+import socket
+cmd = 'bash -c "for i in 0 1 2 3 4 5 6 7 8 9; do echo testing...; sleep 1; done"'
+import os
+p = os.popen(cmd, 'r')
+thread.exit()
+import thread
+thread.exit()
+import gdbm
+g = gdbm.open("/velcro.gdb", "c")
+g["/system"]='system'
+import os
+os.listdir
+os.listdir("DJDIR")
+os.listdir("$DJDIR")
+e = os.getenv("DJDIR")
+e
+help("gdbm")
+g["/system"]='system'
+g.has_key("/system")
+g.keys()
+g["/system"].append
+g["/system"]p
+g["/system"]print()
+g["/system"]print
+g.keys("[/system"])
+import os
+ip = os.popen("open %system%")
+import dl
+dl.open("_bsddb.dxe")
+from bsddb import db
+exit
+from bsddb import db, dbobj
+from bsddb3 import db, dbobj
+env = dbobj.DBEnv()
+env.open(self.homeDir, db.DB_CREATE | db.DB_INIT_MPOOL)
+env.open("db_home", db.DB_CREATE | db.DB_INIT_MPOOL)
+import os
+os.mkdir("db_home")
+env.open("db_home", db.DB_CREATE | db.DB_INIT_MPOOL)
+env.open("db_home", db.DB_CREATE)
+env.open("db_home", db.DB_CREATE | db.DB_PRIVATE)
+env.open("db_home", db.DB_CREATE | db.DB_PRIVATE)
+env.open("db_home", db.DB_CREATE | db.DB_INIT_MPOOL)
+import os
+os.mkdir("db_home")
+from bsddb3 import db, dbobj
+env.open("db_home", db.DB_CREATE | db.DB_PRIVATE)
+env = dbobj.DBEnv()
+env.open("db_home", db.DB_CREATE | db.DB_PRIVATE)
+env.close()
+env.open("db_home", db.DB_CREATE | db.DB_INIT_MPOOL)
+rm env
+del env
+env = dbobj.DBEnv()
+env.open("db_home", db.DB_CREATE | db.DB_PRIVATE)
+db1 = dbobj.DB(self.env)
+db1 = dbobj.DB(env)
+db.open('dbobj.db', db.DB_HASH, db.DB_CREATE)
+db1.open('dbobj.db', db.DB_HASH, db.DB_CREATE)
+from bsddb3 import db, dbobj
+import os
+import os
+os.listdir("/dev/env/DJDIR/bin/*.exe")
+os.listdir("/dev/env/DJDIR/bin/")
+s = "hello.exe"
+s.endswith(".exe")
+~
+file
+file
+s
+s.find("exe")
+s.find("ede")
+import os
+os.popen("D:\KAD\WIN\glview.exe", 'w')
+s = os.popen("D:\KAD\WIN\glview.exe", 'w')
+s.
+s.read()
+s = os.popen("D:\KAD\WIN\glview.exe C:\WINNT\TEMP/@8187.0.pdb", 'w')
+del s
+s = os.popen("D:\KAD\WIN\glview.exe C:\WINNT\TEMP/@8187.0.pdb", 'w')
+s.read()
+s = os.popen("D:\KAD\WIN\glview.exe C:\WINNT\TEMP/@8187.0.pdb", 'rw')
+del s
+s = os.popen("D:\KAD\WIN\glview.exe C:\WINNT\TEMP/@8187.0.pdb", 'rw')
+import ephem
+import ephem
+import dl
+dl.open("_pykpathsea.dxe")
+import dl
+dl.open("dislin.dxe")
+import socket
+from pyx import *
+from pxy import tex
+from pyx import tex
+from pyx import tex
+from pyx import base
+from pyx import unit
+from pyx import epsfile
+from pyx import color
+from pyx import attrlist
+attrlist
+from pyx import _texattr
+from pyx import fontsize
+from pyx import *
+from pyx.tex import base
+from pyx.tex import base
+import serial
+exit
+from mx import DateTime
+import kirbybase
+from kirbybase import KirbyBase, KBError
+KirbyBase
+import datetime
+import datetime
+from mx import DateTime
+from a in DateTime
+from a in DateTime:
+for a in DateTime:
+ print a
+for a in DateTime.__class__
+for a in DateTime.__class__:
+ print a
+import datetime
+import datetime
+datetime.DateTime
+def aa(self):
+ self=datetime.DateTime
+aa
+aa()
+import __init___
+import datetime
+import datetime
+datetime
+datetime
+import datetime
+import dl
+dl.open("_sqlite.dxe")
+import dl
+dl.open("_sqlite.dxe")
+q
+q
+from socket import *
+FTP_PORT = 21
+s = socket(AF_INET, SOCK_STREAM)
+s.connect((hostname, FTP_PORT))
+s.connect(("ftp.simtel.net", FTP_PORT))
+s.connect(("ftp.urz.uni-heidelberg.de", FTP_PORT))
+s.shutdown()
+s.close()
+s.connect(("ftp.urz.uni-heidelberg.de", FTP_PORT))
+FTP_PORT
+s.connect("ftp.urz.uni-heidelberg.de", FTP_PORT)
+s = socket(AF_INET, SOCK_STREAM)
+s.connect("ftp.urz.uni-heidelberg.de", FTP_PORT)
+s.connect(("ftp.urz.uni-heidelberg.de", FTP_PORT))
+import socket
+a = socket.getprotobyname("ftp")
+from twisted import *
+import os
+os.open
+os.open("/dev/com1",os.O_RDWR)
+os.open("/dev/com1", os.O_RDWR|os.O_NOCTTY|os.O_NONBLOCK)
+s = os.open("/dev/com1", os.O_RDWR|os.O_NOCTTY|os.O_NONBLOCK)
+import fcntl
+fcntl.fcntl(s, FCNTL.F_SETFL, 0)
+FCNTL = fcntl
+fcntl.fcntl(s, FCNTL.F_SETFL, 0)
+import termios
+termios.tcgetattr(s)
+import os
+s = os.open("/dev/com1", os.O_RDWR|os.O_NOCTTY|os.O_NONBLOCK)
+import fcntl
+FCNTL = fcntl
+fcntl.fcntl(s, FCNTL.F_SETFL, 0)
+import termios
+termios.tcgetattr(s)
+termios.tcgetattr(s)
+termios.tcgetattr(s)
+termios.tcgetattr(s)
+a = 186 + 263 + 337 + 73 + 1280 + 256 + 210 + 351
+a
+import os
+a = os.popen("cmd")
+ppp
+os.system("cs")
+help "os.popen"
+help ("os.popen")
+help ("os.popen")
+help ("os.popen")
+pipe
+pipe = os.popen("less", 'w')
+import os
+pipe = os.popen("less", 'w')
+help ("os.popen")
+help ("os.popen")
+import os
+a = 186 + 263 + 337 + 73 + 1280 + 256 + 210 + 351
+s.connect(("ftp.urz.uni-heidelberg.de", FTP_PORT))
+import ephem
+import bsddb
+import libxml
+exit
+from os import *
+mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+import libxml2
+help ("libxml2.libxml2.createPushParser")
+help ("libxml2.createPushParser")
+import os
+os.getcwd()
+xml = os.getenv("SYSTEM")
+xml
+datadir = os.getcwd(xml)
+os.p
+os.path
+os.path()
+os.path.dirname(xml)
+os.path.dirname(xml)
+help("os.path.dirname")
+help("os.path.abspath")
+os.path.abspath(xml)
+os.path.realpath(xml)
+os.path.normpath(xml)
+help("os.path.walk")
+xml = os.getenv("SYSTEM")
+xml = xml + "/.."
+os.path.realpath(xml)
+xml
+xml = os.getenv("SYSTEM")
+xml = xml + "\\.."
+os.path.realpath(xml)
+os.path.abspath(xml)
+os.path.dirname(xml)
+help("os.path.walk")
+help("os.path.realpath")
+help("os.path.abspath")
+q = '\\'
+q
+q[:1]
+s = "hello"
+help("string.rfind")
+import syys
+import sys
+sys.path
+xml = os.getenv("SYSTEM")
+import os
+xml = os.getenv("SYSTEM")
+xml
+os.path.abspath(xml)
+os.path.realpath(xml)
+os.path.dirname(xml)
+xml = '/dev/d/d/xml/system.xml'
+os.path.dirname(xml)
+os.path.realpath(xml)
+import os
+xml = os.getenv("SYSTEM")
+xml
+os.path.realpath(xml)
+os.path.dirname(xml)
+os.path.normpath(xml)
+d = ''
+os.path.normpath(d)
+import os
+xml = os.getenv("SYSTEM")
+xml
+os.path.normpath(d)
+os.path.normpath(xml)
+xml = os.getenv("SYSTEM")
+import os
+xml = os.getenv("SYSTEM")
+os.path.normpath(xml)
+os.path.dirname(xml)
+import os
+xml = os.getenv("SYSTEM")
+os.path.dirname(xml)
+from system2 import *
+from system2.version
+system2.version
+system2.xml
+system2.datadir
+from system2 import *
+import libxml2
+import libxml
+import libxml2mod
+libxml2mod.xmlCheckVersion()
+libxml2mod.xmlCheckVersion(1)
+libxml2mod.xmlCheckVersion(0)
+libxml2mod.xmlCheckVersion(3)
+import sys
+sys.path
+from system2 import *
+system2.xml
+system2.xmldir
+system2.srun
+system2.time
+system2.os
+from system2 import *
+from system2 import *
+from system2 import *
+import system2
+from system2 import s2sys
+from system2 import *
+from system2 import *
+import s2sys
+import s2sys
+from system2 import *
+import curses
+import curses
+import curses
+from system2 import *
+s2sys.DOC_MAGIC
+from system2 import *
+from system2 import *
+s2dom.version
+s2dom.usage
+from system2 import *
+help("s2dom")
+help("system2.s2dom")
+help("system2.s2sys")
+help("system2.s2sys")
+help("system2.s2sys")
+help("system2.s2sys")
+help("system2.s2sys")
+help("system2.s2sys")
+help("system2.s2sys")
+from system2 import *
+s2sys.version
+import cursing
+import cursing
+import cursing
+import cursing
+import cursing
+import cursing
+from system2 import *
+s2sys.error
+s2sys.switch
+import libxml2
+import cursing
+import cursing
+help ("cursing.Button")
+s2sys.switch
+from system2 import *
+s2sys.switch
+help("s2sys")
+help("system2.s2sys")
+help("system2.s2sys.sxml")
+from system2 import *
+s2sys.sxml(["sys"])
+err, cmd, file = s2sys.sxml(["sys"])
+import os
+os.system(cmd)#
+os.remove(file)
+from zope import *
+import zope
+from Zope import *
+from zope import *
+import ZServer
+import sys
+sys.path
+import ZODB
+import ZODB
+ZODB.utils.time
+ZODB.utils.time.time
+ZODB.utils.time.time()
+import sys
+sys.modules
+m=sys.modules["__builtin__"]
+m
+m.__path__
+import socket
+exit
+import sys
+import socket
+bdeck
+SHA
+import socket
+import socket
+del socket
+import socket
+import socket
+import ois
+import os
+os.getenv("PATH")
+exit
+exit
+help ("system2.s2sys")
+from system2 import *
+error, cmd, file = s2sys.sxml(["sys"])
+import os
+os.system(cmd)
+error, cmd, file = s2sys.sxml(["python"])
+os.system(cmd)
+from zope import Zope
+import zope
+import zope.Zope
+import Zope
+Import ImageFile
+import ImageFile
+import ImageFile
+import ImageFile
+import Zope
+app=Zope.app()
+app.test_url
+help("app.test_url")
+app.title
+import Zope
+from PIL import *
+from system2 import *
+error, cmd, file = s2sys.sxml(["python"])
+import os
+os.system(cmd)
+import sys
+sys.path
+import socket
+import socket
+from system2 import *
+error, cmd, file = s2sys.sxml(["python"])
+import os
+os.system(cmd)
+import AccessControl
+AccessControl.
+error, cmd, file = s2sys.sxml(["xml"])
+os.system(cmd)
+error, cmd, file = s2sys.sxml(["sys"])
+os.system(cmd)
+error, cmd, file = s2sys.sxml(["c"])
+os.system(cmd)
+from system2 import *
+error, cmd, file = s2sys.sxml(["sys"])
+import osd
+import os
+os.system(cmd)
+error, cmd, file = s2sys.sxml(["pyth"])
+os.system(cmd)
+import _ldap
+exit
+import _ldap
+exir
+exit
+from system2 import *
+error, cmd, file = s2sys.sxml(["pyth"])
+import os
+os.system(cmd)
+import ldap
+ldap.
+ldap.sys
+import ldap
+from system2 import *
+from system2 import *
+error, cmd, file = s2sys.sxml(["pyth"])
+error, cmd, file = s2sys.sxml(["sys"])
+import os
+os.system(cmd)
+from system2 import *
+error, cmd, file = s2sys.sxml(["pyth"])
+import os
+os.system(cmd)
+from system2 import *
+error, cmd, file = s2sys.sxml(["sys"])
+import os
+os.system(cmd)
+from system2 import *
+error, cmd, file = s2sys.sxml(["sys"])
+import os
+os.system(cmd)
+error, cmd, file = s2sys.sxml(["pyth"])
+os.system(cmd)
+error, cmd, file = s2sys.sxml(["sys"])
+from system2 import *
+error, cmd, file = s2sys.sxml(["sys"])
+import os
+os.system(cmd)
+error, cmd, file = s2sys.sxml(["pyth"])
+os.system(cmd)
+import cjaro
+import cjaro
+import cjaro
+cjaro.jaro
+cjaro.jaro("hello there", "hell is there")
+exit
+import xmlrpc
+import rpclib
+import xmlrpclib
+serv = xmlrpclib.Server()
+from system2 import *
+error, cmd, file = s2sys.sxml(["sys"])
+import os
+os.system(cmd)
+error, cmd, file = s2sys.sxml(["pyth"])
+os.system(cmd)
+import cjaro
+cjaro.jaro("wellness", "wells")
+from system2 import *
+import xmlrpclib
+error, cmd, file = s2sys.sxml(["pyth"])
+import os
+os.system(cmd)
+error, cmd, file = s2sys.sxml(["sys"])
+os.system(cmd)
+import cjaro
+cjaro.jaro("hello","there")
+help("sys")
+from system2 import *
+import xmlrpclib
+import cjaro
+error, cmd, file = s2sys.sxml(["sys"])
+import os
+os.system(cmd)
+error, cmd, file = s2sys.sxml(["pyth"])
+os.system(cmd)
+date
+import html_esc
+from system2 import *
+error, cmd, file = s2sys.sxml(["pyth"])
+import os
+os.system(cmd)
+from __future__ import braces
+import this
+a = 16 * 16
+b = 12 * 12
+a + b
+sqrt
+import math
+math.sqrt(400)
+import html_esc
+import html_esc
+html_esc.escape("hello there")
+html_esc.estring("hello there")
+doc ("html_esc")
+help ("html_esc")
+help ("html_esc")
+help ("html_esc")
+help ("html_esc")
+help ("html_esc")
+html_esc.estring("hello there")
+from system2 import *
+error, cmd, file = s2sys.sxml(["pyth"])
+from system2 import *
+error, cmd, file = s2sys.sxml(["pyth"])
+import os
+os.system(cmd)
+error, cmd, file = s2sys.sxml(["sys"])
+os.system(cmd)
+from system2 import *
+error, cmd, file = s2sys.sxml(["pyt"])
+import os
+os.system(cmd)
+error, cmd, file = s2sys.sxml(["sys"])
+os.system(cmd)
+import mailcap
+mailcap.listmailcapfiles()
+mailcap.listmailcapfiles()
+import mailcap
+mailcap.listmailcapfiles()
+mailcap.show()
+mailcap.getcaps()
+from system2 import *
+error, cmd, file = s2sys.sxml(["pyth"])
+import os
+os.system(cmd)
+help("mailcap")
+help("mail")
+import mail
+from mail import *
+help("email")
+from system2 import *
+error, cmd, file = s2sys.sxml(["pyth"])
+import os
+os.system(cmd)
+error, cmd, file = s2sys.sxml(["sys"])
+os.system(cmd)
+import sys, os, pwd
+fromaddr = pwd.getpwuid(os.getuid())[0] + "@" + os.uname()[1]
+fromaddr
+import cjaro
+cjaro.jaro("email", "mail")
+cjaro.jaro("e-mail", "mail")
+cjaro.jaro("e-mail", "email")
+from ZODB import FileStorage, DB
+storage = FileStorage.FileStorage('/dev/env/DJDIR/var/my_zope.fs')
+db = DB( storage )
+connection = db.open()
+root = connection.root()
+root ['disciplines'] = ['Link','Program','Utility','Research','Kad']
+get_transaction().commit()
+from Persistence import Persistent
+help("ZODB")
+import date
+import timedate+
+import timedate
+class Letter(str):
+ def __init__():
+  pass
+Letter = 'hello'
+class Letter(str):
+ def __init__():
+  pass
+a = Letter("herllo")
+class Letter(str):
+ def __init__(self, s=''):
+  self.s=s
+a = Letter("herllo")
+a
+a.__dict__
+os.__dict__
+import os
+os.__dict__
+import email
+import DateTie
+import DateTime
+import DateTime.now()
+from DateTime import DateTime
+DateTime.dow()#
+DateTime.day
+from mx.DateTime import *
+import smtplib
+server = smtplib.SMTP ()
+server.set_debuglevel (1)
+server.connect ("flow01")
+server.login()
+help ("server.login")
+help ("smtplib.login")
+help ("smtplib")
+server.login(server, 'bdecker', 'regensburg')
+server.login('bdecker', 'regensburg')
+help ("smtplib")
+server.login('bdecker', 'regensburg')
+server.connect ("flow01")
+server.ehlo
+server.ehlo()
+server.ehlo("ithaca02.int.flowcom.com.au")
+server.connect()
+server.connect("this", "is" )
+server.connect("flow01", "bdecker", "regensburg" )
+server.connect("flow01", "bdecker")
+server.connect("flow01")
+server.connect("bdecker")
+server.connect("flow01")
+server.connect("ithaca02.int.flowcom.com.au")
+server.connect("ithaca02.int.flowcom.com.au")
+server.connect.__doc__
+from mx.DateTime import *
+date
+DateTime(date)
+DateTime("date")
+date = DateTime(now())
+date = DateTime(now().year)
+date
+date = DateTime(now().ticks())
+now().ticks()
+date = DateTime(now().utc())
+date = DateTime(now().year)
+date
+date = DateTime(now().month)
+date
+date = DateTime(now().year)
+from pyx import *
+exit
+exit
+from ZODB import *
+import smtplib
+server = smtplib.SMTP()
+server.connect ("flow01")
+import smtplib
+server = smtplib.SMTP()
+server.connect ("flow01")
+from twisted import *
+storage = FileStorage.FileStorage('/dev/env/DJDIR/var/zope/Data.fs')
+from ZODB import FileStorage, DB
+from ZODB import FileStorage, DB
+storage = FileStorage.FileStorage('/dev/env/DJDIR/var/zope/Data.fs')
+storage = FileStorage.FileStorage('/dev/env/DJDIR/var/Data.fs')
+storage = FileStorage.FileStorage('/dev/env/DJDIR/var/Data.fs')
+db = DB( storage )
+db = DB( storage )
+connection = db.open()
+root = connection.root()
+root ['disciplines'] = ['Link','Program','Utility','Research','Kad']
+root ['disciplines'] = ['Link','Program','Utility','Research','Kad']
+root ['disciplines'] = ['Link','Program','Utility','Research','Kad']
+from ZODB import FileStorage, DB
+storage = FileStorage.FileStorage('/dev/env/DJDIR/var/zope/Data.fs')
+storage = FileStorage.FileStorage('/dev/env/DJDIR/var/Data.fs')
+db = DB( storage )
+connection = db.open()
+root = connection.root()
+root ['disciplines'] = ['Link','Program','Utility','Research','Kad']
+from ZODB import FileStorage, DB
+db = DB( storage )
+storage = FileStorage.FileStorage('/dev/env/DJDIR/var/Data.fs')
+db = DB( storage )
+connection = db.open()
+root = connection.root()
+root ['disciplines'] = ['Link','Program','Utility','Research','Kad']
+import sys
+sys.path
+help("Pyro")
+
+help("Pyro")
+import sys
+sys.path
+from ZODB import FileStorage, DB
+from ZODB import FileStorage, DB
+import fcntl
+from OFS import *
+import OFS
+from OFS import ZDOM
+from ZODB import FileStorage, DB
+db = DB( storage )
+storage = FileStorage.FileStorage('/dev/env/DJDIR/var/Data.fs')
+db = DB( storage )
+connection = db.open()
+root = connection.root()
+root ['disciplines'] = ['Link','Program','Utility','Research','Kad']
+root.keys
+root.values
+storage = FileStorage.FileStorage('/dev/env/DJDIR/var/Data.fs')
+from ZODB import FileStorage, DB
+db = DB( storage )
+storage = FileStorage.FileStorage('/dev/env/DJDIR/var/Data.fs')
+connection = db.open()
+db = DB( storage )
+storage = FileStorage.FileStorage('/dev/env/DJDIR/var/Data.fs')
+connection = db.open()
+root = connection.root()
+root.values
+root.values()
+root ['disciplines'] = ['Link','Program','Utility','Research','Kad']
+root.values()
+type("a")
+from OFS import ZDOM
+ikmport OpenSSL
+import OpenSSL
+import mscvrt
+import msvcrt
+import msvcrt
+import socket
+connection = db.open()
+import smtplib
+server = smtplib.SMTP()
+server.connect("flow01")
+server.login("bdecker","regensburg")
+import socket
+import osi+
+import os
+from system2 import *
+error, cmd, file = s2sys.sxml(["sys"])
+import os
+os.system(cmd)
+from system2 import *
+error, cmd, file = s2sys.sxml(["sys"])
+import os
+os.system(cmd)
+import xmlrpclib
+server = xmlrpclib.ServerProxy("http://effbot.org/rpc/echo.cgi")
+print repr(server.echo("testing"))
+from Globals import Persistent
+from system2 import *
+import os
+error, cmd, file = s2sys.sxml(["sys"])
+os.system(cmd)
+error, cmd, file = s2sys.sxml(["pyt"])
+os.system(cmd)
+import libxml2mod
+import libxml2
+import libxsltmod
+from system2 import *
+error, cmd, file = s2sys.sxml(["pyt"])
+import os
+os.system(cmd)
+help("OFS")
+error, cmd, file = s2sys.sxml(["sys"])
+os.system(cmd)
+import sys
+sys.path
+from system2 import *
+error, cmd, file = s2sys.sxml(["sys"])
+import os
+os.system(cmd)
+error, cmd, file = s2sys.sxml(["pyt"])
+os.system(cmd)
+from system2 import *
+error, cmd, file = s2sys.sxml(["pyt"])
+import os
+os.system(cmd)
+error, cmd, file = s2sys.sxml(["sys"])
+os.system(cmd)
+import sys
+sys.path
+help("gdbm")
+help("help")
+exit
+import OpenSSL
+OpenSSL.crypto._C_API
+OpenSSL.crypto._C_API()
+import sys
+sys.path
+from system2 import *
+from system2 import s2util
+from system2 import *
+error, cmd, file = s2sys.sxml(["sys"])
+from system2 import *
+error, cmd, file = s2sys.sxml(["sys"])
+from system2 import *
+error, cmd, file = s2sys.sxml(["sys"])
+from system2 import *
+error, cmd, file = s2sys.sxml(["sys"])
+from system2 import *
+error, cmd, file = s2sys.sxml(["sys"])
+from system2 import *
+error, cmd, file = s2sys.sxml(["sys"])
+from system2 import *
+error, cmd, file = s2sys.sxml(["sys"])
+from system2 import *
+error, cmd, file = s2sys.sxml(["sys"])
+import libxml2
+doc = libxml2.parseFile("D:\\D\\xml\\system.xml")
+ctxt = doc.xpathNewContext()
+current_nodes = doc.xpathEval("descendant-or-self::formats/xml/open")
+current_nodes
+res = doc.xincludeProcess()
+doc = libxml2.parseFile("D:\\D\\xml\\system.xml")
+import libxml2
+doc = libxml2.parseFile("D:\\D\\xml\\system.xml")
+ctxt = doc.xpathNewContext()
+res = doc.xincludeProcess()
+doc = libxml2.parseFile("/dev/d/d/xml/system.xml")
+res = doc.xincludeProcess()
+res
+import os
+os.filename
+os.path
+os.path.abspath(os.getenv("SYSTEM"))
+from system2 import *
+error, cmd, file = s2sys.sxml(["sys"])
+error
+s2sys.xml
+s2sys.xmldir
+doc = libxml2.parseFile("D:/D/xml/system.xml")
+import libxml2
+doc = libxml2.parseFile("D:/D/xml/system.xml")
+doc
+ctxt = doc.xpathNewContext()
+res = doc.xincludeProcess()
+res
+current_nodes = doc.xpathEval("descendant-or-self::formats/xml/open")
+current_nodes
+from system2 import *
+error, cmd, file = s2sys.sxml(["sys"])
+system_node = current_nodes[0]
+system_node.children
+system_node.children[0]
+for i in system_node.children:
+ print i
+len(system_node)
+len(system_node.children)
+current_nodes = doc.xpathEval("descendant-or-self::dots")
+current_nodes
+system_node = current_nodes[0]
+for i in system_node.children:
+ print i
+assert 1 == 2
+assert 1 == 2
+slice
+list
+import _crack
+import ldap
+DEF_SERVER_URI="ldap://au-dev-0001.flow.com.au:389"
+DEF_BASE_DN="ou=realms,o=flow.com.au"
+def getUsersBeneathDn(server, baseDn):
+ return server.search_s(baseDn, ldap.SCOPE_SUBTREE,
+  "(objectClass=uidObject)",[])
+getUsersBeneathDn(DEF_SERVER_URI, DEF_BASE_DN)
+server = ldap.initialize(DEF_SERVER_URI)
+import _crack
+_crack.__dict__
+a = ''
+a.type()
+a.type
+type(a)
+a = type("")
+a
+from twisted.trial import unittest
+b = type(unittest)
+b
+b = type(class)
+class test
+class test:
+ pass
+b = type(test)
+b
+b = type({})
+b
+b = type({})
+b = type(())
+b
+b = type(())
+b = type(())
+b = type(5)
+b
+__dict__
+class.__dict__
+cls
+import os
+os.system('cls')
+os.system('clear')
+os.system('cmd /C cls')
+import sys
+sys.__dict__
+for a in sys.__dict__
+for a in sys.__dict__:
+ print a
+for a in sys.__dict__:
+ if a not in ["argv", "ps
+  print a, "Not present."
+os.system('cmd /C cls')
+from twisted.trial import unittest
+for a in sys.__dict__:
+help("unittest.TestCase.assertIn")
+help("unittest.TestCase.assertIn")
+unittest.TestCase.assertIn
+unittest.TestCase.assertIn()
+import types
+types.
+"IntType" in types
+"IntType" in types.__dict__
+thing=getattr(types,DictType)
+thing=getattr(types,"DictType")
+thing
+thing.[1:]
+from twisted.trial import unittest
+from twisted.trial import unittest
+unittest.TestCase.fail()
+spec = {}
+if spec:
+ print spec
+import html_esc
+html_esc.
+from twisted.trial import unittest
+import unittest
+import unittest
+import os
+os.uname()
+from DateTime import DateTime
+from mx.DateTime import DateTime
+now()
+DateTime.now()
+from mx.DateTime import DateTime, now
+now()
+validFrom = now()
+validTo = now()
+fun = lambda x: now() > validFrom and now() < validTo
+fun
+fun()
+fun = lambda: now() > validFrom and now() < validTo
+fun()
+help("DteTime")
+help("DateTime")
+help("mx.DateTime")
+cmp
+DateTime.cmp
+from mx import DateTime
+DateTime.cmp
+DateTime.cmp(validTo, validFrom)
+DateTime.cmp(validFrom, validTo)
+DateTime.cmp(validFrom, validFrom)
+fun = lambda: now() < validFrom and now() < validTo
+fun()
+fun = lambda: now() > validFrom and now() > validTo
+fun()
+from mx import ReletiveDateTime
+from mx import RelativeDateTime
+from DateTime import RelativeDateTime
+from mx.DateTime import RelativeDateTime
+RelativeDateTime
+print now() + RelativeDateTime(hour+=1)
+print now() + RelativeDateTime(hour=+1)
+from system2 import *
+error, cmd, file = s2sys.sxml(["sys"])
+import os
+os.system(cmd)
+error, cmd, file = s2sys.sxml(["pyt"])
+os.system(cmd)
+print [a for a in "Test"]
+print ["%s" % a for a in "Test"]
+print "%s" % a for a in "Test"
+print "%s" % [a for a in "Test"]
+a = [b for b in "Test"]
+a
+a = [b for b in "Test"]
+print [c for c in a]
+print "%s," % [a for a in "Test"]
+a = [(b) for b in "Test"]
+a
+print [(b) for b in "Test"]
+print ([(b) for b in "Test"])
+print repr([(b) for b in "Test"])
+print str([(b) for b in "Test"])
+print [(str.join('', b) for b in "Test"]
+print str.join('', [b for b in "Test"])
+print [ str.join('', b) for b in "Test"])
+print [ str.join('', b) for b in "Test"]
+def htmle(strings):
+ return str.join('', ord(a) for a in strings)
+def htmle(strings):
+ return str.join('', [ord(a) for a in strings])
+htmle("Hello World!")
+htmle("Hello World!")
+def htmle(strings):
+ return str.join('', ["%i" % ord(a) for a in strings])
+htmle("Hello World!")
+ return str.join('', ["&#%i;" % ord(a) for a in strings])
+def htmle(strings):
+ return str.join('', ["&#%i;" % ord(a) for a in strings])
+def htmle(strings):
+htmle("Hello World!")
+htmle("Hello World!")
+htmle("Hello World!\
+This is a message for you.\
+OK?
+htmle("Hello World!\
+This is a message for you.\
+OK?")
+print [ str.join('', b) for b in "Test"])
+print [ str.join('', b) for b in "Test"]
+import os
+from system2 import *
+error, cmd, file = s2sys.sxml(["pyt"])
+from system2 import *
+error, cmd, file = s2sys.sxml(["pyt"])
+from system2 import *
+error, cmd, file = s2sys.sxml(["pyt"])
+from system2 import *
+error, cmd, file = s2sys.sxml(["pyt"])
+from system2 import *
+error, cmd, file = s2sys.sxml(["pyt"])
+from system2 import *
+error, cmd, file = s2sys.sxml(["pyt"])
+from system2 import *
+error, cmd, file = s2sys.sxml(["pyt"])
+from system2 import *
+error, cmd, file = s2sys.sxml(["pyt"])
+error, shell, cmd, file = s2sys.sxml(["pyt"])
+from system2 import *
+error, shell, cmd, file = s2sys.sxml(["pyt"])
+import os
+os.execvp(shell, cmd)
+os.execvp(shell, [cmd])
+from system2 import *
+error, cmd, file = s2sys.sxml(["pyt"])
+import os
+os.system(cmd)
+import os
+from system2 import *
+error, cmd, file = s2sys.sxml(["pyt"])
+os.system(cmd)
+os.system(cmd)
+error, cmd, file = s2sys.sxml(["sys"])
+os.system(cmd)
+import os
+error, cmd, file = s2sys.sxml(["sys"])
+from system2 import *
+error, cmd, file = s2sys.sxml(["sys"])
+os.system(cmd)
+error, cmd, file = s2sys.sxml(["pyt"])
+os.system(cmd)
+for a in "hello":
+ print a
+for a in "hello":
+ print a,
+print "%a" % [a for a in "Test"]
+print "%s" % [a for a in "Test"]
+print "%s" % (a for a in "Test")
+print "%s %s %s %s" % [a for a in "Test"]
+print "%s %s %s %s" % a for a in "Test"
+print "%s %s %s %s" % lambda a for a in "Test"
+clear
+exit
+import sys
+import os
+from system2 import *
+error, cmd, file = s2sys.sxml(["pyt"])
+os.system(cmd)
+sys.stdin.flush()
+sys.stdout.flush()
+from system2 import *
+import os
+import threda
+import thread
+os.pipe.flush()
+start()
+from system2 import *
+error, cmd, file = s2sys.sxml(["pyt"])
+import os
+os.system(cmd)
+from system2 import *
+error, cmd, file = s2sys.sxml(["pyt"])
+import os
+os.system(cmd)
+error, cmd, file = s2sys.sxml(["sys"])
+os.system(cmd)
+import unittest
+from twisted.trial import unittest
+True
+class d(a = {})
+class d(a = {}):
+class d():
+class d:
+ def __init__(a = {}):
+  pass
+d()
+class d():
+class d:
+ def __init__(self, a = {}):
+  self.a = a
+bb = d()
+bb.a
+bb.a["b"] = 1
+bb.a
+bc = d()
+bc.a
+class d:
+ def __init__(self, a = None):
+  if a = None: a = {}
+bc.a
+class d:
+ def __init__(self, a = None):
+  if a == None: a = {}
+  self.a = a
+bc = d()
+bb = d()
+bb.a["b"] = 1
+bb.a
+bc = d()
+bc.a
+from system2 import *
+error, shell, cmd, file = s2sys.sxml(["pyt"])
+import os
+os.system(cmd)
+error, cmd, file = s2sys.sxml(["pyt"])
+os.system(cmd)
+error, cmd, file = s2sys.sxml(["sys"])
+os.system(cmd)
+from system2 import *
+error, cmd, file = s2sys.sxml(["sys"])
+error, cmd, file = s2sys.sxml(["sys"])
+import os
+os.system(cmd)
+error, cmd, file = s2sys.sxml(["pyt"])
+os.system(cmd)
+from system2 import *
+error, cmd, file = s2sys.sxml(["pyt"])
+import os
+os.system(cmd)
+error, cmd, file = s2sys.sxml(["pyt"])
+error, cmd, file = s2sys.sxml(["sys"])
+os.system(cmd)
+from system2 import *
+error, cmd, file = s2sys.sxml(["sys"])
+import os
+os.system(cmd)
+error, cmd, file = s2sys.sxml(["pyt"])
+os.system(cmd)
+error, cmd, file = s2sys.sxml(["unix"])
+os.system(cmd)
+from system2 import *
+error, cmd, file = s2sys.sxml(["pyt"])
+import os
+os.system(cmd)
+error, cmd, file = s2sys.sxml(["sys"])
+os.system(cmd)
+from UserDict import UserDict
+a = UserDict()
+b = {"a":1,"dd":2}
+b
+a.copy(b)
+a.copy()
+a.copy()
+a.__setitem__(b)
+a.items(b)
+a.items()
+a.setdefault
+a.setdefault()
+a.setdefault(b)
+a.tems
+a.items
+a.items()
+def __getitem__(name):
+  print "I am giving you:", name
+  return "Bob!"
+a = {"a":23, "b":24}
+a["a"]
+a = [1,2,3,4]
+a[0]
+a.__getitem__()
+__getitem__
+__getitem__()
+__getitem__(a[0])
+__getitem__
+__
+a = {}
+b = []
+b = ["hello", "there"]
+def b.__getitem__(name):
+def gett(name):
+  print "I am giving you:", name
+  return "Bob!"
+a.__getitem__ = gett
+from UserDict import UserDict
+b = a()
+dict
+a = dict()
+a.__getitem__ = gett
+class a(dict):
+ pass
+a.__getitem__ = gett
+a["hello"]="there"
+b = a()
+b["hello"]="there"
+b
+b.__getitem__=gett
+def gett():
+  print "I am giving you:", name
+  return "Bob!"
+b.__getitem__=gett
+b["hello"]
+def gett(self, name):
+  print "I am giving you:", name
+  return "Bob!"
+b.__getitem__=gett
+b["hello"]
+b.__getitem__
+b.__getitem__("hello")
+from system2 import *
+error, cmd, file = s2sys.sxml(["pyt"])
+import os
+os.system(cmd)
+error, cmd, file = s2sys.sxml(["cmd"])
+os.system(cmd)
+error, cmd, file = s2sys.sxml(["sys"])
+os.system(cmd)
+b["hello"]
+def gett(name):
+  print "I am giving you:", name
+  return "Bob!"
+b["hello"]
+b.__
+b["hello"]
+b.__getitem__("h")
+b
+b['hello']
+gett
+dis(gett)
+import dis
+dis(gett)
+dis.dis(gett)
+dis.dis(b.__getitem__)
+os.system("cmd /C cls")
+class C:
+    def __getitem__(self, name):
+        return name*2
+class D:
+    pass
+def getitem(obj, name): return "some name:" + name
+d = D()
+D['ABC'}
+D['ABC']
+d['ABC']
+d.__getitem__ = getitem
+d['ABC']
+def getitem(name): return "some name:" + name
+d['ABC']
+d.__getitem__ = getitem
+d['ABC']
+del d.__getitem__
+def getitem(obj, name): return "some name:" + name
+D.__getitem__ = getitem
+d['ABC']
+class D(dict):
+ def __getitem__(self, name):
+  return "Item recovered:", name
+a = D()
+a['ghgh']
+a['abc'] = 123
+a.update({'xxx': 'yyy'})
+a
+a['xxx']
+a.items()
+D.__getitem__ = getitem
+a['xxx']
+import os
+os.path.normpath(os.getenv("SYSTEM"))
+from system2 import *
+error, cmd, file = s2sys.sxml(["pyt"])
+cmd
+from system2 import *
+error, cmd, file = s2sys.sxml(["pyt"])
+import os
+os.system(cmd)
+import shutil
+from UserDict import UserDict
+C = UserDict()
+C.newatt = 123
+import os
+print "$.: $_" if /\s[A-Z]\w*\.\w+\s*=/; 
+import utilities
+import utilities
+import utilities
+import cjaro
+import os
+import sys
+os.path.dirname(sys.executable)
+os.path.join(os.pathdirname(sys.executable),'_pyhist')
+os.path.join(os.path.dirname(sys.executable),'_pyhist')
+import __future__
+dir(__future__)
+dir()+
+dir()
+dir(__builtins__)
+a = __builtins__
+dir(a.zip)
+dir(a.zip.__class__)
+from OpenGl import *
+from OpenGL import *
+from Numeric import *
+import sys
+sys.path
+import libxml2
+import gdbm
+a = lambda a: str(a)
+a = lambda a: str(a)
+class mystring:
+ def __init__(self, thistring):
+  self.thistring = lambda thistring: str(thistring)
+a = mystring()
+a = mystring(["hello", "there"])
+a
+a.thistring
+a.thistring()
+a.thistring
+class mystring:
+ def __init__(self, thistring):
+  self.thistring = str(thistring)
+a = mystring(["hello", "there"])
+a.thistring
+class mystring:
+ def __init__(self, thistring):
+  self.thistring = str(thistring)
+a = mystring(["hello", "there"])
+a.thistring
+import os
+dir(os)
+import os
+dir(os)
+fdlkgjkfdggggggggggggggggggggggggggggggggggggggfdssssssssssssssssssssssssssssssssssssssd
+fdlkgjkfdggggggggggggggggggggggggggggggggggggggfdssssssssssssssssssssssssssssssssssssssd
+import sha
+sha
+bens = sha.new()
+bens.update("HELLO")
+bens
+bens.digest()
+xor
+24 * 24
+276 - 24
+bens.hexdigest()
+import sndheader
+imnport sndhdr
+import sndhdr
+x = 0
+while x < len(hexdigest(bens)):
+ char = str (hexdigest(bens)[x] ^ hexdigest(bens)[x+1])
+ print char
+ x = x + 2
+ char = str (bens.hexdigest()[x] ^ bens.hexdigest()[x+1])
+while x < len(hexdigest(bens)):
+ char = str (bens.hexdigest()[x] ^ bens.hexdigest()[x+1])
+ print char
+ x = x + 2
+while x < len(bens.hexdigest()):
+ char = str (bens.hexdigest()[x] ^ bens.hexdigest()[x+1])
+ print char
+ x = x + 2
+while x < len(hexdigest(bens)):
+ char = str (bens.digest()[x] ^ bens.digest()[x+1])
+ print char
+ x = x + 2
+while x < len(bens.digest()):
+ char = str (bens.digest()[x] ^ bens.digest()[x+1])
+ print char
+ x = x + 2
+bens.digest()[1]
+bens.digest()[12]
+while x < len(bens.digest()):
+ char = str (ord(bens.digest()[x]) ^ ord(bens.digest()[x+1]))
+ print char
+ x = x + 2
+def hash1(myhash):
+ while x < len(ord(myhash.digest())):
+ char = ord(myhash.digest()[x]) ^ ord(myhash.digest()[x+1])
+def hash1(myhash):
+ while x < len(ord(myhash.digest())):
+  char = ord(myhash.digest()[x]) ^ ord(myhash.digest()[x+1])
+  print char
+  x = x + 2
+hash1(bens.digest())
+def hash1(myhash):
+ x = 0
+ while x < len(ord(myhash.digest())):
+  char = ord(myhash.digest()[x]) ^ ord(myhash.digest()[x+1])
+  x = x + 2
+  print char
+hash1(bens.digest())
+def hash1(myhash):
+ x = 0
+ while x < len(ord(myhash)):
+  char = ord(myhash[x]) ^ ord(myhash[x+1])
+  x = x + 2
+  print char
+hash1(bens.digest())
+def hash1(myhash):
+ x = 0
+ while x < len(myhash):
+  char = ord(myhash[x]) ^ ord(myhash[x+1])
+  x = x + 2
+  print char
+hash1(bens.digest())
+def hash1(myhash):
+ while x < len(myhash):
+  char = ord(myhash[x]) ^ ord(myhash[x+1])
+  print char,
+  x = x + 2
+hash1(bens.digest())
+def hash1(myhash):
+ x = 0
+ while x < len(myhash):
+  char = ord(myhash[x]) ^ ord(myhash[x+1])
+  print char,
+  x = x + 2
+hash1(bens.digest())
+def hash1(myhash):
+ x = 0
+ arry = []
+  print char,
+def hash1(myhash):
+ x = 0
+ arry = []
+ while x < len(myhash):
+  char = ord(myhash[x]) ^ ord(myhash[x+1])
+  arry.append(char)
+  x = x + 2
+  return(arry)
+hash1(bens.digest())
+def hash1(myhash):
+ while x < len(myhash):
+  char = ord(myhash[x]) ^ ord(myhash[x+1])
+  arry.append(char)
+  x = x + 2
+  return(arry)
+def hash1(myhash):
+  char = ord(myhash[x]) ^ ord(myhash[x+1])
+def hash1(myhash):
+ while x < len(myhash):
+def hash1(myhash):
+ x = 0
+ arry = []
+ while x < len(myhash):
+  char = ord(myhash[x]) ^ ord(myhash[x+1])
+  arry.append(char)
+  x = x + 2
+ return(arry)
+hash1(bens.digest())
+bens2 = hash1(bens.digest())
+for a in bens2:
+y = 0 
+while y < len(bens2)
+while y < len(bens2):
+ print (bens2[y] ^ bens2[y+1])
+ y = y + 2
+hash1(bens.digest())
+hash1(bens.digest())
+7 % 2
+def fold(instrg):
+ if ((len(instrg) % 2) == 1):
+  del instrg[0]
+ count = 0
+ outstrg = []
+ for p in instrg[(len(instrg)/2):]:
+  outstrg.append(p ^instrg[count])
+  count += 1
+ return outstrg
+import sha
+s = sha.new()
+s.update("This is a hash test")
+fold(s.digest())
+s[0]
+s.digest[0]
+s.digest()[0]
+fold(s.hexdigest())
+s.hexdigest()[0]
+def fold(instrg):
+ if ((len(instrg) % 2) == 1):
+  del instrg[0]
+ count = 0
+ outstrg = []
+ for p in instrg[(len(instrg)/2):]:
+  print "debug: ", p, instrg[count]
+  outstrg.append(p ^instrg[count])
+  count += 1
+ return outstrg
+fold(s.hexdigest())
+fold(s.digest())
+def fold(instrg):
+ if ((len(instrg) % 2) == 1):
+  del instrg[0]
+ count = 0
+ outstrg = []
+ for p in instrg[(len(instrg)/2):]:
+  print "debug: ", p, instrg[count]
+  outstrg.append(ord(p) ^ord(instrg[count]))
+  count += 1
+ return outstrg
+fold(s.digest())
+ord(19)
+def fold(instrg):
+ if ((len(instrg) % 2) == 1):
+  del instrg[0]
+ count = 0
+ outstrg = []
+ for p in instrg[(len(instrg)/2):]:
+  print "debug: ", p, instrg[count]
+  outstrg.append"\x"+(ord(p) ^ord(instrg[count]))
+  count += 1
+def fold(instrg):
+ if ((len(instrg) % 2) == 1):
+  del instrg[0]
+ count = 0
+ outstrg = []
+ for p in instrg[(len(instrg)/2):]:
+  print "debug: ", p, instrg[count]
+  outstrg.append("\x"+(ord(p) ^ord(instrg[count])))
+  count += 1
+ return outstrg
+hash
+hash(200)
+hash("hh")
+char(234)
+chr(23)
+def fold(instrg):
+ if ((len(instrg) % 2) == 1):
+  del instrg[0]
+ count = 0
+ outstrg = []
+ for p in instrg[(len(instrg)/2):]:
+  print "debug: ", p, instrg[count]
+  outstrg.append(chr(ord(p) ^ord(instrg[count])))
+  count += 1
+ return outstrg
+def fold(instrg):
+fold(s.digest())
+def fold(instrg):
+ if ((len(instrg) % 2) == 1):
+  del instrg[0]
+ count = 0
+ outstrg = ""
+ for p in instrg[(len(instrg)/2):]:
+  print "debug: ", p, instrg[count]
+  outstrg.append(chr(ord(p) ^ord(instrg[count])))
+  count += 1
+ return outstrg
+fold(s.digest())
+def fold(instrg):
+ if ((len(instrg) % 2) == 1):
+  del instrg[0]
+ count = 0
+ outstrg = ""
+ for p in instrg[(len(instrg)/2):]:
+  print "debug: ", p, instrg[count]
+  outstrg = outstrg + (chr(ord(p) ^ord(instrg[count])))
+  count += 1
+ return outstrg
+fold(s.digest())
+b = fold(s.digest())
+c = fold(b)
+c
+print c
+for cc in c:
+ print cc % 26
+for cc in c:
+ print ord(cc) % 26
+chr.__hash__
+chr.__doc__
+for cc in c:
+ print chr(ord(cc) % 26)
+ print chr(ord(cc) % 26 + 65)
+for cc in c:
+ print chr(ord(cc) % 26 + 65)
+def shafold(instrg, times):
+ while times > 0:
+  if ((len(instrg) % 2) == 1):
+   del instrg[0]
+  count = 0
+  outstrg = ""
+  for p in instrg[(len(instrg)/2):]:
+   print "debug: ", p, instrg[count]
+   outstrg = outstrg + (chr(ord(p) ^ord(instrg[count])))
+   count += 1
+  instrg = outstrg
+  times -= 1
+ return outstrg
+def shafold(instrg, times):
+ while times > 0:
+  if ((len(instrg) % 2) == 1):
+   del instrg[0]
+  count = 0
+  outstrg = ""
+  for p in instrg[(len(instrg)/2):]:
+   #print "debug: ", p, instrg[count]
+   outstrg = outstrg + (chr(ord(p) ^ord(instrg[count])))
+   count += 1
+  instrg = outstrg
+  times -= 1
+ return outstrg
+s
+m = shafold(s.digest())
+m = shafold(s.digest(), 2)
+m+
+m
+m = shafold(s.digest(), 2)
+m
+dict.items
+dict a
+a = {}
+a["hello"] = "there"
+a.items()
+import socket
+import socket
+import socket
+import socket
+import sys
+import misc
+import utilities
+import html_esc
+html_esc.escape("decker@dacafe.com")
+html_esc.estring("decker@dacafe.com")
+import ldap
+ldap.init
+ldap.init()
+from system2 import *
+import ldap
+import types
+list a
+a = list()
+a
+class ValueList = list()
+class ValueList(list):
+ def __init__(self, listType):
+  self.listType = listType
+ def append(self, item):
+  if type(item) != self.listType:
+   raise TypeError, "Values of this list must be type %s." % self.listType
+a = ValueList()
+import types
+a = ValueList(types.StringType)
+a. append(3)
+a. append("hello")
+a = []
+for b in a:
+ print b
+import dl
+a = dl.open('_curses.dxe')
+a
+a = dl.open('_curses_panel.dxe')
+a
+import libxml2
+ctxt = doc.xpatathNewContext()
+current_nodes = doc.xpathEval("descendant-or-self::linux")
+import libxml2
+ctxt = doc.xpathNewContext()
+doc = libxml2.parseFile("D:\\D\\XML\\system.xml")
+ctxt = doc.xpathNewContext()
+current_nodes = doc.xpathEval("descendant-or-self::linux")
+import libxml2
+doc = libxml2.pnt_nodes = doc.xpathEval("descendant-or-self::linux")
+node = current_nodes[0]
+import libxml2
+ctxt = doc.xpathNewContext()
+doc = libxml2.parseFile("D:\\D\\XML\\system.xml")
+ctxt = doc.xpathNewContext()
+current_nodes = doc.xpathEval("descendant-or-self::linux")
+node = current_nodes[0]
+node.next
+while node:#
+ print node.name
+ node = node.next
+node = current_nodes[0]
+node.children
+s = node.children
+while s:
+ print s.name
+ s = s.next
+regedit
+from system2 import *
+err, cmd, file = s2sys.sxml(['c'])
+import os
+os.system(cmd)
+os.remove(file)
+import csv
+import csv
+import csv
+import csv
+import csv
+p = csv.parser()
+file = open("afile.csv")
+while 1:
+    line = file.readline()
+    if not line:
+        break
+    fields = p.parse(line)
+    if not fields:
+        # multi-line record
+        continue
+    # process the fields
+file = open("afile.csv")
+file = open("Yahoo_ab.csv")
+while 1:
+    line = file.readline()
+    if not line:
+        break
+    fields = p.parse(line)
+    if not fields:
+        # multi-line record
+        continue
+    # process the fields
+    print fields
+file2 = open("abook")
+file2 = open("abook")
+file2.write("Hello")
+file2.write()
+file2.close()
+del file2
+file2 = open("abook", "rw")
+file2.write("Hello")
+file2.close()
+del file2
+file2 = open("abook", "w")
+file2.write("Hello")
+file2.close()
+import os
+os.environ
+from system2 import *
+import EXIF
+import csv
+file = open("webstrata2.csv")
+file2 = open("list.txt")
+file2 = open("list.txt", "w")
+line = file.readline()
+del line
+del file
+file = open("webstrata2.csv")
+while 1:
+ line = file.readline()
+ fields = csv.parser.parse(line)
+ if not fields:
+  continue
+ file2.write(fields)
+p = csv.parser()
+while 1:
+ line = file.readline()
+ if not line:
+  break
+ fields = p.parse(line)
+ file2.write(fields)
+while 1:
+ line = file.readline()
+ if not line:
+  break
+ fields = p.parse(line)
+ if not fileds:
+  continue
+ file2.write(str(fields))
+while 1:
+ line = file.readline()
+ if not line:
+  break
+ fields = p.parse(line)
+ if not fileds:
+  continue
+while 1:
+ line = file.readline()
+ if not line:
+  break
+ fields = p.parse(line)
+ if not fileds:
+  continue
+while 1:
+ line = file.readline()
+ if not line:
+  break
+ fields = p.parse(line)
+ if not fields:
+  continue
+ file2.write(str(fields))
+file2.close()
+file1.close()
+file.close()
+file2 = open("list.txt")
+file = open("webstrata2.csv")
+while 1:
+ line = file.readline()
+ if not line:
+  break
+ fields = p.parse(line)
+ if not fields:
+  continue
+ file2.write("%s\n" % str(fields))
+file2 = open("list.txt")
+file = open("webstrata2.csv")
+import csv
+p = csv.parser()
+while 1:
+ line = file.readline()
+ if not line:
+  break
+ fields = p.parse(line)
+ if not fields:
+  continue
+ file2.write("%s\n" % str(fields))
+file2.close()
+del file2
+file2 = open("list.txt", "w")
+while 1:
+ line = file.readline()
+ if not line:
+  break
+ fields = p.parse(line)
+ if not fields:
+  continue
+ file2.write("%s\n" % str(fields))
+file2.close()
+from OpenGL import *
+from Crypto import *
+from ZODB import *
+from Numeric import *
+from OPenSSL import *
+from OpenSSL import *
+import _sqlite
+import _sqlite
+import crack
+import socket
+import _pysqlite
+import _sqlite
+import _sqlite
+import sqlite
+sqlite.exit
+import socket
+import socket
+import socket
+import pcap
+:q
+import md5
+a = md5.md5("This is a test")
+a
+a.digest
+a.digest()
+print a.digest()
+a.hexdigest()
+import md5
+a = md5.md5("hello")
+a.hexdigest()
+b = md5.new()
+c = "hello"
+b.update(c)
+b.hexdigest
+b.hexdigest()
+c = "hello"
+import md5
+b.update(c)
+b = md5.new()
+b.hexdigest()
+b.update(c)
+b.hexdigest()
+import md5
+c = "hello"
+b = md5.new()
+b.update(c)
+b.hexdigest()
+import md5
+c = "hello"
+b = md5.new()
+b.update(c)
+b.hexdigest()
+d = md5.new()
+c = "hello there XXX"
+b.update(c)
+b.hexdigest()
+d.update(c)
+d.hexdigest()
+import libxml2
+doc = libxml2.parseFile(getenv("SYSTEM"))
+import os
+doc = libxml2.parseFile(os.getenv("SYSTEM"))
+nodes = doc.xpathEval("descendant-or-self::link")
+node = nodes[0]
+node.xpathNextChild()
+node.xpathNextChild(node)
+node.xpathNextChild(node)
+node.xpathNextChild(node)
+node.xpathNextChild(node).get_content()
+node.xpathNextChild(node).get_content()
+node.xpathNextChild(node).get_content()
+node.get_children()
+node.xpathNextAncestor(node)
+node.xpathNextDescendantOrSelf()
+node.xpathNextDescendantOrSelf(node)
+while node:
+ node = node.xpathNextDescendantOrSelf(node)
+ print node
+nodes = doc.xpathEval("descendant-or-self::link")
+node = nodes[0]
+node.content()
+node.content
+node.lastChild
+node.lastChild()
+node.prev
+node.prev
+node.prev.get_content()
+node.get_next()
+node = node.get_next()
+node = node.get_next()
+node
+node.children()
+node.children
+node.children.get_content()
+node.children.lastChild
+node.children.lastChild()
+node.lastChild()
+node.lastChild().get_content()
+node
+node = node.get_next()
+node
+node = node.get_next()
+node
+node = nodes[0]
+node = node.lastChild()
+node = node.get_prvious()
+node = node.get_previous()
+node.prev
+node.prev
+file1 = open("customerID-connections.txt", "r")
+file2 = open("sql-flow-domains.txt", "r")
+custlist = []
+custlist = list(file1.readline())
+custlist
+file1.close()
+del file1
+file1 = open("customerID-connections.txt", "r")
+custlist = file1.readline()
+custlist
+file1 = open("serviceIDs.txt", "r")
+file2 = open("sql-flow-domains.txt", "r")
+service = "start"
+while service:
+file1 = open("serviceIDs.list.txt", "r")
+serviceList = file.readline()
+serviceList = file1.readline()
+serviceList
+servcieList = list(serviceList)
+serviceList
+for a in servcieList:
+ print a
+file1 = open("serviceIDs.list.txt", "r")
+file1.read()
+file1.read()
+file1 = open("serviceIDs.list.txt", "r")
+servcies = eval(file1.readline())
+file2 = open("sql-flow-domains.txt", "r")
+service = "0"
+while service != None
+while service != None:
+while service:
+ service = file2.readline()
+ if service in services:
+def exper(mod):
+ try:
+  import mod
+ execpt ImportError:
+def exper(mod):
+ try:
+  import mod
+ except ImportError:
+  print "Couldn't import %s" % mod
+exper(hello)
+exper("hello")
+exper("libxml2")
+def exper(mod):
+ try:
+  __import__(mod)
+ except ImportError:
+  print "Couldn't import %s" % mod
+exper("hello")
+exper("libxml2")
+from mx import DateTime
+DateTime.now()
+a = DateTime.now()
+a
+a.ticks
+a.ticks()
+a.absvalues
+a.absvalues()
+a.absdate()
+a.absdate
+a = DateTime.now()
+a.absdate
+a.gmtime
+a.gmtime()
+a.tjd
+a.year
+a.day
+a.mjd
+a.dst
+a.absdays
+a - DateTime.RelativeDateTime(days=-30)
+DateTime.RelativeDateTime(days=-30)
+a = now() + DateTime.RelativeDateTime(days=-30)
+a = DateTime.now() + DateTime.RelativeDateTime(days=-30)
+a
+a.COMDate
+a.COMDate()
+a.Julian
+a.Julian()
+a.Julian()
+b = a.Julian()
+a = DateTime.now() + DateTime.RelativeDateTime(days=-30)
+a.localtime
+a.localtime()
+a.dst
+a.absdate
+b = DateTime.now()
+b.absdate
+a
+from DateTime import DateTime
+from mx.DateTime import DateTime
+d = DateTime('2004/04/01 23:59:59 GMT+10')
+d = DateTime('2004/04/01 23:59:59 GMT+10')
+from mx import DateTime
+DateTime.mktime
+DateTime.mktime("DateTime('2004/04/01 23:59:59 GMT+10'):")
+DateTime.mktime("DateTime('2004/04/01 23:59:59 GMT+10')")
+DateTime.mktime("2004/04/01 23:59:59 GMT+10")
+DateTime.mktime("2004/04/01 23:59:59 GMT+10")
+DateTime.mxDateTime
+DateTime.now()
+a = DateTime.now()
+a.
+a.gmtime
+a.gmtime()
+a.second
+a.localtime
+a.localtime()
+str.join
+a = {}
+a.has_key("hello")
+import acct
+import acct
+acct.summary
+acct.summary()
+import xmlrpc
+exit
+exit
+import xmlrpc
+import xmlrpclib
+import _xmlrpc
+True
+import ldap
+ldap
+import theos
+from theos import bdTypes
+from theos import bdTypes
+bdTypes.Address
+import _mysql
+import _mysql
+import sys
+sys.path
+import OpenSSL
+OpenSSL.crypto
+OpenSSL.rand
+import _mysql
+_mysql.connect
+_mysql
+import UserList
+from theos import publisher, territory, congregation
+a = {}
+a.__setitem()
+a.__setitem__()
+a.__setitem__(a, "hell")
+a.__setitem__("me", "hello")
+b = {}
+b.__setitem__("1", a)
+b
+a = {}
+a.keys
+a.keys()
+s = ""
+s = ""
+s = "hello"
+s.replace("h", "g")
+from stringmatch import jaro
+jaro.jaro("Andrew", "Andrew Bennets")
+import cjaro
+cjaro.jaro("Andrew", "Andrew Bennets")
+a = ()
+import types
+type(a)
+type.__call__
+type.__repr__
+type.__repr__(a)
+type.__repr__(type(a))
+type.mro
+type.mro(a)
+type.mro(type(a))
+print a
+print type(a)
+b = type(a)
+b.mro
+b.mro()
+b.__str__
+b.__str__()
+b.__contains__
+b.__contains__()
+b.__dict__
+b.__dict__()
+b.__dict__.keys()
+b.__eq__
+b.__eq__()
+str(b)
+print b
+b.__name__
+from theos import bdtypes
+from theos import bdTypes
+a = bdTypes.HistoryList()
+type(a)
+from theos import congregation
+b = congregation.Congreagtion()
+b = congregation.Congregation()
+type(b)
+import csv
+import _xmlrpclib
+import sgmlop2
+import sgmlop
+sgmlop
+sgmlop.__file__
+import ctypes
+import _ctypes
+:q
+import ctypes
+import _ctypes
+from UserDict import UserDict
+a = UserDict()
+a.values.__repr__
+a.values.__str__
+a.values
+a.values.im_self
+import sys
+sys.stdout.write("hello")
+sys.stdout.write("hello")
+sys.stderr.write("hello")
+from theos.territory import Territory
+a = Territory('local')
+dir(a)
+a
+a.__module__
+a.__class__
+oject
+object
+object.__name__
+instance
+object.__module__
+from theos.territory import Territory
+from theos.congregation import Congregation
+from ExtensionClass import ExtensionClass
+a = "hello"
+a.find("hello")
+a.find("hell")
+a.find("hellp")
+a.find("h")
+import dbi
+import Persistance
+from OSF.Folder import Folder
+from zope.OSF.Folder import Folder
+import sys
+sys.path
+import BTree
+import Acquisition
+from OFS.Folder import Folder
+mport IIBTree
+import IIBTree
+import xmlrpclib
+s = xmlrpclib.Server("http://au-rad-0002.flow.com.au:160")
+s.authenticate.authenticate("bdecker@flowcom.com.au","regensburg")
+import xmlrpclib
+s = xmlrpclib.Server("http://au-rad-0002.flow.com.au:160")
+s.authenticate.authenticate("bdecker@flowcom.com.au","regensburg")
+import xmlrpclib
+s = xmlrpclib.Server("http://au-rad-0002.flow.com.au:160")
+s.authenticate.authenticate("bdecker@flowcom.com.au","regensburg")
+import xmlrpclib
+s = xmlrpclib.Server("http://au-rad-0002.flow.com.au:160")
+s.authenticate.authenticate("bdecker@flowcom.com.au","regensburg")
+s.authenticate.authenticate("bdecker@flowcom.com.au","regensbug")
+a = "testString"
+a.replace("String","")
+import os
+import ccsv
+import ccsv
+import ccsv
+import ccsv
+import IPy
+import IPy
+IPy._test()
+admin@planet.net.au
+admin@planet.net.au
+import sqlite
+import sqlite
+import sqlite
+sqlite.
+sqlite.connect
+sqlite.connect()
+sqlite.connect('localhost')
+import bisonmodule
+import bison
+import bison
+import os
+err
+err = err
+import os
+g = os.remove("D:\\test")
+from system2 import s2sys
+from system2 import s2sys
+import bison
+import sqlite
+import IPy
+import xmlrpclib
+from OFS.Folder import Folder
+import sgmlop2
+import acct
+acct.summary
+acct.summary()
+from system2 import *
+s2sys
+import system2
+system2
+system2.tb_lineno
+import twisted
+import BTree
+import Record
+import IOBtree
+import ExtensionClass
+from Crypto import *
+from OpenSSL import *
+from pyldap import *
+import ldif
+import xmlrpc
+import nis
+import nis
+import nis
+import socket
+socket.
+import reportlab
+from reportlab import *
+import OpenSSL
+import dl
+import dl
+import _ldap
+import _ldap
+import ldif
+from OpenSSL import SSL
+from OpenSSL import rand
+from OpenSSL import crypto
+import os
+import mktemp
+os.mktemp
+import sys
+import tempfile
+tempfile.gettempdir()
+tempfile.tempdir
+sys.stdout('hell...')
+sys.stdout.write('hell...')
+sys.stdout.write('hell...\n')
+import libxml2
+import libxml2
+import libxml2
+import libxml2
+import libxml2
+import sys
+sys.path
+/dev/env/DJDIR
+bdeck
+/dev/env/DJDIR/zope
+bdeck
+bdecker
+bdecker@flowcom.com.au
+bdecker@flowcom.com.au
+bdecker@flowcom.com.au
+bdecker
+offline01.flow.com.au
+bdecker@flowcom.com.au
+import magic
+import magic
+from pychart import *
+exixt
+exit
+import s2dom
+from system2 import s2dom
+import os
+sxml = os.getenv("SYSTEM")
+sxml
+xmldoc s2dom.tree(sxml)
+xmldoc=s2dom.tree(sxml)
+xmldoc
+shell=sxmldoc.gettext2("@shell")
+xmldoc = s2dom.tree(sxml)
+shell = xmldoc.gettext2("@shell")
+shell = xmldoc.gettext2("self-or-descendant::@shell")
+shell = xmldoc.gettext2("descendant-or-self::/@shell")
+shell = xmldoc.gettext2("descendant-or-self::@shell")
+shell = xmldoc.gettext2("descendant-or-self::weight/open/@shell")
+shell = xmldoc.gettext2("descendant-or-self::weight")
+shell = xmldoc.gettext2("descendant-or-self::/")
+shell = xmldoc.gettext2("descendant-or-self:://")
+sxml = os.getenv("SYSTEM")
+xmldoc=s2dom.tree(sxml)
+shell = xmldoc.gettext2("descendant-or-self:://link/applications")
+shell = xmldoc.gettext2("descendant-or-self::link")
+shell = xmldoc.gettext2(["descendant-or-self::link"])
+shell
+os.system("cls")
+os.system("clear")
+shell = xmldoc.gettext2(["descendant-or-self::weight/open/@shell"])
+shell
+nodes = xmldoc.xpathEval("descendant-or-self::weight/open/@shell")
+xmldoc
+xmldoc = libxml2.parseFile(sxml)
+import libxml2
+xmldoc = libxml2.parseFile(sxml)
+nodes = xmldoc.xpathEval("descendant-or-self::weight/open/@shell")
+nodes
+nodes[0]
+node = nodes[0]
+node.name
+from system2 import s2dom
+sxml = os.getenv("SYSTEM")
+import os
+sxml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(sxml)
+shell = xmldoc.gettext2(["descendant-or-self::link"])
+from system2 import s2dom
+sxml = os.getenv("SYSTEM")
+import os
+sxml = os.getenv("SYSTEM")
+xmldoc = s2dom.tree(sxml)
+shell = xmldoc.gettext2(["descendant-or-self::link"])
+shell
+shell = xmldoc.gettext2(["descendant-or-self::apt-get"])
+shell
+shell = xmldoc.gettext2(["descendant-or-self::weight/open"])
+shell
+shell = xmldoc.gettext2(["descendant-or-self::weight/open/@shell"])
+impot libxml2
+import libxml2
+xmldoc = libxml2.parseFile(sxml)
+nodes = xmldoc.xpathEval("descendant-or-self::weight/open/@shell")
+nodes
+nodes[0].name
+import os
+sxml = os.getenv("SYSTEM")
+from system2 import s2dom
+import libxml2
+xmldoc = libxml2.parseFile(sxml)
+nodes = xmldoc.xpathEval("descendant-or-self::weight")
+test = s2dom.gettext3(nodes[0])\
+\
+test = s2dom.tree.gettext3("test", nodes[0])
+xmldoc2 = s2dom.tree(sxml)
+test = s2dom.tree.gettext3(xmldoc2, nodes[0])
+from system2 import s2dom
+import libxml2
+nodes[0].name
+import os
+sxml = os.getenv("SYSTEM")
+xmldoc2 = s2dom.tree(sxml)
+xmldoc = libxml2.parseFile(sxml)
+nodes = xmldoc.xpathEval("descendant-or-self::weight")
+test = s2dom.tree.gettext3(xmldoc2, nodes[0])
+test
+nodes = xmldoc.xpathEval("descendant-or-self::ndis3nt")
+test = s2dom.tree.gettext3(xmldoc2, nodes[0])
+test
+nodes = xmldoc.xpathEval("descendant-or-self::ndis3nt/dialup")
+test = s2dom.tree.gettext3(xmldoc2, nodes[0])
+test
+nodes = xmldoc.xpathEval("descendant-or-self::ping")
+test = s2dom.tree.gettext3(xmldoc2, nodes[0])
+test
+import os
+import libxml2
+from system2 import s2dom
+xmldoc2 = s2dom.tree(sxml)
+sxml = os.getenv("SYSTEM")
+xmldoc2 = s2dom.tree(sxml)
+xmldoc = libxml2.parseFile(sxml)
+nodes = xmldoc.xpathEval("descendant-or-self::ndis3nt/dialup")
+test = s2dom.tree.gettext3(xmldoc2, nodes[0])
+test
+test = s2dom.tree.gettext2["descendant-or-self::ndis3nt/dialup"]
+test = s2dom.tree.gettext2["descendant-or-self::ndis3nt/dialup"]
+test = s2dom.tree.gettext2(["descendant-or-self::ndis3nt/dialup"])
+test = xmldoc2.gettext2(["descendant-or-self::ndis3nt/dialup"])
+test
+test = xmldoc2.gettext2(["descendant-or-self::weight/open"])
+nodes = xmldoc
+test = xmldoc2.gettext2(["descendant-or-self::weight"])
+test
+test = xmldoc.xpathEval("descendant-or-self::ndis3nt/dialup")
+test
+test.children
+while child:
+test[0].children
+test2 = test[0].children
+child = test[0].children
+while child:
+print child, child.name
+while child:
+ print child, child.name
+ child = child.next
+test = xmldoc.xpathEval("descendant-or-self::weight/open")
+child = test[0].children
+while child:
+ print child, child.name
+ child = child.next
+test2.hasProp
+test2.hasProp("shell")
+test2.get_children
+test2.get_children()
+a = test2.get_children()
+a
+test2
+test = xmldoc.xpathEval("descendant-or-self::weight")
+test2 = test[0].children
+test2
+test2.get_children()
+test = xmldoc.xpathEval("descendant-or-self::weight/open")
+test2 = test[0].children
+test2.get_children()
+import os
+import libxml2
+sxml = os.getenv("SYSTEM")
+xmldoc = libxml2.parseFile(sxml)
+from system2 import s2dom
+xmldoc2 = s2dom.tree(sxml)
+test = xmldoc.xpathEval("descendant-or-self::weight/open")
+test2 = test[0]
+test2.getAttributes()
+test2.content
+test2.sys
+import libxml2
+import os
+sxml = os.getenv("SYSTEM")
+xmldoc = libxml2.parseFile(sxml)
+test = xmldoc.xpathEval("descendant-or-self::weight/open")
+test2 = test[0]
+test3 = test2.get_properties()
+test3
+test3.get_content()
+test3.name
+test2.add_property("hello")
+test2.addProperty("hello")
+test2.add_prop("hello")
+test2.newProp
+test2.newProp("hello")
+test2.newProp("hello", "there")
+test3 = test2.get_properties()
+test3
+test3.next()
+test3.next
+from system2 import s2dom
+import os
+sxml = os.getenv("SYSTEM")
+xmldoc2 = s2dom.tree(sxml)
+test = xmldoc2.gettext2(["descendant-or-self::ndis3nt/dialup"])
+test
+test = xmldoc2.gettext2(["descendant-or-self::weight"])
+import libxml2
+import os
+sxml = os.getenv("SYSTEM")
+xmldoc = libxml2.parseFile(sxml)
+test = xmldoc.xpathEval("descendant-or-self::weight/open")
+test2 = test.get_attributes()
+test2 = test[0]
+test3 = test2.get_attributes()
+test3 = test2.get_properties()
+test3
+test3.next
+test3
+test3.next()
+test4 = test3.next
+test4
+test3.next()
+test2.newProp("hello", "there")
+test3 = test2.get_properties()
+test3.next
+test4 = test3.next
+test4.get_content()
+import os
+sxml = os.getenv("SYSTEM")
+from system2 import s2dom
+xmldoc2 = s2dom.tree(sxml)
+test = xmldoc2.gettext2(["descendant-or-self::weight"])
+test
+test = xmldoc2.gettext2(["descendant-or-self::weight/open"])
+test2 = 
+import libxml2
+xmldoc = libxml2.parseFile(sxml)
+test = xmldoc.xpathEval("descendant-or-self::weight/open")
+test2 = test[0]
+test2.get_parent()
+test = xmldoc.xpathEval("descendant-or-self::weight/open")
+a = []
+a.insert()
+a = ["hello", "there"]
+a.insert("you")
+a.insert("you", 0)
+a.insert(0,"you")
+a
+from system2 import s2dom
+import os
+xmldoc2 = s2dom.tree(sxml)
+sxml = os.getenv("SYSTEM")
+xmldoc2 = s2dom.tree(sxml)
+test = xmldoc2.gettext2(["descendant-or-self::weight/open"])
+test
+test = xmldoc2.gettext2(["descendant-or-self::weight"])
+test
+import irclib
+import magic
+import magic
+import magic
+import _cursesmodule
+import _curses
+import _curses
+import _curses
+_curses
+:
+import curses
+def next_j(j):
+    if j == 0:
+        j = 4
+    else:
+        j -= 1
+    if curses.has_colors():
+        z = randrange(0, 3)
+        color = curses.color_pair(z)
+        if z:
+            color = color | curses.A_BOLD
+        stdscr.attrset(color)
+def next_j(j):
+    if j == 0:
+        j = 4
+    else:
+        j -= 1
+if curses.has_colors():
+    z = randrange(0, 3)
+    color = curses.color_pair(z)
+    if z:
+        color = color | curses.A_BOLD
+    stdscr.attrset(color)
+def next_j(j):
+    if j == 0:
+        j = 4
+    else:
+        j -= 1
+    if curses.has_colors():
+        z = randrange(0, 3)
+        color = curses.color_pair(z)
+        if z:
+            color = color | curses.A_BOLD
+        stdscr.attrset(color)
+    return j
+global stdscr
+stdscr = win
+if curses.has_colors():
+    bg = curses.COLOR_BLACK
+    curses.init_pair(1, curses.COLOR_BLUE, bg)
+    curses.init_pair(2, curses.COLOR_CYAN, bg)
+curses.nl()
+curses.noecho()
+# XXX curs_set() always returns ERR
+# curses.curs_set(0)
+stdscr.timeout(0)
+c = curses.COLS - 4
+r = curses.LINES - 4
+xpos = [0] * c
+ypos = [0] * r
+global stdscr
+stdscr = win
+import curses
+from random import randrange
+import dl
+dxe = dl.open("_curses.dxe")
+dxe
+dxe.sym
+dxe.sym()
+dict(dxe)
+dxe.sym("init")
+dxe.sym("bye")
+from system2 import *
+from system2.s2sys import *
+from system2.s2sys import s2dom, xml
+help("s2dom")
+s2dom.__doc__
+help("system2.s2dom")
+xmldoc = s2dom.tree(xml)
+doc = xmldoc.gettext2("ndis3nt")
+doc
+from system2 import s2sys
+doc = s2sys.sdoc("ndis3nt")
+doc
+from s2sys import xml, raeder
+from system2 import xml, reader
+a = reader.lookup("ndis3nt")
+a = reader(xml)
+reader.lookup("ndis3nt")
+a.lookup("ndis3nt")
+a
+a.data
+from system2 import xml, reader
+doc = reader(xml)
+doc.lookup("ndis3nt")
+doc.data[0][0]
+help ("system2")
+system2.__doc__
+import system2
+system2.__doc__
+import system2
+help ("system2")
+system2.__doc__
+system2
+system2.__doc__()
+help ("system2.__init__")
+import system2
+import system2
+system2.doc
+system2.doc()
+import system2
+help("system2")
+import system2
+help("system2")
+import system2
+help("system2")
+import os
+os.platform
+import sys
+sys.platform
+import system2
+help("system2")
+import spark
+spark
+dir(spark)
+spark.__builtins__
+import ipv4
+import IPy
+IPy.IP
+addr = IPy.IP('202.3.192.14')
+addr
+addr.netmask
+addr.netmask()
+addr.broadcast
+addr.broadcast()
+addr = IPy.IP('202.3.192.14/29')
+addr = IPy.IP('202.3.192.14\29')
+addr = IPy.IP('202.3.192.8/29')
+addr
+addr.netmask()
+addr.broadcast()
+addr.gateway()
+addr.net()
+import sha
+sha.sha
+sha.sha("hello world")
+a = sha.sha("hello world")
+a.digest
+a.digest()
+print a.digest()
+print a.hexdigest()
+import sha
+a = sha.new()
+a.update()
+a.update("hello world")
+a.hexdigest()
+help("sha")
+import sys
+sys.__repr__
+exit
+exit
+hello
+import sys
+import sys
+a.digest()
+print
+import ois
+import os
+a = os.environ.get("TEST")
+a
+a.lower()
+a = {one:"test1", two:"test2"}
+a = {"one":"test1", "two":"test2"}
+a
+print "welcome to %('two')s\n" % a
+a
+locals()
+print "welcome to %(a)s\n" % locals()
+print "welcome to %(two)s\n" % a
+import PDMconfig
+import PDMConfig
+PDMConfig.DTD
+PDMConfig.DTD
+import PDMConfig
+import PDMConfig
+PDMConfig.DTD
+import expat
+import pyexpat
+pyexpat.XMLParserType 
+pyexpat.xmlparser
+license
+credits
+copyright
+import PyXML
+import xml
+xml.version_info 
+ewwewewe
+license
+license
+license
+import sys, getopt
+(options,sysids)=getopt.getopt(sys.argv,"",["list"])
+options
+sysids
+a = ("hello","there")
+dir(a)
+a = a + "me"
+a = a + ("me")
+a = a + ("me",)
+a
+import sys
+import os
+sys.platform
+os.name
+im port db
+import db
+import sys
+from system2 import *
+from twisted import *
+from OpenGL import *
+from OpenGL.Glut import *
+from OpenGL.glut import *
+glut
+GLUT
+Glut
+OpenGL.GLUT
+import reportlab
+import Lparser
+import LParser
+LParser
+import Pyro
+import Pyro
+import irclib
+import libconfix
+1024*5
+import dl
+dl.open
+import _pybsddb
+import _pybsddb
+_pybsddb.dxe
+_pybsddb.dxe
+import _pybsddb
+import _pybsddb
+import _pybsddb
+import smooth
+a = {}
+a.has_key 
+a = []
+a.type
+type(a)
+b = type(a)
+b
+print b
+c = b[0]
+if type(a) == type ([]):
+ print a
+import radius
+result = radius.authenticate("bdecker@flowcom.com.au", "regensburg", "Fl0wsQu1ck", "radiator.flow.com.au", 1645)
+result = radius.authenticate("bdecker@flowcom.com.au", "regensburg", "Fl0wsQu1ck", "radiator.flow.com.au", 1645)
+result = radius.authenticate("decker@flowcom.com.au", "regensburg", "Fl0wsQu1ck", "radiator.flow.com.au", 1645)
+import radius
+result = radius.authenticate("decker@flowcom.com.au", "regensburg", "Fl0wsQu1ck", "radiator.flow.com.au", 1645)
+import radius
+result = radius.authenticate("bend@ddaustralia.com.au", "regensburg", "Fl0wsQu1ck", "radiator.flow.com.au", 1645)
+result = radius.authenticate("bend@ddaustralia.com.au", "regensburg", "Fl0wsQu1ck", "radiator.flow.com.au", 1645)
+import socket
+/dev/env/DJDIR/site-python
+y
+y
+import web.database
+import datetime
+datetime
+import sys
+sys.hexver
+sys.hexvers
+sys.hexversion
+sys.version_info 
+sys.version_info [0]
+sys.version_info [1]
+sys.version_info(0) * 10 + sys.version_info(1)
+print sys.version_info(0) * 10 + sys.version_info(1)
+print int(sys.version_info(0)) * 10 + int(sys.version_info(1))
+print sys.version_info[0] * 10 + sys.version_info[1]
+65536 / 16
+65536 / 8
+a=1
+a.__floordiv__
+dict(a)
+dir(a)
+a.__class__
+a.__class__.__dict__ 
+b = a.__class__.__dict__ 
+b
+b.items()
+a.__class__.__dict__.items()
+help (read)
+help(read)
+help(file.read)
+import random
+random
+random.gauss 
+random.gauss ()
+dir(random)
+random.seed
+random.seed()
+a = random.seed()
+a
+help (random)
+help(sha1)
+help(sha)
+help(sha2)
+help(sha3)
+help(md5)
+import sha
+help(sha)
+import LibicalWrap
+a = 0x3b40000
+a
+a = 0x3b
+a
+char(59)
+ord(a)
+import LibicalWrap
+import LibicalWrap
+import LibicalWrap
+import LibicalWrap
+import LibicalWrap
+LibicalWrap.icalperiodtype_null_period 
+from time import time
+import _LibicalWrap
+import duration
+import Libical
+dir (Libical)
+Libical.Time
+Libical.Todo
+help(Libical.Todo)
+import sitemap_gen
+import curses
+stdscr=curses.initscr()
+import curses
+stdscr=curses.initscr()
+import curses
+stdscr=curses.initscr()
+import curses
+stdscr=curses.initscr()
+import curses
+help("curses.initscr")
+help("curses")
+stdscr=curses.setupterm()
+curses.setupterm()
+curses.setupterm(1)
+curses.setupterm("term")
+curses.setupterm("djgpp")
+stdscr=curses.initscr()
+import os
+os.system("D:\Project\ncurses-5.4\test\rain.exe")
+os.system("D:/Project/ncurses-5.4/test/rain.exe")
+import curses
+stdscr=curses.initscr()
+import nis
+nis.cat 
+nis.cat()
+nis.cat("1")
+nis.cat("www.caddit.net")
+nis.cat("caddit.net")
+import curses
+stdscr=curses.initscr()
+import curses
+stdscr=curses.initscr()
+604870 * 13
+import curses
+stdscr=curses.initscr()
+hello
+helklkdksal
+hjfsjdhjfhsd
+dfsd
+fsd
+Thadjssakjdkjsajdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddsdksjakdjjsakkdjksjakjdkjksaajjdkjsakajdjksaajdjsakajk
+Thadjssakjdkjsajdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddsdksjakdjjsakkdjksjakjdkjksaajjdkjsakajdjksaajdjsakajk
+Thadjssakjdkjsajdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddsdksjakdjjsakkdjksjakjdkjksaajjdkjsakajdjksaajdjsakajk
+import sys
+sys.builtin_module_names 
+sys.builtin_module_names 
+import sys
+sys.builtin_module_names 
+~~
+sys.builtin_module_names 
+import sys
+sys.builtin_module_names 
+import sys
+sys.builtin_module_names 
+fdsafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+fdsafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+sys.builtin_module_names 
+filename = "/dev/d/tmp/testing"
+import dbm
+dbm.open(filename, 'c')
+filename = "D:\testing"
+dbm.open(filename, 'c')
+filename = "D:\\testing"
+dbm.open(filename, 'c')
+from dbm import error
+dbm.open(filename, 'c')
+import gdbm
+import dbm
+import dbm
+import dbm
+filename = "D:\\testing"
+dbm.open(filename, 'c')
+filename = "/tmp/testing"
+dbm.open(filename, 'c')
+import dbm
+filename = "/tmp/testing"
+dbm.open(filename, 'c')
+import dbm
+dbm.library
+import os
+os.unlink("/tmp/test")
+import email
+email
+email
+import email
+email
+import email
+email
+import curses
+import curses
+curses.initscr 
+import curses
+curses.curs_set(0)
+import session
+sys.builtin_module_names 
+import sys
+sys.builtin_module_names 
+import readline
+import sys
+sys.ps1 = '\033[33;1m>>> \033[0m'
+sys.ps1 = '\033[35;1m>>> \033[0m'
+sys.ps1 = '\033[35;1m>>> \033[0m\33[sm'
+sys.ps1 = '\033[35;1m>>> \033[0m\33[s'
+import sys
+sys.builtin_module_names 
+sys.builtin_module_names 
+sys.ps1 = '\033[35;1m>>> \033[0m\33[;5H'
+sys.ps1 = '\033[35;1m>>> \033[0m\33[0;5H'
+sys.ps1 = '\033[35;1m>>> \033[0m\33[?;5H'
+sys.ps1 = '\033[35;1m>>> \033[0m\33[?'
+sys.builtin_module_names 
+sys.ps1 = '\033[35;1m>>> \033[0m\33[?'
+sys.ps1 = '\033[35;1m>>>  \033[0m\33[2D'
+sys.builtin_module_names 
+sys.ps1 = '\33[2D\033[35;1m>>>  \033[0m'
+sys.builtin_module_names 
+        cls
+sys.ps1 = '\033[35;1m>>>  \033[0m'
+import sys
+sys.ps1 = '\033[35;1m>>>  \033[0m'
+sys.builtin_module_names 
+sys.builtin_module_names 
+import os
+os.system('cls')
+os.system('clear')
+sys.ps1 = '\033[35;1m>>>  \033[0m'
+sys.builtin_module_names 
+sys.ps1 = '\033[35;1m>>> '
+sys.builtin_module_names 
+sys.ps1 = '\033[35;1m>>> \033[0m'
+sys.builtin_module_names 
+sys.ps1 = '\033[33;1m>>> \033[0m'
+cdsdsad
+dsassdsadasdsa
+sys.builtin_module_names 
+sys.ps1 = '[\033[33;1m>>> \033[0m]'
+sys.builtin_module_names 
+sys.ps1 = '\033[33;1m>>> \033[0m'
+sys.ps1 = '\033[33;1m>>> \033[0m,'
+sys.builtin_module_names 
+impoer sys
+import sys
+sys.builtin_module_names 
+import sys
+sys.builtin_module_names 
+class logger:
+        def __init__(self,file):
+                self.file = file
+                self.fd = None
+                try:
+                        self.fd = open(file,'a')
+                except:
+                        return None
+import os
+os.stat(".")
+os.stat("/")
+os.stat("/dev/env/DJDIR")
+os.stat("D:\\B")
+import sys
+sys.executable
+sys.argv
+sys.path
+import sys
+sys.prefix
+import sys
+sys.prefix
+import sys
+sys.exec_prefix
+exoit
+exit
+import sys
+sys.executable
+import nis
+import locale
+import socket
+import fcntl
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+old = fcntl.fcntl(s.fileno(), fcntl.F_GETFD)

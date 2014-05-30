@@ -1,0 +1,16 @@
+# Printcap: to be used with the inclosed filter
+
+# Don't forget to place the filter in /etc and make the /tmp
+# Directory, and set the lp setting to the proper device.
+
+
+lp:lp=/dev/lp1:sd=/dev/env/DJDIR/tmp:mx%0:if=/dev/env/DJDIR/etc/filter:sh
+
+bjc2000:\
+    :sh:\
+    :lp=/dev/lpt1:\
+    :sd=/dev/env/DJDIR/tmp:\
+    :mx#0:\
+    :lf=sd=/dev/env/DJDIR/tmp/lpd-errs:\
+    :if=/usr/local/libexec/hpif:
+

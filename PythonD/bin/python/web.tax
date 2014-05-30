@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+
+<instance class="twisted.internet.app.Application" reference="1">
+  <dictionary>
+    <string role="key" value="unixConnectors" />
+    <list />
+    <string role="key" value="uid" />
+    <int value="42" />
+    <string role="key" value="sslConnectors" />
+    <list />
+    <string role="key" value="twisted.internet.app.Application.persistenceVersion" />
+    <int value="12" />
+    <string role="key" value="extraConnectors" />
+    <list />
+    <string role="key" value="udpPorts" />
+    <list />
+    <string role="key" value="services" />
+    <dictionary />
+    <string role="key" value="udpConnectors" />
+    <list />
+    <string role="key" value="name" />
+    <string value="web" />
+    <string role="key" value="unixPorts" />
+    <list />
+    <string role="key" value="sslPorts" />
+    <list />
+    <string role="key" value="tcpPorts" />
+    <list>
+      <tuple>
+        <int value="80" />
+        <instance class="twisted.web.server.Site">
+          <dictionary>
+            <string role="key" value="logPath" />
+            <string value="/dev/env/DJDIR/var/log/twisted.web" />
+            <string role="key" value="resource" />
+            <instance class="twisted.web.static.File">
+              <dictionary>
+                <string role="key" value="processors" />
+                <dictionary>
+                  <string role="key" value=".php" />
+                  <class name="twisted.web.twcgi.PHPScript" />
+                  <string role="key" value=".epy" />
+                  <class name="twisted.web.script.PythonScript" />
+                  <string role="key" value=".trp" />
+                  <function name="twisted.web.trp.ResourceUnpickler" />
+                  <string role="key" value=".php3" />
+                  <class name="twisted.web.twcgi.PHP3Script" />
+                  <string role="key" value=".rpy" />
+                  <function name="twisted.web.script.ResourceScript" />
+                  <string role="key" value=".cgi" />
+                  <class name="twisted.web.twcgi.CGIScript" />
+                </dictionary>
+                <string role="key" value="encoding" />
+                <none />
+                <string role="key" value="defaultType" />
+                <string value="text/html" />
+                <string role="key" value="ignoredExts" />
+                <list />
+                <string role="key" value="registry" />
+                <instance class="twisted.web.static.Registry">
+                  <dictionary>
+                    <string role="key" value="twisted.web.static.Registry.persistenceVersion" />
+                    <int value="1" />
+                    <string role="key" value="twisted.python.components.Componentized.persistenceVersion" />
+                    <int value="1" />
+                    <string role="key" value="_pathCache" />
+                    <dictionary />
+                    <string role="key" value="_adapterCache" />
+                    <dictionary>
+                      <string role="key" value="twisted.internet.interfaces.IServiceCollection" />
+                      <reference key="1" />
+                    </dictionary>
+                  </dictionary>
+                </instance>
+                <string role="key" value="twisted.web.static.File.persistenceVersion" />
+                <int value="6" />
+                <string role="key" value="path" />
+                <string value="/dev/env/DJDIR/var/webserver" />
+                <string role="key" value="type" />
+                <string value="text/html" />
+                <string role="key" value="children" />
+                <dictionary />
+                <string role="key" value="indexNames" />
+                <list>
+                  <string value="index.htm" />
+                </list>
+              </dictionary>
+            </instance>
+            <string role="key" value="sessions" />
+            <dictionary />
+          </dictionary>
+        </instance>
+        <int value="5" />
+        <string value="" />
+      </tuple>
+    </list>
+    <string role="key" value="gid" />
+    <int value="42" />
+    <string role="key" value="tcpConnectors" />
+    <list />
+    <string role="key" value="extraPorts" />
+    <list />
+    <string role="key" value="persistStyle" />
+    <string value="xml" />
+  </dictionary>
+</instance>

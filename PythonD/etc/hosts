@@ -1,0 +1,111 @@
+#
+# Waterloo TCP/IP Host file
+#
+# ip-address     hostname   [alias(es)..]
+
+127.0.0.1        localhost  loopback    LOCALHOST       LOOPBACK
+0.0.0.0          null
+
+198.41.0.8       internic
+193.0.0.194      whois
+193.0.0.200      whois.ripe.net
+
+#
+# Note: if a host contains non-ASCII (8bit) letters the hosts
+#       matching is CASE-SENSITIVE. The hosts list must then
+#       be repeated with all casing combinations of the non-
+#       ASCII letter(s). The reason is that stricmp() doesn't
+#       understand non-ASCII upper/lower case letters.
+# E.g. 
+#
+# 128.0.10.20 Üsgard èsgard èSGARD # Ü = Norwegian 'a ring'
+#                                  # è = Norwegian 'A ring'
+#
+# In this example 'èSGARD' is not needed because it's matched by 'èsgard'
+
+
+# ITHACA local network !!keep spacing standard for grep-scripts!!
+169.254.0.1	  ithaca01	  ithaca-netcomm	ithaca-dsl-01   # Network Server
+#169.254.1.2      ithaca02        ITHACA02      Ithaca02
+169.254.1.3       ithaca03	  ITHACA03	Ithaca03   # AIX machine
+169.254.1.4	  ithaca04	  ITHACA04	Ithaca04   # LG Windows 2000
+169.254.1.5	  ithaca05	  ITHACA05	solar      # Solaris Dev Box
+169.254.1.6	  ithaca06	  ITHACA06	Ithaca06   # Linux Host
+169.254.1.10      ithaca10	  ITHACA10      Ithaca10   # IBM Win2000 Server
+#169.254.1.100     ithaca-dsl-001  ITHACA-DSL-001  router01
+# WEP Encryption key: fe110fe110fe110fe110fe110f
+
+
+# MERIT EMS local network
+192.168.1.1	  ws1
+192.168.1.2	  ws2
+192.168.1.3	  ws3
+192.168.1.4	  ws4
+192.168.1.5	  ws5
+192.168.1.6	  ws6
+192.168.1.7	  ws7
+192.168.1.8	  ws8
+192.168.1.9       ws9                     WS9
+192.168.1.10	  ws10
+192.168.1.11	  ws11
+192.168.1.12	  ws12
+192.168.1.199     Nt1                     nt1
+192.168.1.100     rs43pc                  RS43PC          RS43pc   
+192.168.1.209  	  brick
+192.168.1.210	  pbox
+192.168.1.202	  pbox2
+192.168.1.101     MS-DOS                  DJGPP           nonet
+
+
+# FLOWCOM local network
+172.20.0.1        flow01          FLOW01
+172.20.1.2	  flowcom01	  FLOWCOM01	     flowcom01.flowcom.com.au
+172.20.0.7	  datashare	  DATASHARE	     datashare.flow.com.au
+172.20.1.193	  nocprinter	  NOCPRINTER	# The last remaining printer on FLOW net
+#172.20.1.194      printer10       PRINTER10
+#172.20.1.8        printer7        PRINTER7
+# Internal FLOW Management LAN VPN server:
+172.20.1.35	  kentvpn-2	  KENTVPN-2	     
+202.129.65.2      au-dev-0001	  au-dev-0001.flow.com.au
+202.129.65.70	  au-rad-0002	  au-rad-0002.flow.com.au                 
+172.20.16.1	  au-lan-0001	flowdhcp
+202.129.64.121    au-mai-0004	flowmail	     smtp.flow.com.au
+202.129.64.242    int.flowcom   int.flowcom.com.au   smtp.flowcom.com.au
+172.20.1.126      munich        au-lan-1126          au-lan-1126.int.flowcom.com.au
+
+
+
+# DDA Network
+10.239.4.50       dda-sbs1        DDA-SBS1	     dda-sbs1.ddaustralia.local
+202.3.192.12      mail-gw.ddaustralia.com.au
+10.237.2.10	  telco-1	  TELCO-1	     telco-1.ntl.net.au
+10.239.4.247	  lexmark1	  LEXMARK1
+10.239.4.248	  lexmark2	  LEXMARK2	     #Printer closest to me
+10.237.2.50       telco-spec1     TELCO-SPEC1          telco-spec1.ntl.net.au
+10.237.4.51       telco-spec1-dev-dr TELCO-SPEC1-DEV-DR telco-spec1-dev-dr.ntl.net.au
+10.237.4.56       telco-soc1 TELCO-SOC1 telco-soc1.ntl.net.au
+10.237.4.70       telco-soa1 TELCO-SOA1 telco-soa1.ntl.net.au
+
+
+# WWW Nameservers
+# Root server 'G' see www.root-servers.org US. DOD at Vienna VA
+192.112.36.4 	  dns.g			g.root-servers.net
+# Root server 'F' see www.root-servers.org Internet Software Consortium 
+192.5.5.241	  dns.f			f.root-servers.net
+# Root server 'J' see www.root-servers.org VeriSign
+192.58.128.30     dns.j			j.root-servers.net
+203.0.178.191     dns.iiNet		dns.iinet.net.au
+202.12.144.10	  dns.telstra		dns.telstra.com.au
+202.129.64.194    dns1.flow		dns1.flow.com.au
+202.129.64.198    dns2.flow		dns2.flow.com.au
+213.240.67.102    dns.tiscali
+213.240.67.106    dns.tiscali2
+62.26.26.62 	  dns.tiscali3
+195.185.185.195   dns.tiscali4
+212.40.0.10  	  ns1.tiscali.ch
+212.40.5.50  	  ns2.tiscali.ch
+
+# WWW Email servers (for easier login)
+62.26.116.137     mail.surfeu.de
+194.97.55.148     pop3.freenet.de
+216.136.173.10    pop.mail.yahoo.com	yahoo.mail

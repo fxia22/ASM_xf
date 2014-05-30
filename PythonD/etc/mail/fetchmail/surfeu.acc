@@ -1,0 +1,5 @@
+#! /bin/bash
+# Simple Fetchmail, bdecker 2004 http://members.lycos.co.uk/bdeck
+
+# Get pop3 mail from default pop3 server in 'mail' command as 'deckerben'
+mail -u deckerben

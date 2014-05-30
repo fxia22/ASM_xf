@@ -1,0 +1,27 @@
+#! bash
+# D-DIRECT Queueless driver configuration for DOS
+#
+# Base filter for postscript printing direct to a remote printer using LPR.
+# $DEVICE is the HOSTNAME of the remote LPR server/printer.
+
+
+# A2PS uses uppercase papersize
+export PAPER=`echo $PAPER | tr '[a-z]' '[A-Z]'`
+
+# Unfortunately, DJGPP lpr.exe does not recognize /dev/env/DJDIR!
+export TEMPFILE=$DJDIR\\tmp\\`date +%H%M%S`.ps
+
+# a2ps will make the input file unreadable to ghostscript if it is a ps!
+if [ `echo $1 | tail -c 5` != ".ps" ]
+then
+    a2ps -g -K --medium=$PAPER --output=$TEMPFILE $* 2>/dev/null
+else
+    cp $1 $TEMPFILE
+fi
+
+
+# software filter sends results to postscript printer ("printer10")
+# Use the full path to DJGPP lpr under Windows 2000 (it alraedy has lpr).
+#echo Printing $TEMPFILE on $DEVICE. >&2
+/dev/env/DJDIR/bin/lpr.exe $DEVICE $TEMPFILE
+rm -f $TEMPFILE

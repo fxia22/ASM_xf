@@ -1,0 +1,129 @@
+#! /bin/bash
+#   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *
+#   *                                                                       *
+#   *   *   *              http://www.caddit.net                *   *   *
+#   *                                                                       *
+#############################################################################
+# ~/.bashrc
+
+if [ "$PS1" != "" ]; then
+  # setting for interactive shell
+  CVSROOT=/usr/src/master
+  EDITOR='vim'
+  CDPATH="${HOME}/work${PATH_SEPARATOR-;}${HOME}"
+  TMPDIR="${TMPDIR-.}"
+  export CVSROOT EDITOR CDPATH TMPDIR
+
+  alias ls='ls -F --color=auto'
+  # don't put duplicate lines in the history.
+  history_control=ignoredups
+  export HISTCONTROL=ignoredups
+fi
+
+
+#enable command completion
+#if [ "$PS1" -a -f /dev/env/DJDIR/etc/bash_completion ]; then
+#    . /dev/env/DJDIR/etc/bash_completion
+#fi
+
+export ac_cv_prog_LEX="flex.exe"
+alias dir=/dev/env/DJDIR/bin/dir
+alias cat=/dev/env/DJDIR/bin/cat
+alias mkdir=/dev/env/DJDIR/bin/mkdir
+alias sort=/dev/env/DJDIR/bin/sort
+alias ping=/dev/env/DJDIR/bin/ping
+alias env=/dev/env/DJDIR/bin/env
+alias finger=/dev/env/DJDIR/bin/finger
+alias test=/dev/env/DJDIR/bin/test
+alias hostname=/dev/env/DJDIR/bin/hostname
+alias find=/dev/env/DJDIR/bin/find
+alias date=/dev/env/DJDIR/bin/date
+alias tracert=/dev/env/DJDIR/bin/tracert
+alias rexec=/dev/env/DJDIR/bin/rexec
+alias nslookup=/dev/env/DJDIR/bin/nslookup
+alias rsh=/dev/env/DJDIR/bin/rsh
+alias talk=/dev/env/DJDIR/bin/talk
+alias telnet=/dev/env/DJDIR/bin/telnet
+alias ftp=/dev/env/DJDIR/bin/ftp
+alias archie=/dev/env/DJDIR/bin/archie
+alias more=/dev/env/DJDIR/bin/more
+alias copy=/dev/env/DJDIR/bin/cp
+alias del=/dev/env/DJDIR/bin/rm
+alias delete=/dev/env/DJDIR/bin/rm
+alias redir=/dev/env/DJDIR/bin/redir
+alias convert=/dev/env/DJDIR/bin/convert
+alias tcpdump=/dev/env/DJDIR/bin/tcpdump
+alias python=/dev/env/DJDIR/bin/python/pythond
+alias ldapsearch=/dev/env/DJDIR/bin/ldapsearch
+alias pythonw="cmd /C python"
+alias tracert=/dev/env/DJDIR/bin/tracert
+alias syslog="less /dev/env/DJDIR/var/log/syslog"
+alias fgrep='grep -F'
+alias egrep='grep -E'
+# alias java="/dev/env/DJDIR/bin/java"
+# alias javac="/dev/env/DJDIR/bin/javac"
+# alias javadoc="/dev/env/DJDIR/bin/javadoc"
+# alias javap="/dev/env/DJDIR/bin/javap"
+# alias appletviewer="/dev/env/DJDIR/bin/appletviewer"
+
+
+export PATH="$PATH;/dev/env/DJDIR/share/guile/1.6/scripts"
+export TMP='/dev/env/DJDIR/tmp'
+export TEMP='/dev/env/DJDIR/tmp'
+export base="/dev/env/DJDIR"
+export platbase="/dev/env/DJDIR"
+export PREFIX="/dev/env/DJDIR"
+export SHELL="/dev/env/DJDIR/bin/sh"
+# export ac_cv_prog_YACC="bison -y -dv"
+export ac_cv_func_fork=no
+export ag_cv_with_guile=yes
+export LD=/dev/env/DJDIR/bin/ld.exe
+export OBJEXT=o
+#This is handled in DJGPP.ENV
+#export LD_LIBRARY_PATH=/dev/env/DJDIR/lib
+
+
+export TMP="/dev/env/DJDIR/tmp"
+export TEMP="/dev/env/DJDIR/tmp"
+export bindir="/dev/env/DJDIR/bin"
+export sbindir="/dev/env/DJDIR/bin"
+export libexecdir="/dev/env/DJDIR/bin"
+export datadir="/dev/env/DJDIR/share"
+export sysconfdir="/dev/env/DJDIR/etc"
+export sharedstatedir="/dev/env/DJDIR/tmp"
+export localstatedir="/dev/env/DJDIR/tmp"
+export libdir="/dev/env/DJDIR/lib"
+export includedir="/dev/env/DJDIR/include"
+export oldincludedir="/dev/env/DJDIR/include/old"
+export infodir="/dev/env/DJDIR/info"
+export mandir="/dev/env/DJDIR/man"
+
+
+# PRINTER settings for LPR and LPQ
+alias lpq=/dev/env/DJDIR/bin/lpq
+alias lpr=/dev/env/DJDIR/bin/lpr
+export LPRSRV=bashrc-printserver
+export PRINTER=bashrc-printer
+
+# PRINTSERVER for LPRN command
+export LPD_SERVER=bashrc-printserver
+#export PS1='\h:`pwd`:\u\$ '
+# Set up custom color prompt on ansi.sys...
+#\[...\] embeds a sequence of non-printing characters like so:
+export PS1='\[\033[34m\033[1m\]\h:`pwd`:\u$ \[\033[36m\033[1m\]' 
+# set up ls colors
+export LS_COLORS='no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35:*.wav=01;35:';
+
+# Networking Support and bootstrap
+export WAN=`grep -aF NDISWANIP /dev/env/DJDIR/etc/network/NDIS` 
+if [ -n "$WAN" ]; then
+    export MYIP=`ipinit`
+    echo "Network $WAN detected at IP: " $MYIP | logger
+fi
+export WAN=
+echo
+
+alias echo=/dev/env/DJDIR/bin/echo
+
+#create CLISESSID for Spectrum CLI interface 'connect' command:
+export CLISESSID=$$

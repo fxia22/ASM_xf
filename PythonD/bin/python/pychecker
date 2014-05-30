@@ -1,0 +1,3 @@
+#! /bin/sh
+
+python /dev/env/DJDIR/lib/python2/packages/pychecker/checker.py "$@"

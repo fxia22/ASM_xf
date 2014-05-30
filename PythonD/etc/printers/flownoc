@@ -1,0 +1,21 @@
+#! bash
+# DRECT Queueless printer for DOS configuration: values must be literal!
+#
+# Driver for B-W printers, Flow Communications, Sydney.
+#
+# Version control for future revision/incompatibilty check
+export DDIRECTVERSION=1
+
+# Name of the printer
+export PRINTERNAME=flowcnoc
+
+# Defaults
+export DEVICE=nocprinter
+export DRIVER=
+export PAPER=A4
+export MARGIN=
+export COPIES=
+export FONT=
+export BW=
+export BANNER=
+export FILTER=net-ps

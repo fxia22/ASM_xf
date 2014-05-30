@@ -1,0 +1,332 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+    <TITLE>mxDateTime - Date/time types for Python :: History</TITLE>
+</HEAD>
+
+  <BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+
+    <HR NOSHADE WIDTH="100%">
+
+    <H2>mxDateTime - Date and Time types for Python</H2>
+
+    <HR SIZE=1 NOSHADE WIDTH="100%">
+
+    <H3>Old History Entries</H3>
+
+    <UL>
+
+	<P> These are the really old history entries for those interested
+            in how mxDateTime discovered the world of split seconds...
+
+	<P>Things that changed from 0.8.4 to 0.9.0:
+
+	<P><UL>
+
+            <LI>Added oneWeek constant.
+
+            <P><LI>Added ISO submodule for interfacing to ISO date and
+            time representations.
+
+            <P><LI>Added ISO.Week() constructor and .iso_week attribute
+            to DateTime objects. (Hope I got that right...)
+
+            <P><LI>Added gmticks method, a test to make sure
+            ticks(offset,dst) always returns proper values for dst = 0
+            and dst = 1 and documentation on the possible error
+            conditions that can occur when using these. The gmticks
+            method is only available if the platform provides the
+            timegm() C API.  <I>Currently, you will have to edit the
+            Setup file to enable/disable the HAVE_TIMEGM compiler flag
+            -- the next Python version (>1.5.1) will do the check for
+            you.</I>
+
+            <P><LI>Fixed gmticks() to first try datetime.gmticks() and
+            only revert to the ticks offset method if it is not
+            available.
+
+            <P><LI><B>Changed API for mktime():</B> the arguments are
+            no longer defined as keywords and it now excepts three
+            additional arguments to be call compatible to time.mktime().
+
+            <P><LI>Added string parsing constructors to ISO that
+            handle the most common cases of ISO string representation.
+
+            <P><LI>Added ARPA submodule for parsing Internet dates.
+
+        </UL>
+
+	<P>Things that changed from 0.8.3 to 0.8.4:
+
+	<P><UL>
+
+            <LI>Added gmticks() and new parameters to the
+            ticks()-method. This should make storing and retrieving
+            UTC-time values a little easier.
+
+        </UL>
+
+	<P>Things that changed from 0.8.2 to 0.8.3:
+
+	<P><UL>
+
+            <LI>Fixed a small bugglet that caused the module not to
+            compile with compilers that have problems with static
+            forward declarations.
+
+            <P><LI>Trimmed down the DateTime object size by a few bytes.
+
+            <P><LI>Fixed the mxDateTime/__init__.py module to import
+            all symbols from the extension module mxDateTime. This
+            used to confuse some users.
+
+        </UL>
+
+	<P>Things that changed from 0.8.1 to 0.8.2:
+
+	<P><UL>
+
+            <LI>Added today().
+
+            <P><LI>DateTime.tuple() now tries to determine the DST
+            value assuming the stored value is given in local time.
+
+            <P><LI>DateTime instances now have two extra attributes:
+            datetime.dst is an integer stating if the given time uses
+            DST or not and datetime.tz returns a timezone string.
+
+            <P><LI>Reduced the pickle size for both types by providing
+            function name shortcuts for the unpickling routines.
+
+            <P><LI>The functions localtime() and gmtime() now return
+            the current time rounded to the nearest micro-second.
+            This makes un/pickling the current time more reliable (rounding
+            errors become less likely).
+
+            <P><LI>Added methods needed for the copy protocol as
+            defined by the copy module: __copy__ and
+            __deepcopy__. Since both types have immutable instances
+            these functions merely return a new reference to the
+            instance. Thanks to <I>Stephane Bidoul</I> for suggesting
+            this addition.
+
+            <P><LI>Fixed the documentation a little.
+
+	</UL>
+
+	<P>Things that changed from 0.8 to 0.8.1:
+
+	<P><UL>
+
+            <LI>Fixed a typo that caused conversion from DateTime
+            to ticks using the ticks()-method to be off by one hour in
+            summertime.
+
+
+	</UL>
+
+	<P>Things that changed from 0.7 to 0.8:
+
+	<P><UL>
+
+	    <LI><B>Important change:</B> Conversions from and to Unix
+	    time values (ticks) are now done assuming the broken down
+	    values represent <I>local time</I>, not UTC as in previous
+	    versions.  now() returns local time instead of UTC -- this
+	    was confusing to some users. The change had to be done since
+	    I didn't want to carry the timemodule.c stuff all along the
+	    way... the method I used to convert from mktime() output to
+	    UTC was flaky anyway.
+
+	    <P><LI><B>Important for programmers</B> wanting to use the C
+	    interface: I dropped the direct access macros in the
+	    mxDateTime header file. If you want to access the broken
+	    down representation of the instances from C, use the new
+	    DateTime[Delta]_BrokenDown() APIs. I did this, because I may
+	    decide to put the two types on a diet in a next version
+	    (i.e.  dropping the cached broken down values).
+
+	    <P><LI>Added an alias 'Format' for the method
+	    DateTime.strftime. This makes the DateTime type compatible
+	    with the existing PythonWin date type.
+
+	    <P><LI>DateTime.strftime() defaults to '%c' as format string if
+	    no parameters are given.
+
+	    <P><LI>Dropped the plan to add keywords handling: it would
+	    produce a noticable performance hit due to the way keyword
+	    handling works in the interpreter.
+
+	    <P><LI>Dropped the module specific ConversionError in favour of
+	    the standard OverflowError. Conversion to ticks will raise
+	    an OverflowError in case the converted value doesn't fit
+	    into the machines time value format.
+
+	    <P><LI>Moved some constructors and objects from mxDateTime to
+	    DateTime. You won't notice any difference if you are using
+	    the DateTime interface (which you should), except the fact
+	    that some functions are now coded in Python rather than C.
+
+	    <P><LI>The TimeDelta() constructor now accepts keywords. This
+	    is a side-effect from moving it out of the C module into the
+	    Python package module. You can now write <TT>twoMinutes =
+	      TimeDelta(minutes=2)</TT>.
+
+	    <P><LI>Added an experimental ODMG submodule that uses date/time
+	    classes built on top of the two basic types. The main
+	    difference is that they support timezone offsets.
+
+	    <P><LI>Added support for storing COM dates
+	    as-is. DateTimeFromCOMDate(x).COMDate() will always return x
+	    unchanged.
+
+	</UL>
+
+	<P>Things that changed from 0.6 to 0.7:
+
+	<P><UL>
+
+	    <LI>To make the transition from usage of time values to
+	    usage of the new types easier, they can convert themselves
+	    to floats and integers on demand (e.g. with float() or
+	    int()). The DateTime instances return their value in ticks,
+	    the DateTimeDelta instances in seconds. The necessary
+	    conversion can cause a ConversionError to be raised in case
+	    the objects value doesn't fit into the converted types
+	    range.
+
+	    <P><LI>Since it is sometimes needed to have the date/time value
+	    stored in one number (begin sufficiently accurate to hold a
+	    vast range of dates), interfaces to both types were added
+	    that return the internal value as days Python float (maps to
+	    a C double). The fraction part is calculated using a 86400.0
+	    seconds/day basis and does not account for leap seconds.
+
+	    <P><LI>Fixed a bug in the value of the constant Epoch. The
+	    epoch for this module is 1.1.0001 0:00:00.00 and not
+	    1.1.0001 0:00:01.00.
+
+	    <P><LI>Added code from Modules/timemodule.c (found in the 1.5
+	    Python distribution) that allows now() to return fractions
+	    of a second.
+
+	    <P><LI>Added __members__ attribute to both types. The builtin
+	    dir() function will now tell you what attributes the types
+	    have.
+
+	    <P><LI>The module now defines a cleanup function which it
+	    registers with Py_AtExit(). This will free the free lists
+	    upon finalization of the interpreter.
+
+	    <P><LI>Added #ifdefs and #defines to make the module more
+	    portable to platforms which don't provide the C lib
+	    functions strftime() and strptime(). These interfaces are
+	    only available on platforms which provide the corresponding
+	    C functions. <I>You may have to enable them manually (see
+	      mxDateTime.c) on platforms other than Unix.</I>
+
+	    <P><LI>When converting the date/time values to the
+	    representation used by the C API strftime(), seconds are now
+	    rounded to the next integer (the struct tm defines second as
+	    being an integer, thus fraction parts can not be displayed).
+
+	    <P><LI>Changed the default date/time representation for str()
+	    and repr() to ISO format. I previously used the strftime()
+	    C-API but that has the disadvantage of not displaying
+	    fractions of a second which can lead to representations off
+	    by up to 0.5 seconds.
+
+	    <P><LI>The second attributes of both types now return floats
+	    instead of integers.
+
+	</UL>
+
+	<P>Things that changed from 0.5 to 0.6:
+
+	<P><UL>
+
+	    <LI>The constructor DateTimeDeltaFromTicks has been renamed
+	    to DateTimeDeltaFromSeconds, since the old name was
+	    misleading (ticks being a seconds since the epoch
+	    value). The corresponding C API's was dropped, since there
+	    already is a function providing the same functionality
+	    (DateTimeDelta_FromDaysAndSeconds with 0 days).
+
+	    <P><LI>The installation structure now uses a package
+	    layout. The package is called <TT>DateTime</TT> and imports
+	    the C extension mxDateTime.
+
+	    <P><LI>Fixed a bug causing overflow errors for larger deltas.
+
+	    <P><LI>Fixed a bugglet that prevented the module from being
+	    used inside packages.
+
+	    <P><LI>Fixed a naming bug in mxDateTime.h. The interface for
+	    DateTimeDelta now also uses function names without the 'mx'
+	    prefix. Changed DateTimeDelta_AsTicks to
+	    DateTimeDelta_AsDouble (see note above).
+
+	    <P><LI>The DateTimeDelta API now also provides low-level
+	    macros, like the DateTime API.
+
+	    <P><LI>Fixed a bug in DateTimeDelta() and in the str()/repr()
+	    routines that caused a core dump for very large deltas,
+	    e.g. DateTimeDeltaFromSeconds(-443243329200.0).
+
+	    <P><LI>Made the two types pickleable. Importing the package
+	    registers them via <TT>copy_reg</TT>.
+
+	    <P><LI>Added free lists for both types reducing the number of
+	    free/malloc calls necessary.  If you don't want these lists,
+	    have a look at the top of the C file.
+
+	    <P><LI>Fixed a bug that caused comparing numbers and instances
+	    to always returned 0 (meaning equal).
+
+	</UL>
+
+	<P>Interface change from 0.4 to 0.5 (thanks to <I>Greg
+	Stein</I> for suggesting many of these changes): 
+
+	    <P><UL>
+
+	    <LI>The as_XXX methods have been renamed and some of them
+	    now return more information (that's why they were renamed,
+	    so an exception will be raised in case you still use them).
+
+	    <P><LI>Further attributes were added to DateTimeDelta
+	    objects. Because of this the method as_ticks and
+	    as_timetuple have been dropped.
+
+	    <P><LI>The DateTime constructor now takes arguments year,
+	    month, day, hour, minute, second instead of just absolute
+	    days and seconds. The old constructor is still available,
+	    but the name has been changed to DateTimeFromAbsDateTime().
+
+	    <P><LI>The constructors Date(), Time() and Timestamp() are just
+	    different names for DateTime(), TimeDelta(), DateTime()
+	    resp.
+
+	    <P><LI>The str() and repr() outputs have changed. These now use
+	    a format that should be usable in most standard situations.
+
+	    <P><LI>The DateTimeDelta attributes hour, minute, second now
+	    return negative values for negative time deltas.
+
+	</UL>
+
+	<P>The change index starts with version 0.4, the first one
+	  that also provided a type for time values.
+
+	<P>
+
+    </UL>
+
+    <HR WIDTH="100%">
+    <CENTER><FONT SIZE=-1>&copy; 1997-2000, Copyright by
+	Marc-Andr&eacute; Lemburg; All Rights Reserved. mailto: <A
+	  HREF="mailto:mal@lemburg.com?subject=mxDateTime">mal@lemburg.com</A>
+      </FONT></CENTER>
+
+  </BODY>
+</HTML>
