@@ -8,10 +8,8 @@ CODE SEGMENT
      ASSUME CS:CODE,DS:DATA,ES:DATA,SS:STACK1
 SUB1 PROC FAR
 START:
-	MOV AX,DATA
+		MOV AX,DATA
       	MOV DS,AX
-      
-
       	MOV AL,80H
      	MOV DX,3FBH
       	OUT DX,AL
@@ -22,9 +20,8 @@ START:
       	MOV DX,3F9H
       	OUT DX,AL
       	MOV AL,0BH
-      	MOV DX,3F8H
       	OUT DX,AL
-      	MOV AL,03H ;MODEM
+      	MOV AL,03H ; MODEM
       	MOV DX,3FCH
       	OUT DX,AL
       	MOV AL,0
@@ -32,51 +29,27 @@ START:
       	OUT DX,AL
 
 WAIT_FOR:
-      	MOV DX,3FDH
-      	IN AL,DX
-      	TEST AL,1EH
-      	JNZ ERROR
-      	TEST AL,1
-      	JNZ RECEIVE
-      	TEST AL,20H
-      	JZ WAIT_FOR
       	MOV AH,1
       	INT 16H
-      	JZ WAIT_FOR
       	MOV AH,0
       	INT 16H
       	MOV DX,3F8H
       	OUT DX,AL
       	CMP AL,20H
-	JZ  QUIT
-	JMP WAIT_FOR
+		JZ  QUIT
+		JMP WAIT_FOR
+		
 RECEIVE:
       	MOV DX,3F8H
       	IN  AL,DX
       	AND AL,7FH
+		MOV 	AH,0EH
+		INT 	10H
       	CMP AL,20H
-      	JNZ CHAR
+      	JNZ WAIT_FOR
       	MOV AH,4CH
-      	INT 21H
-CHAR:
-	PUSH	AX
-	MOV 	AH,0EH
-	INT 	10H
-	POP	AX
-	CMP	AL,0DH
-	JNZ 	WAIT_FOR
-	MOV 	AL,0AH
-	MOV 	AH,0EH
-	INT	10H
-	JMP	WAIT_FOR
-ERROR:	MOV	DX,3F8H
-	IN	AL,DX
-	MOV 	AL,'?'
-	MOV 	AH,14
-	INT 	10H
-	JMP	WAIT_FOR
-QUIT:	MOV 	AH,4CH
-	INT 	21H
+      	INT 21H		
+
 SUB1	ENDP
 	CODE	ENDS
 	END	START

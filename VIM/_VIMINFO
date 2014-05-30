@@ -15,9 +15,9 @@ $
 
 # Command Line History (newest to oldest):
 :wq
+:WQ
 :q!
 :Q!
-:WQ
 :wqall
 :q
 :w
@@ -70,18 +70,25 @@ $
 		INT	21H
 
 # File marks:
-'0  68  1  C:\CODE\LAB5\LAB5_1.ASM
-'1  79  8  C:\CODE\LAB5\LAB5_2.ASM
-'2  50  12  C:\CODE\LAB5\LAB5_1.ASM
-'3  46  12  C:\CODE\LAB5\LAB5_2.ASM
-'4  64  0  C:\CODE\LAB5\LAB5_1.ASM
-'5  78  9  C:\CODE\LAB5\LAB5_1.ASM
-'6  20  4  C:\CODE\55\1.ASM
-'7  10  8  C:\CODE\55\1.ASM
-'8  36  6  C:\CODE\55\1.ASM
-'9  1  0  C:\CODE\LAB_0.ASM
+'0  103  14  C:\CODE\LAB5\LAB5_3.ASM
+'1  149  12  C:\CODE\LAB5\LAB5_3.ASM
+'2  74  0  C:\CODE\LAB5\LAB5_3.ASM
+'3  128  11  C:\CODE\LAB5\LAB5_3.ASM
+'4  151  4  C:\CODE\LAB5\LAB5_3.ASM
+'5  152  0  C:\CODE\LAB5\LAB5_3.ASM
+'6  68  1  C:\CODE\LAB5\LAB5_1.ASM
+'7  79  8  C:\CODE\LAB5\LAB5_2.ASM
+'8  50  12  C:\CODE\LAB5\LAB5_1.ASM
+'9  46  12  C:\CODE\LAB5\LAB5_2.ASM
 
 # Jumplist (newest first):
+-'  103  14  C:\CODE\LAB5\LAB5_3.ASM
+-'  149  12  C:\CODE\LAB5\LAB5_3.ASM
+-'  74  0  C:\CODE\LAB5\LAB5_3.ASM
+-'  128  11  C:\CODE\LAB5\LAB5_3.ASM
+-'  151  4  C:\CODE\LAB5\LAB5_3.ASM
+-'  152  0  C:\CODE\LAB5\LAB5_3.ASM
+-'  1  0  C:\CODE\LAB5\LAB5_3.ASM
 -'  68  1  C:\CODE\LAB5\LAB5_1.ASM
 -'  74  1  C:\CODE\LAB5\LAB5_1.ASM
 -'  62  1  C:\CODE\LAB5\LAB5_1.ASM
@@ -172,11 +179,79 @@ $
 -'  31  15  C:\CODE\LAB_2\LAB2_2.ASM
 -'  25  0  C:\CODE\LAB_2\LAB2_2.ASM
 -'  12  9  C:\CODE\LAB_2\LAB2_2.ASM
--'  9  9  C:\CODE\LAB_2\LAB2_2.ASM
--'  4  10  C:\CODE\LAB_2\LAB2_12.ASM
--'  41  3  C:\CODE\LAB_2\LAB2_12.ASM
 
 # History of marks within files (newest to oldest):
+
+> C:\CODE\LAB5\LAB5_3.ASM
+	"	103	14
+	^	103	15
+	.	103	14
+	+	52	5
+	+	49	17
+	+	50	9
+	+	51	11
+	+	52	1
+	+	52	20
+	+	52	22
+	+	3	23
+	+	108	0
+	+	87	5
+	+	3	33
+	+	87	0
+	+	88	20
+	+	88	6
+	+	88	9
+	+	88	8
+	+	88	0
+	+	52	13
+	+	52	19
+	+	53	0
+	+	92	3
+	+	91	4
+	+	92	3
+	+	91	5
+	+	103	14
+	+	97	1
+	+	89	9
+	+	97	19
+	+	89	7
+	+	97	20
+	+	103	14
+	+	99	1
+	+	103	13
+	+	101	11
+	+	103	12
+	+	108	0
+	+	64	0
+	+	62	12
+	+	63	8
+	+	52	4
+	+	109	0
+	+	108	0
+	+	52	12
+	+	121	0
+	+	123	0
+	+	122	16
+	+	130	1
+	+	130	0
+	+	127	9
+	+	128	2
+	+	130	1
+	+	128	11
+	+	142	0
+	+	141	3
+	+	147	11
+	+	149	22
+	+	150	0
+	+	62	8
+	+	128	11
+	+	132	7
+	+	103	2
+	+	151	0
+	+	148	17
+	+	107	0
+	+	105	0
+	+	103	14
 
 > C:\CODE\LAB5\LAB5_1.ASM
 	"	68	1
